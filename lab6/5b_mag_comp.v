@@ -125,7 +125,7 @@ module mag5b_comp(
     //nor_output_SELY == ~( y[4] | 0);
    
 //x_bar = twoComp_x
-rca_5b twoComp_x( .a(x),
+rca_5b twoComp_x( .a(~x),
                 .b(oneS),
                .cin(0),
                .sum(x_bar),
@@ -135,7 +135,7 @@ rca_5b twoComp_x( .a(x),
 );
 
 //y_bar = twoComp_y
-rca_5b twoComp_y( .a(y),
+rca_5b twoComp_y( .a(~ y ),
                 .b(oneS),
                  .cin(0),
                   .sum(y_bar),
