@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1539030123">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="BCD_Decoder.drc"/>
+  <File Type="BG-BGN" Name="BCD_Decoder.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="BCD_Decoder.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="BCD_Decoder.ltx"/>
+  <File Type="BITSTR-MMI" Name="BCD_Decoder.mmi"/>
+  <File Type="BITSTR-BMM" Name="BCD_Decoder_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="BCD_Decoder.nky"/>
+  <File Type="BITSTR-RBT" Name="BCD_Decoder.rbt"/>
+  <File Type="BITSTR-MSK" Name="BCD_Decoder.msk"/>
+  <File Type="BG-BIN" Name="BCD_Decoder.bin"/>
+  <File Type="BG-BIT" Name="BCD_Decoder.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="BCD_Decoder_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="BCD_Decoder_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="BCD_Decoder_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="BCD_Decoder.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="BCD_Decoder_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="BCD_Decoder_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="BCD_Decoder_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="BCD_Decoder_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="BCD_Decoder_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="BCD_Decoder_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="BCD_Decoder_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="BCD_Decoder_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="BCD_Decoder_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="BCD_Decoder_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="BCD_Decoder_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="BCD_Decoder_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="BCD_Decoder_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="BCD_Decoder_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="BCD_Decoder_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="BCD_Decoder_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="BCD_Decoder_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="BCD_Decoder_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="BCD_Decoder_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="BCD_Decoder_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="BCD_Decoder_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="BCD_Decoder_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="BCD_Decoder_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="BCD_Decoder_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="BCD_Decoder_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="BCD_Decoder_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="BCD_Decoder_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="BCD_Decoder_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="BCD_Decoder_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="BCD_Decoder_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="BCD_Decoder_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="BCD_Decoder_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="BCD_Decoder_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="BCD_Decoder_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="BCD_Decoder_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="BCD_Decoder_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="BCD_Decoder_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="BCD_Decoder_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="BCD_Decoder_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="BCD_Decoder_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="BCD_Decoder_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="BCD_Decoder_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="BCD_Decoder_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="BCD_Decoder.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="BCD_Decoder_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="BCD_Decoder_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="BCD_Decoder_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="BCD_Decoder_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="BCD_Decoder_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="BCD_Decoder_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="BCD_Decoder_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="BCD_Decoder.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/BCD_Decoder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="BCD_Decoder"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/Physical Componets.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

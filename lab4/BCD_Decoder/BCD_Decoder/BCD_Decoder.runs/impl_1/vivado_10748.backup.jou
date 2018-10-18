@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Oct  8 20:04:54 2018
+# Process ID: 10748
+# Current directory: /home/victor/CPE133/lab4/BCD_Decoder/BCD_Decoder/BCD_Decoder.runs/impl_1
+# Command line: vivado -log BCD_Decoder.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source BCD_Decoder.tcl -notrace
+# Log file: /home/victor/CPE133/lab4/BCD_Decoder/BCD_Decoder/BCD_Decoder.runs/impl_1/BCD_Decoder.vdi
+# Journal file: /home/victor/CPE133/lab4/BCD_Decoder/BCD_Decoder/BCD_Decoder.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source BCD_Decoder.tcl -notrace
