@@ -104,9 +104,11 @@ endmodule
 
 
 
+
 module mag5b_comp(
     input [4:0] x,
     input [4:0] y,
+    output [4:0] absX,
     output GT,
     output EQ,
     output LT
@@ -163,6 +165,18 @@ mux_2t1_a Y_MUX( .SEL(~( y[4] | 0)), //from nor gate output
 
 );
 
+
+////////////// FOR ABS Value if(|x| = |y| )//////////////////
+         
+     mux_2t1_a absValueOfX(
+        .SEL(x[4]),
+         .D1(x), //0 select
+         .D2(x_bar), //1 select
+         .F(absX)
+
+);
+  ///////////////////////////////////////////////
+
 //finalOuput = { EQ, LT, GT}
 comp5b finalOutput(
                     .a(x), //choose_x_OR_x_bar
@@ -178,6 +192,8 @@ comp5b finalOutput(
 
 
 endmodule
+
+
 
 
 
