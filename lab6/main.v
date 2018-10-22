@@ -8,16 +8,18 @@
 
 
 
-module main(x, y, seg, an);
+module main(x, y, seg, an, clk);
 
 
-input x,y;
+input [4:0]x;
+input [4:0]y;
 
-wire EQ, absX;
+wire EQ;
+wire [4:0] absX;
 
+input clk;
 
-
-output [8:0] seg;
+output [7:0] seg;
 output [3:0] an;
 
 
@@ -34,19 +36,21 @@ mag5b_comp leftModule(
   // ouputs of leftmodule are EQ AND absX      
   
   
+  
+  assign sign = x[4] & y[4];
  
-          
+          assign outputx = {9'b000000000, absX};
         
   //right module "output" 
   univ_sseg U(
-  .cnt1(14'b00000000000000), //hardwiring to zero
-  .cnt2({2'b00, absX}), //converting 5 bit input to 7bit input 
-  .valid(~EQ),
+  .cnt1(outputx), //converting to 8 bi
+  .cnt2(0), //converting 5 bit input to 7bit input 
+  .valid(EQ),
   .dp_en(0),
-  .dp_sel(0),
-  .mod_sel(0),
-  .sign(0),
-  .clk(0),
+  .dp_sel(2'b00),
+  .mod_sel(2'b00),
+  .sign(sign),
+  .clk(clk),
   .ssegs(seg),
   .disp_en(an)
 
