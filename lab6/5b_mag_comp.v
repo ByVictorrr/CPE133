@@ -44,8 +44,6 @@ endmodule
 
 
 
-
-
 module mux_2t1_a(SEL, D1, D2, F); 
     
     input  SEL;
@@ -56,8 +54,8 @@ module mux_2t1_a(SEL, D1, D2, F);
   always @(SEL,D1,D2)
 
    begin
-      if      (SEL == 0)  F = D1; //twos complement x 
-      else if (SEL == 1)  F = D2; //else output x
+      if      (SEL == 0)  F = D1; //output x
+      else if (SEL == 1)  F = D2; //else output x complement
       else                F = 5'b00000;
    end
            
@@ -69,11 +67,13 @@ endmodule
 
 
 
-module comp_5b(a, b, eq, lt, gt);
+module comp_nb(a, b, eq, lt, gt);
 
-    input  [4:0] a, b;
+    input  [n-1:0] a, b;
 
     output reg eq, lt, gt;
+
+parameter n = 8;
 
     always @ (a,b)
 
@@ -118,9 +118,11 @@ module mag5b_comp(
    
    //wire nor_output_SELX, nor_output_SELY;
     //for output of rca
-    wire x_bar, y_bar;
+    wire [4:0] x_bar; 
+    wire [4:0] y_bar;
     //for output of mux
-    wire choose_x_OR_x_bar, choose_y_OR_y_bar;
+    wire [4:0] choose_x_OR_x_bar;
+    wire [4:0] choose_y_OR_y_bar;
     
     
    //nor_output_SELX == ~( x[4] | 0);
@@ -178,9 +180,9 @@ mux_2t1_a Y_MUX( .SEL(~( y[4] | 0)), //from nor gate output
   ///////////////////////////////////////////////
 
 //finalOuput = { EQ, LT, GT}
-comp_5b finalOutput(
-                    .a(x), //choose_x_OR_x_bar
-                     .b(y), //choose_y_OR_y_bar
+comp_nb #(.n(5)) finalOutput(
+                    .a(choose_x_OR_x_bar), //choose_x_OR_x_bar
+                     .b(choose_y_OR_y_bar), //choose_y_OR_y_bar
                      .eq(EQ), //EQ final
                      .lt(LT), //LT final
                       .gt(GT) //GT final
