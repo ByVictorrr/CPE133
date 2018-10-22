@@ -131,7 +131,7 @@ rca_5b twoComp_x( .a(~x),
                 .b(oneS),
                .cin(0),
                .sum(x_bar),
-               .cout(0) //0 because were not using it
+               .co(0) //0 because were not using it
                   
 
 );
@@ -141,7 +141,7 @@ rca_5b twoComp_y( .a(~ y ),
                 .b(oneS),
                  .cin(0),
                   .sum(y_bar),
-                  .cout(0) //because were not using it
+                  .co(0) //because were not using it
 
 );
 
@@ -178,7 +178,7 @@ mux_2t1_a Y_MUX( .SEL(~( y[4] | 0)), //from nor gate output
   ///////////////////////////////////////////////
 
 //finalOuput = { EQ, LT, GT}
-comp5b finalOutput(
+comp_5b finalOutput(
                     .a(x), //choose_x_OR_x_bar
                      .b(y), //choose_y_OR_y_bar
                      .eq(EQ), //EQ final

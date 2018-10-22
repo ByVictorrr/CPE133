@@ -1,0 +1,428 @@
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22269 
+WARNING: [Synth 8-2490] overwriting previous definition of module rca_5b [/home/victor/CPE133/lab6/5b_mag_comp.v:24]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_2t1_a [/home/victor/CPE133/lab6/5b_mag_comp.v:49]
+WARNING: [Synth 8-2490] overwriting previous definition of module comp_5b [/home/victor/CPE133/lab6/5b_mag_comp.v:72]
+WARNING: [Synth 8-2490] overwriting previous definition of module mag5b_comp [/home/victor/CPE133/lab6/5b_mag_comp.v:108]
+WARNING: [Synth 8-2490] overwriting previous definition of module univ_sseg [/home/victor/CPE133/lab6/univ_sseg.v:56]
+WARNING: [Synth 8-2490] overwriting previous definition of module clk_divder [/home/victor/CPE133/lab6/univ_sseg.v:232]
+WARNING: [Synth 8-2490] overwriting previous definition of module cnt_convert_14b [/home/victor/CPE133/lab6/univ_sseg.v:249]
+WARNING: [Synth 8-2490] overwriting previous definition of module cnt_convert_7b [/home/victor/CPE133/lab6/univ_sseg.v:347]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1242.086 ; gain = 86.207 ; free physical = 5882 ; free virtual = 14511
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/home/victor/CPE133/lab6/main.v:11]
+INFO: [Synth 8-6157] synthesizing module 'mag5b_comp' [/home/victor/CPE133/lab6/5b_mag_comp.v:108]
+	Parameter oneS bound to: 5'b00001 
+INFO: [Synth 8-6157] synthesizing module 'rca_5b' [/home/victor/CPE133/lab6/5b_mag_comp.v:24]
+	Parameter n bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rca_5b' (1#1) [/home/victor/CPE133/lab6/5b_mag_comp.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'sum' does not match port width (5) of module 'rca_5b' [/home/victor/CPE133/lab6/5b_mag_comp.v:133]
+WARNING: [Synth 8-689] width (32) of port connection 'co' does not match port width (1) of module 'rca_5b' [/home/victor/CPE133/lab6/5b_mag_comp.v:134]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab6/5b_mag_comp.v:134]
+WARNING: [Synth 8-689] width (1) of port connection 'sum' does not match port width (5) of module 'rca_5b' [/home/victor/CPE133/lab6/5b_mag_comp.v:143]
+WARNING: [Synth 8-689] width (32) of port connection 'co' does not match port width (1) of module 'rca_5b' [/home/victor/CPE133/lab6/5b_mag_comp.v:144]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab6/5b_mag_comp.v:144]
+INFO: [Synth 8-6157] synthesizing module 'mux_2t1_a' [/home/victor/CPE133/lab6/5b_mag_comp.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_a' (2#1) [/home/victor/CPE133/lab6/5b_mag_comp.v:49]
+WARNING: [Synth 8-689] width (32) of port connection 'SEL' does not match port width (1) of module 'mux_2t1_a' [/home/victor/CPE133/lab6/5b_mag_comp.v:149]
+WARNING: [Synth 8-689] width (1) of port connection 'D2' does not match port width (5) of module 'mux_2t1_a' [/home/victor/CPE133/lab6/5b_mag_comp.v:151]
+WARNING: [Synth 8-689] width (1) of port connection 'F' does not match port width (5) of module 'mux_2t1_a' [/home/victor/CPE133/lab6/5b_mag_comp.v:152]
+WARNING: [Synth 8-689] width (32) of port connection 'SEL' does not match port width (1) of module 'mux_2t1_a' [/home/victor/CPE133/lab6/5b_mag_comp.v:159]
+WARNING: [Synth 8-689] width (1) of port connection 'D2' does not match port width (5) of module 'mux_2t1_a' [/home/victor/CPE133/lab6/5b_mag_comp.v:161]
+WARNING: [Synth 8-689] width (1) of port connection 'F' does not match port width (5) of module 'mux_2t1_a' [/home/victor/CPE133/lab6/5b_mag_comp.v:162]
+WARNING: [Synth 8-689] width (1) of port connection 'D2' does not match port width (5) of module 'mux_2t1_a' [/home/victor/CPE133/lab6/5b_mag_comp.v:174]
+INFO: [Synth 8-6157] synthesizing module 'comp_5b' [/home/victor/CPE133/lab6/5b_mag_comp.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'comp_5b' (3#1) [/home/victor/CPE133/lab6/5b_mag_comp.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'mag5b_comp' (4#1) [/home/victor/CPE133/lab6/5b_mag_comp.v:108]
+WARNING: [Synth 8-689] width (1) of port connection 'x' does not match port width (5) of module 'mag5b_comp' [/home/victor/CPE133/lab6/main.v:26]
+WARNING: [Synth 8-689] width (1) of port connection 'y' does not match port width (5) of module 'mag5b_comp' [/home/victor/CPE133/lab6/main.v:27]
+WARNING: [Synth 8-689] width (1) of port connection 'absX' does not match port width (5) of module 'mag5b_comp' [/home/victor/CPE133/lab6/main.v:28]
+WARNING: [Synth 8-689] width (32) of port connection 'GT' does not match port width (1) of module 'mag5b_comp' [/home/victor/CPE133/lab6/main.v:29]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab6/main.v:29]
+WARNING: [Synth 8-689] width (32) of port connection 'LT' does not match port width (1) of module 'mag5b_comp' [/home/victor/CPE133/lab6/main.v:31]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab6/main.v:31]
+INFO: [Synth 8-6157] synthesizing module 'univ_sseg' [/home/victor/CPE133/lab6/univ_sseg.v:56]
+INFO: [Synth 8-6157] synthesizing module 'cnt_convert_14b' [/home/victor/CPE133/lab6/univ_sseg.v:249]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab6/univ_sseg.v:268]
+INFO: [Synth 8-6155] done synthesizing module 'cnt_convert_14b' (5#1) [/home/victor/CPE133/lab6/univ_sseg.v:249]
+INFO: [Synth 8-6157] synthesizing module 'cnt_convert_7b' [/home/victor/CPE133/lab6/univ_sseg.v:347]
+WARNING: [Synth 8-567] referenced signal 'cnt' should be on the sensitivity list [/home/victor/CPE133/lab6/univ_sseg.v:361]
+INFO: [Synth 8-6155] done synthesizing module 'cnt_convert_7b' (6#1) [/home/victor/CPE133/lab6/univ_sseg.v:347]
+INFO: [Synth 8-6157] synthesizing module 'clk_divder' [/home/victor/CPE133/lab6/univ_sseg.v:232]
+	Parameter n bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divder' (7#1) [/home/victor/CPE133/lab6/univ_sseg.v:232]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab6/univ_sseg.v:103]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab6/univ_sseg.v:119]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab6/univ_sseg.v:131]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab6/univ_sseg.v:143]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab6/univ_sseg.v:155]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab6/univ_sseg.v:167]
+INFO: [Synth 8-6155] done synthesizing module 'univ_sseg' (8#1) [/home/victor/CPE133/lab6/univ_sseg.v:56]
+WARNING: [Synth 8-689] width (3) of port connection 'cnt2' does not match port width (7) of module 'univ_sseg' [/home/victor/CPE133/lab6/main.v:43]
+WARNING: [Synth 8-689] width (9) of port connection 'ssegs' does not match port width (8) of module 'univ_sseg' [/home/victor/CPE133/lab6/main.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'main' (9#1) [/home/victor/CPE133/lab6/main.v:11]
+WARNING: [Synth 8-3917] design main has port seg[8] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1271.211 ; gain = 115.332 ; free physical = 5899 ; free virtual = 14529
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1271.211 ; gain = 115.332 ; free physical = 5913 ; free virtual = 14528
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1271.211 ; gain = 115.332 ; free physical = 5913 ; free virtual = 14528
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/victor/CPE133/lab6/hardwareConfig.xdc]
+WARNING: [Vivado 12-584] No ports matched 'y[0]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[0]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[1]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[1]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[2]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[2]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[3]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[3]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[4]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[4]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'y[5]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[0]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[0]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[1]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched '[1]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[2]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[2]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[3]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[3]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[4]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[4]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[5]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'x[5]'. [/home/victor/CPE133/lab6/hardwareConfig.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/victor/CPE133/lab6/hardwareConfig.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/victor/CPE133/lab6/hardwareConfig.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/victor/CPE133/lab6/hardwareConfig.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1596.547 ; gain = 0.000 ; free physical = 5670 ; free virtual = 14285
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5740 ; free virtual = 14354
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5740 ; free virtual = 14354
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5742 ; free virtual = 14356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5732 ; free virtual = 14347
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 18    
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 14    
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 3     
+	   8 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rca_5b 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      6 Bit       Adders := 1     
+Module mux_2t1_a 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      5 Bit        Muxes := 1     
+Module cnt_convert_14b 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 18    
+	   2 Input      4 Bit       Adders := 7     
++---Muxes : 
+	   4 Input     14 Bit        Muxes := 1     
+Module cnt_convert_7b 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 7     
+Module univ_sseg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design main has port seg[8] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5722 ; free virtual = 14339
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5599 ; free virtual = 14216
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5599 ; free virtual = 14216
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (U/m_cnt_reg[1]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (U/m_cnt_reg[0]) is unused and will be removed from module main.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5598 ; free virtual = 14215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5598 ; free virtual = 14215
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5598 ; free virtual = 14215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5598 ; free virtual = 14215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5598 ; free virtual = 14215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5598 ; free virtual = 14215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5598 ; free virtual = 14215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     1|
+|2     |IBUF |     2|
+|3     |OBUF |    13|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    16|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.547 ; gain = 440.668 ; free physical = 5598 ; free virtual = 14215
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1596.547 ; gain = 115.332 ; free physical = 5652 ; free virtual = 14269
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1596.555 ; gain = 440.668 ; free physical = 5652 ; free virtual = 14269
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 58 Warnings, 23 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1596.555 ; gain = 440.844 ; free physical = 5651 ; free virtual = 14268
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/victor/CPE133/lab6/five-bit-mag-comp/five-bit-mag-comp.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1596.555 ; gain = 0.000 ; free physical = 5653 ; free virtual = 14270
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 22 09:40:49 2018...

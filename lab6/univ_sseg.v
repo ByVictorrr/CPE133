@@ -1,5 +1,3 @@
-`include "mag5b_comp.v"
-
 `timescale 1ns / 1ps
 //----------------------------------------------------------------------------
 //- Verilog Model: univ_sseg.sv
@@ -50,6 +48,7 @@
 //-  Revision History:
 //------------------------------------------------------------------------------- 
 //-  Created: 07-01-2018  v1.00
+//-           10-17-2018  v1.01  fixed system verilog conversion error
 //- 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -357,14 +356,13 @@ module cnt_convert_7b(
     // BCD intermediates   
     reg [3:0] d1;     // 10's digit
     reg [3:0] d0;     // 1's digit
-    
-    assign cnt_new = cnt;
-   
+      
     //- decimal (2 digit) to BCD conversion 
     always @ (cnt_new)
     begin
        d1=0;  d0=0; 
-       cnt_new_w = cnt_new; 
+        
+       cnt_new_w = cnt; 
 
        // handle 10's digit
        if      (cnt_new_w > 89) begin   d1=9;   cnt_new_w = cnt_new_w - 90;  end
@@ -384,9 +382,9 @@ module cnt_convert_7b(
     
 
     // handles the lead zero blanking
-    always @ (cnt_new, d1, d0)
+    always @ (cnt, d1, d0)
     begin
-       if (cnt_new < 10)  // 10's digit
+       if (cnt < 10)  // 10's digit
           c2_d1 = 'hF; 
        else 
           c2_d1 = d1;
@@ -395,8 +393,6 @@ module cnt_convert_7b(
     end 
     
 endmodule
-
-
 
 
 
