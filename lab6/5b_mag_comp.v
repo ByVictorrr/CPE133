@@ -21,7 +21,7 @@
 
 
 
-module rca_5b(
+module rca_nb(
     input [n-1:0] a,
     input [n-1:0] b,
     input cin,
@@ -29,7 +29,7 @@ module rca_5b(
     output reg co
     );
 	
-    parameter n = 5;
+    parameter n = 8;
 	
     reg [n:0] tmp_sum;  
     
@@ -39,6 +39,8 @@ module rca_5b(
     end
     
 endmodule
+
+
 
 
 
@@ -54,8 +56,8 @@ module mux_2t1_a(SEL, D1, D2, F);
   always @(SEL,D1,D2)
 
    begin
-      if      (SEL == 0)  F = D1; //output x
-      else if (SEL == 1)  F = D2; //else output x complement
+      if      (SEL == 0)  F = D1; //twos complement x 
+      else if (SEL == 1)  F = D2; //else output x
       else                F = 5'b00000;
    end
            
@@ -69,11 +71,11 @@ endmodule
 
 module comp_nb(a, b, eq, lt, gt);
 
-    input  [n-1:0] a, b;
+    input  [4:0] a, b;
 
     output reg eq, lt, gt;
 
-parameter n = 8;
+    parameter n = 8;
 
     always @ (a,b)
 
@@ -118,37 +120,33 @@ module mag5b_comp(
    
    //wire nor_output_SELX, nor_output_SELY;
     //for output of rca
-    wire [4:0] x_bar; 
-    wire [4:0] y_bar;
+    wire x_bar, y_bar;
     //for output of mux
-    wire [4:0] choose_x_OR_x_bar;
-    wire [4:0] choose_y_OR_y_bar;
-    
-    
-   //nor_output_SELX == ~( x[4] | 0);
-    //nor_output_SELY == ~( y[4] | 0);
+    wire choose_x_OR_x_bar, choose_y_OR_y_bar;
+   //getting abs value of x 
+   assign absX = choose_x_OR_x_bar; 
    
 //x_bar = twoComp_x
-rca_5b twoComp_x( .a(~x),
+rca_nb #(.n(5)) twoComp_x( .a(~x),
                 .b(oneS),
                .cin(0),
                .sum(x_bar),
-               .co(0) //0 because were not using it
+               .cout(0) //0 because were not using it
                   
 
 );
 
 //y_bar = twoComp_y
-rca_5b twoComp_y( .a(~ y ),
+rca_nb #(.n(5)) twoComp_y( .a(~ y ),
                 .b(oneS),
                  .cin(0),
                   .sum(y_bar),
-                  .co(0) //because were not using it
+                  .cout(0) //because were not using it
 
 );
 
 //choose_x_OR_x_bar = X_MUX
-mux_2t1_a X_MUX( .SEL(~( x[4] | 0)), //from nor gate output
+mux_2t1_a X_MUX( .SEL(x[4]), //from nor gate output
                   .D1(x), //just x by itself
                    .D2(x_bar), //from rca output 
                    .F(choose_x_OR_x_bar)
@@ -158,7 +156,7 @@ mux_2t1_a X_MUX( .SEL(~( x[4] | 0)), //from nor gate output
 );
 
 //choose_y_OR_y_bar = y_MUX
-mux_2t1_a Y_MUX( .SEL(~( y[4] | 0)), //from nor gate output
+mux_2t1_a Y_MUX( .SEL(y[4]), //from nor gate output
                   .D1(y), //just y by itself
                    .D2(y_bar), //from rca output 
                    .F(choose_y_OR_y_bar)
@@ -170,19 +168,25 @@ mux_2t1_a Y_MUX( .SEL(~( y[4] | 0)), //from nor gate output
 
 ////////////// FOR ABS Value if(|x| = |y| )//////////////////
          
-     mux_2t1_a absValueOfX(
-        .SEL(x[4]),
-         .D1(x), //0 select
+ /*    mux_2t1_a absValueOfX(
+        .SEL(EQ),
+         .D1(b'0000), //0 select
          .D2(x_bar), //1 select
          .F(absX)
 
 );
   ///////////////////////////////////////////////
 
+
+
+
+  */
+
+
 //finalOuput = { EQ, LT, GT}
 comp_nb #(.n(5)) finalOutput(
-                    .a(choose_x_OR_x_bar), //choose_x_OR_x_bar
-                     .b(choose_y_OR_y_bar), //choose_y_OR_y_bar
+                    .a(x), //choose_x_OR_x_bar
+                     .b(y), //choose_y_OR_y_bar
                      .eq(EQ), //EQ final
                      .lt(LT), //LT final
                       .gt(GT) //GT final
