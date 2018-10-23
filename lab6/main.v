@@ -38,12 +38,10 @@ mag5b_comp leftModule(
   
   
   assign sign = x[4] & y[4];
- 
-          assign outputx = {9'b000000000, absX};
         
   //right module "output" 
   univ_sseg U(
-  .cnt1(ouputx), //converting to 8 bi
+  .cnt1(absx), //converting to 8 bi
   .cnt2(0), //converting 5 bit input to 7bit input 
   .valid(EQ),
   .dp_en(0),
