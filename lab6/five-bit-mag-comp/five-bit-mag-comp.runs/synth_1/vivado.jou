@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Oct 22 09:40:15 2018
-# Process ID: 22253
+# Start of session at: Tue Oct 23 08:25:21 2018
+# Process ID: 15477
 # Current directory: /home/victor/CPE133/lab6/five-bit-mag-comp/five-bit-mag-comp.runs/synth_1
 # Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: /home/victor/CPE133/lab6/five-bit-mag-comp/five-bit-mag-comp.runs/synth_1/main.vds

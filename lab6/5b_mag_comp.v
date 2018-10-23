@@ -57,8 +57,7 @@ module mux_2t1_a(SEL, D1, D2, F);
 
    begin
       if      (SEL == 0)  F = D1; //twos complement x 
-      else if (SEL == 1)  F = D2; //else output x
-      else                F = 5'b00000;
+      else  F = D2; //else output 
    end
            
 
@@ -116,32 +115,33 @@ module mag5b_comp(
     output LT
     );
     
-    parameter oneS = 5'b00001;
    
    //wire nor_output_SELX, nor_output_SELY;
     //for output of rca
-    wire x_bar, y_bar;
+    wire [4:0]x_bar;
+    wire [4:0] y_bar;
     //for output of mux
-    wire choose_x_OR_x_bar, choose_y_OR_y_bar;
-   //getting abs value of x 
-   assign absX = choose_x_OR_x_bar; 
+    wire [4:0] choose_x_OR_x_bar;
+    wire [4:0] choose_y_OR_y_bar;
+  
+  
    
 //x_bar = twoComp_x
 rca_nb #(.n(5)) twoComp_x( .a(~x),
-                .b(oneS),
-               .cin(0),
+                .b(5'b00000),
+               .cin(1),
                .sum(x_bar),
-               .cout(0) //0 because were not using it
+               .co(0) //0 because were not using it
                   
 
 );
 
 //y_bar = twoComp_y
 rca_nb #(.n(5)) twoComp_y( .a(~ y ),
-                .b(oneS),
-                 .cin(0),
+                .b(5'b00000),
+                 .cin(1),
                   .sum(y_bar),
-                  .cout(0) //because were not using it
+                  .co(0) //because were not using it
 
 );
 
@@ -166,27 +166,15 @@ mux_2t1_a Y_MUX( .SEL(y[4]), //from nor gate output
 );
 
 
-////////////// FOR ABS Value if(|x| = |y| )//////////////////
-         
- /*    mux_2t1_a absValueOfX(
-        .SEL(EQ),
-         .D1(b'0000), //0 select
-         .D2(x_bar), //1 select
-         .F(absX)
-
-);
-  ///////////////////////////////////////////////
 
 
-
-
-  */
+  
 
 
 //finalOuput = { EQ, LT, GT}
 comp_nb #(.n(5)) finalOutput(
-                    .a(x), //choose_x_OR_x_bar
-                     .b(y), //choose_y_OR_y_bar
+                    .a(choose_x_OR_x_bar), //choose_x_OR_x_bar
+                     .b(choose_y_OR_y_bar), //choose_y_  OR_y_bar
                      .eq(EQ), //EQ final
                      .lt(LT), //LT final
                       .gt(GT) //GT final
@@ -194,7 +182,7 @@ comp_nb #(.n(5)) finalOutput(
 
 
 
-
+ assign absX = choose_x_OR_x_bar; 
 
 
 endmodule
