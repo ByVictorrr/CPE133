@@ -4,7 +4,7 @@
 // Engineer: 
 // 
 // Create Date: 10/17/2018 12:31:47 PM
-// Design Name: 
+// Design Name: VANE
 // Module Name: 5b_mag_comp
 // Project Name: 
 // Target Devices: 
@@ -125,7 +125,8 @@ module mag5b_comp(
     wire [4:0] choose_y_OR_y_bar;
   
   
-   
+    assign absX = choose_x_OR_x_bar;
+     
 //x_bar = twoComp_x
 rca_nb #(.n(5)) twoComp_x( .a(~x),
                 .b(5'b00000),
@@ -182,7 +183,7 @@ comp_nb #(.n(5)) finalOutput(
 
 
 
- assign absX = choose_x_OR_x_bar; 
+
 
 
 endmodule

@@ -41,12 +41,12 @@ mag5b_comp leftModule(
         
   //right module "output" 
   univ_sseg U(
-  .cnt1(absx), //converting to 8 bi
+  .cnt1(absX), 
   .cnt2(0), //converting 5 bit input to 7bit input 
   .valid(EQ),
   .dp_en(0),
-  .dp_sel(2'b00),
-  .mod_sel(2'b00),
+  .dp_sel(0),
+  .mod_sel(0),
   .sign(sign),
   .clk(clk),
   .ssegs(seg),
