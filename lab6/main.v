@@ -38,10 +38,23 @@ mag5b_comp leftModule(
   
   
   assign sign = x[4] & y[4];
+<<<<<<< Updated upstream
+||||||| merged common ancestors
+ 
+          assign outputx = {9'b000000000, absX};
+=======
+ 
+>>>>>>> Stashed changes
         
   //right module "output" 
   univ_sseg U(
+<<<<<<< Updated upstream
   .cnt1(absX), 
+||||||| merged common ancestors
+  .cnt1(ouputx), //converting to 8 bi
+=======
+  .cnt1(absX), //converting to 8 bi
+>>>>>>> Stashed changes
   .cnt2(0), //converting 5 bit input to 7bit input 
   .valid(EQ),
   .dp_en(0),

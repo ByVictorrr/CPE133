@@ -115,7 +115,7 @@ module mag5b_comp(
     output LT
     );
     
-   
+    assign absX = choose_x_OR_x_bar;   
    //wire nor_output_SELX, nor_output_SELY;
     //for output of rca
     wire [4:0]x_bar;
@@ -128,7 +128,8 @@ module mag5b_comp(
     assign absX = choose_x_OR_x_bar;
      
 //x_bar = twoComp_x
-rca_nb #(.n(5)) twoComp_x( .a(~x),
+rca_nb #(.n(5)) twoComp_x( 
+		.a(~x),
                 .b(5'b00000),
                .cin(1),
                .sum(x_bar),
@@ -138,16 +139,18 @@ rca_nb #(.n(5)) twoComp_x( .a(~x),
 );
 
 //y_bar = twoComp_y
-rca_nb #(.n(5)) twoComp_y( .a(~ y ),
+rca_nb #(.n(5)) twoComp_y( 
+		.a(~y),
                 .b(5'b00000),
-                 .cin(1),
-                  .sum(y_bar),
-                  .co(0) //because were not using it
+                 cin(1),
+                 .sum(y_bar),
+                 .co(0) //because were not using it
 
 );
 
 //choose_x_OR_x_bar = X_MUX
-mux_2t1_a X_MUX( .SEL(x[4]), //from nor gate output
+mux_2t1_a X_MUX( 
+		  .SEL(x[4]), //from nor gate output
                   .D1(x), //just x by itself
                    .D2(x_bar), //from rca output 
                    .F(choose_x_OR_x_bar)
@@ -157,19 +160,15 @@ mux_2t1_a X_MUX( .SEL(x[4]), //from nor gate output
 );
 
 //choose_y_OR_y_bar = y_MUX
-mux_2t1_a Y_MUX( .SEL(y[4]), //from nor gate output
+mux_2t1_a Y_MUX( 
+		  .SEL(y[4]), //from nor gate output
                   .D1(y), //just y by itself
                    .D2(y_bar), //from rca output 
                    .F(choose_y_OR_y_bar)
 
 
 
-);
-
-
-
-
-  
+);  
 
 
 //finalOuput = { EQ, LT, GT}
@@ -183,7 +182,12 @@ comp_nb #(.n(5)) finalOutput(
 
 
 
+<<<<<<< Updated upstream
 
+||||||| merged common ancestors
+ assign absX = choose_x_OR_x_bar; 
+=======
+>>>>>>> Stashed changes
 
 
 endmodule
