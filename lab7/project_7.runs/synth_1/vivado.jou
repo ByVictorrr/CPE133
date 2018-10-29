@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Oct 29 02:12:30 2018
+# Process ID: 28119
+# Current directory: /home/victor/CPE133/lab7/project_7.runs/synth_1
+# Command line: vivado -log Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
+# Log file: /home/victor/CPE133/lab7/project_7.runs/synth_1/Main.vds
+# Journal file: /home/victor/CPE133/lab7/project_7.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Main.tcl -notrace
