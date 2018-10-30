@@ -2,18 +2,19 @@
 `include "clk_divider_nbit.v"
 
 
-module main(BTN,CLK, segs, an
+module main(BTN,CLK, seg, an
 
 
 
 );
+input CLK, BTN;
 
 wire [14:0] Num_in_StoneAge_Binary;
 wire clk_Reg; //slower clock
 
 
 output [3:0] an;
-output [7:0] segs;
+output [7:0] seg;
 
 
 // f(n) * 2Hz = 100MHz  = > n = 25
@@ -42,7 +43,8 @@ univ_sseg Univ(
 	
 	.cnt1(Num_in_StoneAge_Binary),                                                                                    
    	.cnt2(0),                                                                                     
-    	.valid(0),                                                                                           	  .dp_en(0),                                                                                          
+    	.valid(1), 
+    	.dp_en(0),                                                                                          
     	.dp_sel(0),                                                                                   
      	.mod_sel(0),                                                                                  
      	.sign(0),                                                                                           

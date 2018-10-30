@@ -1,18 +1,15 @@
-module NS_DCDR(x1, F);
+module NS_DCDR(x1, F1);
 
     input  [4:0]x1;
 
-    output reg [4:0]F;
+    output reg [3:0]F1;
   
-     //- create bundled signal with concatenation
-
-    //assign ABC = {A,B,C};
-
+  
 always @(*)
 
     begin
 
-     if      (x1 == 5'b10000)     F1 = 4'b0001;
+     if     (x1 == 5'b10000)   F1 = 4'b0001;
 
      else if (x1 == 5'b10001)  F1 = 4'b0010;
 
@@ -77,5 +74,8 @@ always @(*)
      else if (x1 == 5'b01111)  F1 = 4'b0000;
 
      else F1 = 4'b0000;
+     
+end 
 
      endmodule
+    

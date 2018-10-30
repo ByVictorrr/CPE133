@@ -10,10 +10,10 @@ module Stone_Age_CNTR(  BTN,
 			);
  input  BTN;
  input CLK;
- output [14:0] Num_in_StoneAge_Binary;
+ output  [14:0] Num_in_StoneAge_Binary;
  
- wire [4:0] y; //y is the output of REG
- wire [4:0] y_plus; //y_plus is the output of inputDCDR
+ wire [3:0] y; //y is the output of REG
+ wire [3:0] y_plus; //y_plus is the output of inputDCDR
 
 //input has to conca BTN and y from REG output
 NS_DCDR inputDCDR(.x1({BTN, y}),
@@ -28,9 +28,9 @@ reg_nb #(.n(4)) REG(.data_in(y_plus),
 			.data_out(y)
 ); 
 
-OUTPUT_DCDR ouputDCDR(
+OUTPUT_DCDR outputDCDR(
 			.x2(y),
-			.F_stone(Num_in_StoneAge_Binary)
+			.F_Stone(Num_in_StoneAge_Binary)
 		);
 
 

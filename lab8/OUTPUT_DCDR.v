@@ -1,9 +1,9 @@
 
-module OUTPUT_DCDR(x1, F_Stone);
+module OUTPUT_DCDR(x2, F_Stone);
 
-    input  [4:0]x2;
+    input  [3:0]x2;
 
-    output [4:0]F_Stone;
+    output reg [14:0]F_Stone;
 
 always @(*)
 
@@ -39,8 +39,7 @@ always @(*)
 
      else if (x2 == 4'b1111)  F_Stone = 15'b111111111111111;
 
-     else (x2 == 0) F_Stone = 0;
+     else  F_Stone = 15'b000000000000000;;
 
-  end
 
 endmodule
