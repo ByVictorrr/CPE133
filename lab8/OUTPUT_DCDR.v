@@ -1,47 +1,85 @@
 `timescale 1ns/1ps
 
+module NS_DCDR(x1, F1);
 
-module OUTPUT_DCDR(x2, F_Stone);
+    input  [4:0]x1;
 
-    input  [3:0]x2;
+    output reg [3:0]F1;
+  
+  
+always @(x1)
 
-    output reg [14:0]F_Stone;
+    begin
 
-always @(*)
+     if     (x1 == 5'b10000)   F1 = 4'b0001;
 
-     if      (x2 == 4'b0000)     F_Stone = 15'b000000000000000;
+     else if (x1 == 5'b10001)  F1 = 4'b0010;
 
-     else if (x2 == 4'b0001)  F_Stone = 15'b000000000000001;
+     else if (x1 == 5'b10010)  F1 = 4'b0011;
 
-     else if (x2 == 4'b0010)  F_Stone = 15'b000000000000011;
+     else if (x1 == 5'b10011)  F1 = 4'b0100;
 
-     else if (x2 == 4'b0011)  F_Stone = 15'b000000000000111;
+     else if (x1 == 5'b10100)  F1 = 4'b0101;
 
-     else if (x2 == 4'b0100)  F_Stone = 15'b000000000001111;
+     else if (x1 == 5'b10101)  F1 = 4'b0110;
 
-     else if (x2 == 4'b0101)  F_Stone = 15'b000000000011111;
+     else if (x1 == 5'b10110)  F1 = 4'b0111;
 
-     else if (x2 == 4'b0110)  F_Stone = 15'b000000000111111;
+     else if (x1 == 5'b10111)  F1 = 4'b1000;
 
-     else if (x2 == 4'b0111)  F_Stone = 15'b000000001111111;
+     else if (x1 == 5'b11000)  F1 = 4'b1001;
 
-     else if (x2 == 4'b1000)  F_Stone = 15'b000000011111111;
+     else if (x1 == 5'b11001)  F1 = 4'b1010;
 
-     else if (x2 == 4'b1001)  F_Stone = 15'b000000111111111;
+      else if (x1 == 5'b11010)  F1 = 4'b1011;
 
-     else if (x2 == 4'b1010)  F_Stone = 15'b000001111111111;
+      else if (x1 == 5'b11011)  F1 = 4'b1100;
 
-     else if (x2 == 4'b1011)  F_Stone = 15'b000011111111111;
+      else if (x1 == 5'b11100)  F1 = 4'b1101;
 
-     else if (x2 == 4'b1100)  F_Stone = 15'b000111111111111;
+      else if (x1 == 5'b11101)  F1 = 4'b1110;
 
-     else if (x2 == 4'b1101)  F_Stone = 15'b001111111111111;
+      else if (x1 == 5'b11110)  F1 = 4'b1111;
 
-     else if (x2 == 4'b1110)  F_Stone = 15'b011111111111111;
+      else if (x1 == 5'b11111)  F1 = 4'b0000;
 
-     else if (x2 == 4'b1111)  F_Stone = 15'b111111111111111;
+//counting down
 
-     else  F_Stone = 15'b000000000000000;;
+     else if (x1 == 5'b00000)  F1 = 4'b1111;
 
+     else if (x1 == 5'b00001)  F1 = 4'b0000;
 
-endmodule
+     else if (x1 == 5'b00010)  F1 = 4'b0001;
+
+     else if (x1 == 5'b00011)  F1 = 4'b0010;
+
+     else if (x1 == 5'b00100)  F1 = 4'b0011;
+
+     else if (x1 == 5'b00101)  F1 = 4'b0100;
+
+     else if (x1 == 5'b00110)  F1 = 4'b0101;
+
+     else if (x1 == 5'b00111)  F1 = x1-1;
+
+     else if (x1 == 5'b01000)  F1 = x1-1;
+
+     else if (x1 == 5'b01001)  F1 = x1-1;
+
+     else if (x1 == 5'b01010)  F1 = x1-1;
+
+     else if (x1 == 5'b01011)  F1 = x1-1;
+
+     else if (x1 == 5'b01100)  F1 = x1-1;
+
+     else if (x1 == 5'b01101)  F1 = x1-1;
+
+     else if (x1 == 5'b01110)  F1 = x1-1;
+
+     else if (x1 == 5'b01111)  F1 = x1-1;
+
+     else if (F1 == 4'b0000) F1= 4'b0000;
+     
+end 
+
+     endmodule
+    
