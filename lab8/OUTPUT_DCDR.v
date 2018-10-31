@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 
 module OUTPUT_DCDR(x2, F_Stone);
 
