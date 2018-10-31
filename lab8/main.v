@@ -1,20 +1,24 @@
+
+`timescale 1ns/1ps
+
 `include "Stone_Age_CNTR.v"
 `include "clk_divider_nbit.v"
 
 
-module main(BTN,CLK, seg, an
 
-
+module main(BTN,CLK, seg, an, led
 
 );
 input CLK, BTN;
 
-wire [14:0] Num_in_StoneAge_Binary;
+output [14:0] led;
 wire clk_Reg; //slower clock
 
+wire [3:0] y;
 
 output [3:0] an;
 output [7:0] seg;
+
 
 
 // f(n) * 2Hz = 100MHz  = > n = 25
@@ -31,7 +35,8 @@ clk_divder_nbit #(.n(25)) clkReg(
 Stone_Age_CNTR LeftModule(
 			.BTN(BTN),
 			.CLK(clk_Reg), //clk_Reg is a slowed down version
-			.Num_in_StoneAge_Binary(Num_in_StoneAge_Binary)
+			.Num_in_StoneAge_Binary(led),
+			.Num_in_Binary(y)
 
 );
 
@@ -41,7 +46,7 @@ Stone_Age_CNTR LeftModule(
 //fast clock for sseg
 univ_sseg Univ( 
 	
-	.cnt1(Num_in_StoneAge_Binary),                                                                                    
+	.cnt1(y),                                                                                    
    	.cnt2(0),                                                                                     
     	.valid(1), 
     	.dp_en(0),                                                                                          
