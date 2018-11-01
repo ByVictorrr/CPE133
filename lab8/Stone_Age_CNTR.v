@@ -1,5 +1,5 @@
 `include "NS_DCDR.v"
-`include "reg_nb.v" 
+`include "../Modules/reg_nb.v" 
 `include "OUTPUT_DCDR.v" 
 
 `timescale 1ns/1ps
@@ -10,7 +10,7 @@
 module Stone_Age_CNTR(  BTN,
 			CLK,
 			Num_in_StoneAge_Binary,
-	       Num_in_Binary
+		       Num_in_Binary
 			);
 			
 			

@@ -1,21 +1,13 @@
-<<<<<<< Updated upstream
 
 `timescale 1ns/1ps
 
+`include "../Modules/clk_divider_nbit.v"
 `include "Stone_Age_CNTR.v"
-||||||| merged common ancestors
-`include "Stone_Age_CNTR.v"
-=======
-include "Stone_Age_CNTR.v"
->>>>>>> Stashed changes
-`include "clk_divider_nbit.v"
-
-
+`include "../Modules/univ_sseg.v"
 
 module main(BTN,CLK, seg, an, led
 
 );
-input CLK, BTN;
 
 output [14:0] led;
 wire clk_Reg; //slower clock
