@@ -1,7 +1,13 @@
+<<<<<<< Updated upstream
 
 `timescale 1ns/1ps
 
 `include "Stone_Age_CNTR.v"
+||||||| merged common ancestors
+`include "Stone_Age_CNTR.v"
+=======
+include "Stone_Age_CNTR.v"
+>>>>>>> Stashed changes
 `include "clk_divider_nbit.v"
 
 
