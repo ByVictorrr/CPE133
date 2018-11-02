@@ -19,42 +19,41 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module BCD_Decoder(
-    input [3:0] bcd,
-    input [3:0] switch,
-    output reg [7:0] display,
-    output [3:0] an);
+module  Multiplexed_Display(
+    input [3:0] y,
+    output reg [7:0] seg,
+    output [1:0] an );
  
- assign an = ~switch;
+//two clocks one for displaying
  
-    always @(bcd)
+    always @(seg)
   
     begin
-    //cases for bcd
-        case(bcd)
+   
+        case(y)
             //if no inputs
             4'b0000 : 
-                display = 8'b00000011; 
+                seg = 8'b00000011; 
             4'b0001 :           
-                display = 8'b10011111; 
+                seg = 8'b10011111; 
             4'b0010 :  
-                display = 8'b00100101;
+                seg = 8'b00100101;
             4'b0011 :       
-                display = 8'b00001101;
+                seg = 8'b00001101;
             4'b0100 :     
-                display = 8'b10011001;
+                seg = 8'b10011001;
             4'b0101 :      
-                display = 8'b01001001;
+                seg = 8'b01001001;
             4'b0110 :      
-                display = 8'b01000001;
+                seg = 8'b01000001;
             4'b0111 :        
-                display = 8'b00011111;
+                seg = 8'b00011111;
             4'b1000 :            
-                display =  8'b00000001;
+                seg =  8'b00000001;
             4'b1001 :           
-                display =  8'b00001001;
+                seg =  8'b00001001;
              default: 
-                display = 8'b11111111;
+                seg = 8'b11111111;
       endcase
      end       
 endmodule
