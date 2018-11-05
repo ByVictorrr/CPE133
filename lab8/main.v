@@ -11,6 +11,8 @@ module main(BTN,CLK, seg, an, led
 
 output [14:0] led;
 wire clk_Reg; //slower clock
+input BTN;
+input CLK;
 
 wire [3:0] y;
 

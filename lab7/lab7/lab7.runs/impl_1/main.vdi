@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Nov  5 09:50:38 2018
+# Process ID: 11704
+# Current directory: /home/victor/CPE133/lab7/lab7/lab7.runs/impl_1
+# Command line: vivado -log main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace
+# Log file: /home/victor/CPE133/lab7/lab7/lab7.runs/impl_1/main.vdi
+# Journal file: /home/victor/CPE133/lab7/lab7/lab7.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace
+Command: link_design -top main -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1

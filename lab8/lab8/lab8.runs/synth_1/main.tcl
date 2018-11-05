@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,10 +31,10 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   /home/victor/CPE133/lab8/NS_DCDR.v
   /home/victor/CPE133/lab8/OUTPUT_DCDR.v
-  /home/victor/CPE133/lab8/reg_nb.v
+  /home/victor/CPE133/Modules/reg_nb.v
   /home/victor/CPE133/lab8/Stone_Age_CNTR.v
-  /home/victor/CPE133/lab8/clk_divider_nbit.v
-  /home/victor/CPE133/lab8/ssegs.v
+  /home/victor/CPE133/Modules/univ_sseg.v
+  /home/victor/CPE133/Modules/clk_divider_nbit.v
   /home/victor/CPE133/lab8/main.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being

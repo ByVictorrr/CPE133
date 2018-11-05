@@ -1,0 +1,11 @@
+0.6
+2018.2
+Jun 14 2018
+20:07:38
+/home/victor/CPE133/Modules/comp_nb.v,1541374495,verilog,,,,comp_nb,,,,,,,,
+/home/victor/CPE133/Modules/mux_2t1_nb.v,1541374495,verilog,,/home/victor/CPE133/Modules/rca_nb.v,,mux_2t1_nb,,,,,,,,
+/home/victor/CPE133/Modules/rca_nb.v,1541374495,verilog,,/home/victor/CPE133/Modules/univ_sseg.v,,rca_nb,,,,,,,,
+/home/victor/CPE133/Modules/univ_sseg.v,1541374495,verilog,,/home/victor/CPE133/lab7/main.v,,clk_divder;cnt_convert_14b;cnt_convert_7b;univ_sseg,,,,,,,,
+/home/victor/CPE133/lab7/AddSubValid_5b.v,1541408549,verilog,,/home/victor/CPE133/Modules/mux_2t1_nb.v,/home/victor/CPE133/Modules/mux_2t1_nb.v;/home/victor/CPE133/Modules/comp_nb.v;/home/victor/CPE133/Modules/rca_nb.v,AddSubValid_5b,,,,,,,,
+/home/victor/CPE133/lab7/lab7/lab7.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+/home/victor/CPE133/lab7/main.v,1541407274,verilog,,,/home/victor/CPE133/lab7/AddSubValid_5b.v;/home/victor/CPE133/Modules/univ_sseg.v,main,,,,,,,,
