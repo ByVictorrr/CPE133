@@ -2,14 +2,15 @@
 `timescale 1ns/1ps
 
 `include "../Modules/clk_divider_nbit.v"
-`include "Stone_Age_CNTR.v"
+`include "StoneCNTR.v"
+`include "Multiplexed_Display.v"
 
-module main(BTN,CLK, seg, an, led
+module StoneCounter(BTN,CLK, seg, an, led
 
 );
 
 output [14:0] led;
-wire clk_Reg; //slower clock
+wire CLK_M; //slower clock for the multiplexed display
 
 wire [3:0] y;
 
@@ -18,18 +19,15 @@ output [7:0] seg;
 
 
 
-// f(n) * 2Hz = 100MHz  = > n = 25
-//always slows down a clock
-clk_divder_nbit #(.n(25)) clkReg(
+clk_divder_nbit #(.n(12)) clkM
 				.clockin(CLK),
-       				.clockout(clk_Reg)
+       				.clockout(CLK_M)
 			);
 
 
 
 
-
-Stone_Age_CNTR LeftModule(
+StoneCNTR LeftModule(
 			.BTN(BTN),
 			.CLK(clk_Reg), //clk_Reg is a slowed down version
 			.Num_in_StoneAge_Binary(led),
@@ -37,10 +35,19 @@ Stone_Age_CNTR LeftModule(
 
 );
 
+//faster clock than reg
+Multiplexed_Display Display(
+			    .y(y),
+    			    .CLK(CLK_M),
+        		    .seg(seg),
+	     		    .an(an)
+
+);
 
 
-//slow clock for the register 
-//fast clock for sseg
+
+
+
 
 
 

@@ -1,3 +1,8 @@
+`include "../Modules/mux_2t1_nb.v"
+`include "../Modules/comp_nb.v"
+`include "../Modules/BCD_Decoder.v"
+`include "./Two_Digit_DEC_decoder.v"
+`include "./AN_DCDR.v"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: Victor Delaplaine, Esteban Rubio
@@ -21,39 +26,33 @@
 
 module  Multiplexed_Display(
     input [3:0] y,
+    input CLK,
     output reg [7:0] seg,
-    output [1:0] an );
+    output [3:0] an );
+
+wire [3:0] tensPlace,onesPlace, muxOUT;
+
+
+
+Two_Digit_DEC_decoder(
+			.x2(y),
+			.F1(onesPlace),
+			.F2(tensPlace)
+			);
  
-//two clocks one for displaying
- 
-    always @(seg)
-  
-    begin
-   
-        case(y)
-            //if no inputs
-            4'b0000 : 
-                seg = 8'b00000011; 
-            4'b0001 :           
-                seg = 8'b10011111; 
-            4'b0010 :  
-                seg = 8'b00100101;
-            4'b0011 :       
-                seg = 8'b00001101;
-            4'b0100 :     
-                seg = 8'b10011001;
-            4'b0101 :      
-                seg = 8'b01001001;
-            4'b0110 :      
-                seg = 8'b01000001;
-            4'b0111 :        
-                seg = 8'b00011111;
-            4'b1000 :            
-                seg =  8'b00000001;
-            4'b1001 :           
-                seg =  8'b00001001;
-             default: 
-                seg = 8'b11111111;
-      endcase
-     end       
+
+mux_2t1_nb #(.n(4)) place(
+			.SEL(CLK),
+			.D0(onesPlace),
+			.D1(tensPlace),
+			.D_OUT(muxOUT)	
+			);
+			
+//an = anOutput
+AN_DCDR anOutput(.CLK(CLK), .an(an));
+
+//seg = BCD_Decoder
+BCD_Decoder Segment(.x(muxOUT),.seg(seg);
+
+
 endmodule
