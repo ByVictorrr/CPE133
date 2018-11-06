@@ -5,9 +5,11 @@
 `include "StoneCNTR.v"
 `include "Multiplexed_Display.v"
 
-module StoneCounter(BTN,CLK, seg, an, led
+module main(BTN,CLK, seg, an, led
 
 );
+
+input BTN, CLK;
 
 output [14:0] led;
 wire CLK_M; //slower clock for the multiplexed display
@@ -19,7 +21,7 @@ output [7:0] seg;
 
 
 
-clk_divder_nbit #(.n(12)) clkM
+clk_divder_nbit #(.n(12)) div(
 				.clockin(CLK),
        				.clockout(CLK_M)
 			);
@@ -29,24 +31,21 @@ clk_divder_nbit #(.n(12)) clkM
 
 StoneCNTR LeftModule(
 			.BTN(BTN),
-			.CLK(clk_Reg), //clk_Reg is a slowed down version
-			.Num_in_StoneAge_Binary(led),
-			.Num_in_Binary(y)
+			.CLK(CLK), //clk_Reg is a slowed down version
+			.y(y),
+			.led(led)
+
 
 );
 
 //faster clock than reg
 Multiplexed_Display Display(
-			    .y(y),
+			         .y(y),
     			    .CLK(CLK_M),
         		    .seg(seg),
 	     		    .an(an)
 
 );
-
-
-
-
 
 
 

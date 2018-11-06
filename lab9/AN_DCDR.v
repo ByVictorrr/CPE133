@@ -1,8 +1,8 @@
 
-module AN_DCDR(x,an);
+module AN_DCDR(CLK,an);
 
 input CLK;
-output [3:0] an;
+output reg [3:0] an;
 
 always @(*)
 

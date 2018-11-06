@@ -27,7 +27,7 @@
 module  Multiplexed_Display(
     input [3:0] y,
     input CLK,
-    output reg [7:0] seg,
+    output [7:0] seg,
     output [3:0] an );
 
 wire [3:0] tensPlace,onesPlace, muxOUT;
@@ -35,7 +35,7 @@ wire [3:0] tensPlace,onesPlace, muxOUT;
 
 
 Two_Digit_DEC_decoder(
-			.x2(y),
+			.x(y),
 			.F1(onesPlace),
 			.F2(tensPlace)
 			);
@@ -43,7 +43,7 @@ Two_Digit_DEC_decoder(
 
 mux_2t1_nb #(.n(4)) place(
 			.SEL(CLK),
-			.D0(onesPlace),
+			.D0(tensPlace),
 			.D1(tensPlace),
 			.D_OUT(muxOUT)	
 			);
@@ -52,7 +52,7 @@ mux_2t1_nb #(.n(4)) place(
 AN_DCDR anOutput(.CLK(CLK), .an(an));
 
 //seg = BCD_Decoder
-BCD_Decoder Segment(.x(muxOUT),.seg(seg);
+BCD_Decoder Segment(.x(muxOUT),.seg(seg));
 
 
 endmodule

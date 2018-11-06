@@ -4,17 +4,13 @@
 `include "../Modules/clk_divider_nbit.v"
 `include "Stone_Age_CNTR.v"
 
-module StoneCNTR_Higer(BTN,CLK, seg, an, led
-
-);
+module StoneCNTR(BTN,CLK,y,led);
 
 output [14:0] led;
 wire clk_Reg; //slower clock
 
-wire [3:0] y;
-
-output [3:0] an;
-output [7:0] seg;
+output [3:0] y;
+input BTN,CLK;
 
 
 
