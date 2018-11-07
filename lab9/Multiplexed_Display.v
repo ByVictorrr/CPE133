@@ -1,58 +1,87 @@
-`include "../Modules/mux_2t1_nb.v"
-`include "../Modules/comp_nb.v"
 `include "../Modules/BCD_Decoder.v"
-`include "./Two_Digit_DEC_decoder.v"
-`include "./AN_DCDR.v"
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: Victor Delaplaine, Esteban Rubio
-// 
-// Create Date: 10/07/2018 10:23:19 PM
-// Design Name: VANE
-// Module Name: BCD_Decoder
-// Project Name: 7 - Segment BCD decoder
-// Target Devices: 
-// Tool Versions: 
-// Description: A project in which we learned learned how a BCD works and is applied to a 7-segment display decoder
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+`include "../Modules/clk_divider_nbit.v"
+
+module Multiplexed_Display(input CLK, input [3:0] x, output [7:0] seg, output reg [3:0] an);
 
 
-module  Multiplexed_Display(
-    input [3:0] y,
-    input CLK,
-    output [7:0] seg,
-    output [3:0] an );
-
-wire [3:0] tensPlace,onesPlace, muxOUT;
-
-
-
-Two_Digit_DEC_decoder(
-			.x(y),
-			.F1(onesPlace),
-			.F2(tensPlace)
-			);
+ reg [3:0] F2,F1;
  
+ reg [3:0] BCD_input;
+    
+ wire CLK_M;
 
-mux_2t1_nb #(.n(4)) place(
-			.SEL(CLK),
-			.D0(tensPlace),
-			.D1(tensPlace),
-			.D_OUT(muxOUT)	
+BCD_Decoder BCD(.x(BCD_input),.seg(seg));
+
+//always slows down a clock
+clk_divder_nbit #(.n(13)) clkM(
+				.clockin(CLK),
+       				.clockout(CLK_M)
 			);
-			
-//an = anOutput
-AN_DCDR anOutput(.CLK(CLK), .an(an));
 
-//seg = BCD_Decoder
-BCD_Decoder Segment(.x(muxOUT),.seg(seg));
 
+
+always @ (posedge CLK_M)
+
+	begin
+	//case statement for ones place
+	case (x)
+		
+	        4'b0000 : F1 = x; 
+	        4'b0001 : F1 = x;
+	        4'b0001 : F1 = x;
+	        4'b0010: F1 = x;
+	        4'b0010: F1 = x;
+	        4'b0011: F1 = x;
+	        4'b0100: F1 = x;
+	        4'b0101: F1 = x; //five
+	        4'b0110: F1 = x;
+	        4'b0111: F1 = x;
+	        4'b1000: F1 = x;
+	        4'b1001: F1 = x; //nine
+	        4'b1010: F1 = 4'b0000; //ten
+	        4'b1011: F1 = 4'b0001; 
+	        4'b1100: F1 = 4'b0010; //twelve	        
+            4'b1101: F1 = 4'b0011;
+            4'b1110: F1 = 4'b0100 ; //fourteen  
+            4'b1111: F1 = 4'b0101 ; //fithteen 
+            
+            
+      endcase
+      
+      
+     
+          //case statement for tens place
+          case (x)
+              
+                  4'b0000 : F2 = 4'b0000; 
+                  4'b0001 : F2 = 4'b0000 ;
+                  4'b0010: F2 = 4'b0000;
+                  4'b0010: F2 = 4'b0000;
+                  4'b0011: F2 = 4'b0000;
+                  4'b0100: F2 = 4'b0000;
+                  4'b0101: F2 = 4'b0000; //five
+                  4'b0110: F2 = 4'b0000;
+                  4'b0111: F2 = 4'b0000;
+                  4'b1000: F2 = 4'b0000;
+                  4'b1001: F2 = 4'b0000; //nine
+                  4'b1010: F2 = 4'b0001; //ten
+                  4'b1011: F2 = 4'b0001; 
+                  4'b1100: F2 = 4'b0001; //twelve            
+                  4'b1101: F2 = 4'b0001;
+                  4'b1110: F2 = 4'b0001 ; //fourteen  
+                  4'b1111: F2 = 4'b0001 ; //fithteen 
+                  
+                  
+            endcase
+      
+            
+            if ( CLK_M == 1'b1 ) an = 4'b1110; BCD_input = F1;
+            if (CLK_M == 1'b0) an = 4'b1101; BCD_input = F2;
+          
+      
+	end
+	
+	
+	
 
 endmodule

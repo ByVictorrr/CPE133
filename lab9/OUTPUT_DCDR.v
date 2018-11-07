@@ -1,4 +1,5 @@
 `timescale 1ns/1ps
+
  module OUTPUT_DCDR(x2, F_Stone);
       input  [3:0]x2;
  
@@ -38,7 +39,7 @@
  
       else if (x2 == 4'b1111)  F_Stone = 15'b111111111111111;
  
-      else  F_Stone = 15'b000000000000000;;
+      else  F_Stone = 15'b000000000000000;
  
  
  endmodule

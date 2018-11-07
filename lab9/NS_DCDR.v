@@ -45,37 +45,37 @@ always @(x1)
 
 //counting down
 
-     else if (x1 == 5'b00000)  F1 = F1-1;
+     else if (x1 == 5'b00000)  F1 = x1-1;
 
-     else if (x1 == 5'b00001)  F1 = F1-1;
+     else if (x1 == 5'b00001)  F1 = x1-1;
 
-     else if (x1 == 5'b00010)  F1 = F1-1;
+     else if (x1 == 5'b00010)  F1 = x1-1;
 
-     else if (x1 == 5'b00011)  F1 = F1-1;
+     else if (x1 == 5'b00011)  F1 = x1-1;
 
-     else if (x1 == 5'b00100)  F1 = F1-1;
+     else if (x1 == 5'b00100)  F1 = x1-1;
 
-     else if (x1 == 5'b00101)  F1 = F1-1;
+     else if (x1 == 5'b00101)  F1 = x1-1;
 
-     else if (x1 == 5'b00110)  F1 = F1-1;
+     else if (x1 == 5'b00110)  F1 = x1-1;
 
-     else if (x1 == 5'b00111)  F1 = F1-1;
+     else if (x1 == 5'b00111)  F1 = x1-1;
 
-     else if (x1 == 5'b01000)  F1 = F1-1;
+     else if (x1 == 5'b01000)  F1 = x1-1;
 
-     else if (x1 == 5'b01001)  F1 = F1-1;
+     else if (x1 == 5'b01001)  F1 = x1-1;
 
-     else if (x1 == 5'b01010)  F1 = F1-1;
+     else if (x1 == 5'b01010)  F1 = x1-1;
 
-     else if (x1 == 5'b01011)  F1 = F1-1;
+     else if (x1 == 5'b01011)  F1 = x1-1;
 
-     else if (x1 == 5'b01100)  F1 = F1-1;
+     else if (x1 == 5'b01100)  F1 = x1-1;
 
-     else if (x1 == 5'b01101)  F1 = F1-1;
+     else if (x1 == 5'b01101)  F1 = x1-1;
 
-     else if (x1 == 5'b01110)  F1 = F1-1;
+     else if (x1 == 5'b01110)  F1 = x1-1;
 
-     else if (x1 == 5'b01111)  F1 = F1-1;
+     else if (x1 == 5'b01111)  F1 = x1-1;
 
      else if (F1 == 4'b0000) F1= 4'b0000;
      
