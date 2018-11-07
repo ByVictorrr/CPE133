@@ -22,9 +22,6 @@ output [7:0] seg;
 
 
 
-
-
-
 Stone_Age_CNTR LeftModule(
 			.BTN(BTN),
 			.CLK(CLK), //clk_Reg is a slowed down version
