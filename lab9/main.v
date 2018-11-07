@@ -23,6 +23,8 @@ output [7:0] seg;
 
 
 
+
+
 Stone_Age_CNTR LeftModule(
 			.BTN(BTN),
 			.CLK(CLK), //clk_Reg is a slowed down version
@@ -37,7 +39,7 @@ Stone_Age_CNTR LeftModule(
 //faster clock than reg
 Multiplexed_Display Display(
                       .CLK(CLK),
-			         .x(y),
+			    .x(y),
         		    .seg(seg),
 	     		    .an(an)
 
