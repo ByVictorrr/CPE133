@@ -26,7 +26,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module clk_divder_nbit(clockin, clockout); 
+module clk_divider_nbit(clockin, clockout); 
     input clockin; 
     output wire clockout; 
 
