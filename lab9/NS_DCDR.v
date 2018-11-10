@@ -1,4 +1,24 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+//// Company: VANE
+//// Engineer: Victor Delaplaine, Esteban Rubio
+//// 
+//// Create Date: 10/31/2018 12:31:47 PM
+//// Design Name: 
+//// Module Name: NS_DCDR
+//// Project Name: Exp 9
+//// Target Devices: Basy3
+//// Tool Versions: 
+////Description: Provides a relationship between future and present state.
+//// Dependencies: n/a
+//// Revision:
+//// Revision 0.01 - File Created
+//// Additional Comments:
+//// 
+////////////////////////////////////////////////////////////////////////////////////
+//
+
+
 
 module NS_DCDR(x1, F1);
 

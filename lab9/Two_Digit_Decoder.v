@@ -1,4 +1,25 @@
-
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+//// Company: VANE
+//// Engineer: Victor Delaplaine, Esteban Rubio
+//// 
+//// Create Date: 11/5/2018 12:31:47 PM
+//// Design Name: 
+//// Module Name: Two_Digit_Decoder
+//// Project Name: Exp 9
+//// Target Devices: Basy3
+//// Tool Versions: 
+///* Description: Separates a 4-bit binary number into its if it were
+//converted to a decimal number. The 4-bit binary number is separated
+//variables F1 (1’s place)  and F2 (tens place). 
+//*/
+//// Dependencies: n/a  
+//// Revision:
+//// Revision 0.01 - File Created
+//// Additional Comments:
+//// 
+////////////////////////////////////////////////////////////////////////////////////
+//
 module Two_Digit_Decoder( input [3:0] x,output reg [3:0] F1, output reg [3:0] F2);
 
 

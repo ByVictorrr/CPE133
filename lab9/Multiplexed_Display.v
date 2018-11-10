@@ -5,6 +5,29 @@
 `include "../Modules/mux_2t1_nb.v"
 
 
+//////////////////////////////////////////////////////////////////////////////////
+//// Company: VANE
+//// Engineer: Victor Delaplaine, Esteban Rubio
+//// 
+//// Create Date: 11/5/2018 12:31:47 PM
+//// Design Name: 
+//// Module Name: Multiplexed_Display
+//// Project Name: Exp 9
+//// Target Devices: Basy3
+//// Tool Versions: 
+///* Description: Extracts the ones and tens place of a four-bit binary number
+//and displays each value on the 7-segment display fast enough to give the
+//illusion of just displaying the two digit decimal number.
+//*/
+///* Dependencies: clk_divider_nbit.v, Two_Digit_Decoder.v, AN_DCDR.v,
+//BCD_Decoder.v, mux_2t1_nb.v
+//*/ 
+//// Revision:
+//// Revision 0.01 - File Created
+//// Additional Comments:
+//// 
+////////////////////////////////////////////////////////////////////////////////////
+
 module Multiplexed_Display( input CLK, input [3:0] x, output [3:0] an , output [7:0] seg);
 
 wire CLK_M; //slower clock

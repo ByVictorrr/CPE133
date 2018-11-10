@@ -1,3 +1,25 @@
+//////////////////////////////////////////////////////////////////////////////////
+//// Company: VANE
+//// Engineer: Victor Delaplaine, Esteban Rubio
+//// 
+//// Create Date: 10/31/2018 12:31:47 PM
+//// Design Name: 
+//// Module Name: MEALY_OUTPUT_DCDR
+//// Project Name: Exp 9
+//// Target Devices: Basy3
+//// Tool Versions: 
+////Description: This decoder takes the current state and forms the stone age
+//unary number equivalent if the button is pressed. Else it ouputs the
+//compliment of the stone age equivlent
+//// Dependencies: n/a
+//// Revision:
+//// Revision 0.01 - File Created
+//// Additional Comments:
+//// 
+////////////////////////////////////////////////////////////////////////////////////
+//
+//
+
 `include "../Modules/mux_2t1_nb.v"
 
 module MEALY_OUTPUT_DCDR( input BTN, input [3:0] ST, output [14:0] led_mealy);
