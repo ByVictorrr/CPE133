@@ -18,7 +18,8 @@ module Stone_Age_CNTR(  BTN,
  input  BTN, CLK;
  output  [14:0] led_mealy;
  wire CLK_REG;
- wire [3:0] ST, ST_plus; //ps and NS
+ output [3:0] ST;
+ wire [3:0] ST_plus; //ps and NS
 
 
 

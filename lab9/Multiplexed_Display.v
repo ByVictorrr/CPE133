@@ -45,7 +45,7 @@ Two_Digit_Decoder onesTensDivider(.x(x),.F1(F1), .F2(F2));
 mux_2t1_nb #(.n(4)) onesTensDecider(.SEL(CLK_M), .D0(F1), .D1(F2), .D_OUT(F_ones_or_tens));
 
 //output ones or tens 
-BCD_Decoder bcd(.x(F_ones_or_tens),seg(seg));
+BCD_Decoder bcd(.x(F_ones_or_tens),.seg(seg));
 
 
 //anode decoder

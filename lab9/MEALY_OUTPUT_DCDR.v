@@ -24,7 +24,7 @@
 
 module MEALY_OUTPUT_DCDR( input BTN, input [3:0] ST, output [14:0] led_mealy);
 
-wire [14:0] led_Stone;
+reg [14:0] led_Stone;
 
 
 mux_2t1_nb #(.n(15)) mealy_OUPUT_TYPE(.SEL(BTN),.D0(~led_Stone),.D1(led_Stone),.D_OUT(led_mealy));
