@@ -51,14 +51,22 @@ module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore);
 	       begin
 		if(UP==1)
 		begin
+			if(ODD != EVEN)
+			begin
 			if(EVEN == 1) NS = st_2; // jumps to even sequence
-			else NS = st_1; //doesnt matter if odd because next state is odd
+			else NS = st_1;
+			end
+			else NS = st_1;
 		end
 		
 		else //if up is zero 
 		begin
+			if(ODD != EVEN)
+			begin
 			if(EVEN == 1) NS = st_6; // jumps to even sequence
 			else NS = st_7; //doesnt matter if odd because next state is odd
+			end
+			else NS = st_7;
 		end
 	     end
 	     else NS = PS; //if hold is asserted
@@ -70,15 +78,23 @@ module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore);
              if(HOLD != 1 )
 	       begin
 		if(UP==1)
-		begin
+		begin	
+			if(ODD != EVEN)
+			begin
 			if(ODD == 1) NS = st_3; // jumps to even sequence
 			else NS = st_2; //doesnt matter if odd because next state is odd
+			end
+			else NS = st_2;
 		end
 		
 		else //if up is zero 
-		begin
+		begin	
+			if(ODD != EVEN)
+			begin
 			if(ODD == 1) NS = st_7; // jumps to even sequence
 			else NS = st_0; //doesnt matter if odd because next state is odd
+			end
+			else NS = st_0;
 		end
 	     end
 	     else NS = PS; //if hold is asserted
@@ -91,14 +107,22 @@ module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore);
 	       begin
 		if(UP==1)
 		begin
-			if(EVEN == 1) NS = st_4; // jumps to even sequence
+			if(ODD != EVEN)
+			begin
+			if(EVEN == 1) NS = st_4; // jumps to even sequenc
 			else NS = st_3; //doesnt matter if odd because next state is odd
+			end
+			else NS=st_3;
 		end
 		
 		else //if up is zero 
 		begin
+			if(ODD != EVEN)
+			begin
 			if(EVEN == 1) NS = st_0; // jumps to even sequence
 			else NS = st_1; //doesnt matter if odd because next state is odd
+			end
+			else NS = st_1;
 		end
 	     end
 	     else NS = PS; //if hold is asserted
@@ -111,14 +135,22 @@ module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore);
 	       begin
 		if(UP==1)
 		begin
+                        if(ODD != EVEN)
+			begin
 			if(ODD == 1) NS = st_5; // jumps to odd sequence
 			else NS = st_4; //doesnt matter if even because next state is odd
+			end
+			else NS = st_4;
 		end
 		
 		else //if up is zero 
 		begin
+			if(ODD != EVEN)
+			begin
 			if(ODD == 1) NS = st_1; // jumps to odd sequence
 			else NS = st_2; //doesnt matter if even because next state is odd
+			end
+			else NS = st_2;
 		end
 	     end
 	     else NS = PS; //if hold is asserted
@@ -131,14 +163,22 @@ module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore);
 	       begin
 		if(UP==1)
 		begin
+			if(ODD != EVEN)
+			begin
 			if(EVEN == 1) NS = st_6; // jumps to even sequence
 			else NS = st_5; //doesnt matter if odd because next state is odd
+			end
+			else NS = st_5;
 		end
 		
 		else //if up is zero 
 		begin
+			if(ODD !=EVEN)
+			begin
 			if(EVEN == 1) NS = st_2; // jumps to even sequence
 			else NS = st_3; //doesnt matter if odd because next state is odd
+			end
+			else NS = st_3;
 		end
 	     end
 	     else NS = PS; //if hold is asserted
@@ -151,14 +191,22 @@ module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore);
 	       begin
 		if(UP==1)
 		begin
+			if(ODD != EVEN)
+			begin
 			if(ODD == 1) NS = st_7; // jumps to odd sequence
 			else NS = st_6; //doesnt matter if even because next state is odd
+			end
+			else NS = st_6;
 		end
 		
 		else //if up is zero 
 		begin
+			if(ODD != EVEN)
+			begin
 			if(ODD == 1) NS = st_3; // jumps to odd sequence
 			else NS = st_4; //doesnt matter if even because next state is odd
+			end
+			else NS = st_4;
 		end
 	     end
 	     else NS = PS; //if hold is asserted
@@ -171,14 +219,22 @@ module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore);
 	       begin
 		if(UP==1)
 		begin
+			if(ODD != EVEN)
+			begin
 			if(EVEN == 1) NS = st_0; // jumps to even sequence
 			else NS = st_7; //doesnt matter if odd because next state is odd
+			end
+			else NS = st_7;
 		end
 		
 		else //if up is zero 
 		begin
+			if(ODD != EVEN)
+			begin
 			if(EVEN == 1) NS = st_4; // jumps to even sequence
 			else NS = st_5; //doesnt matter if odd because next state is odd
+			end
+			else NS = st_5;
 		end
 	     end
 	     else NS = PS; //if hold is asserted
@@ -191,14 +247,22 @@ module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore);
 	       begin
 		if(UP==1)
 		begin
+			if(ODD != EVEN)
+			begin
 			if(ODD == 1) NS = st_1; // jumps to odd sequence
 			else NS = st_0; //doesnt matter if even because next state is odd
+			end
+			else NS = st_0;
 		end
 		
 		else //if up is zero 
 		begin
+			if(ODD != EVEN)
+			begin
 			if(ODD == 1) NS = st_5; // jumps to odd sequence
 			else NS = st_6; //doesnt matter if even because next state is odd
+			end
+			else NS = st_6;
 		end
 	     end
 	     else NS = PS; //if hold is asserted

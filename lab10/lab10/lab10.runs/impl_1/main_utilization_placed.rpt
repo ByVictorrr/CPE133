@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sun Nov 11 00:23:05 2018
+| Date         : Sun Nov 11 01:11:39 2018
 | Host         : TheShell running 64-bit unknown
 | Command      : report_utilization -file main_utilization_placed.rpt -pb main_utilization_placed.pb
 | Design       : main
@@ -37,7 +37,7 @@ Table of Contents
 | Slice Registers         |   45 |     0 |     41600 |  0.11 |
 |   Register as Flip Flop |   45 |     0 |     41600 |  0.11 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |    1 |     0 |     16300 | <0.01 |
+| F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 
@@ -68,8 +68,8 @@ Table of Contents
 |                 Site Type                 | Used | Fixed | Available | Util% |
 +-------------------------------------------+------+-------+-----------+-------+
 | Slice                                     |   16 |     0 |      8150 |  0.20 |
-|   SLICEL                                  |    4 |     0 |           |       |
-|   SLICEM                                  |   12 |     0 |           |       |
+|   SLICEL                                  |   11 |     0 |           |       |
+|   SLICEM                                  |    5 |     0 |           |       |
 | LUT as Logic                              |   17 |     0 |     20800 |  0.08 |
 |   using O5 output only                    |    0 |       |           |       |
 |   using O6 output only                    |   14 |       |           |       |
@@ -183,10 +183,10 @@ Table of Contents
 | IBUF     |    6 |                  IO |
 | LUT2     |    5 |                 LUT |
 | LUT1     |    4 |                 LUT |
-| LUT6     |    3 |                 LUT |
 | FDCE     |    3 |        Flop & Latch |
+| LUT6     |    2 |                 LUT |
 | LUT4     |    2 |                 LUT |
-| MUXF7    |    1 |               MuxFx |
+| LUT3     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
