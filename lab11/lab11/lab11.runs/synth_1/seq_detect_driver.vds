@@ -1,0 +1,397 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Nov 11 21:53:32 2018
+# Process ID: 4198
+# Current directory: /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1
+# Command line: vivado -log seq_detect_driver.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seq_detect_driver.tcl
+# Log file: /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1/seq_detect_driver.vds
+# Journal file: /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source seq_detect_driver.tcl -notrace
+Command: synth_design -top seq_detect_driver -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4203 
+WARNING: [Synth 8-2490] overwriting previous definition of module FSM_SEQ_DETECTOR [/home/victor/CPE133/lab11/./FSM_SEQ_DETECTOR.v:26]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1242.480 ; gain = 89.191 ; free physical = 10327 ; free virtual = 16574
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'seq_detect_driver' [/home/victor/CPE133/lab11/seq_detect_driver.v:38]
+INFO: [Synth 8-6157] synthesizing module 'FSM_SEQ_DETECTOR' [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:26]
+	Parameter st_a bound to: 3'b000 
+	Parameter st_b bound to: 3'b001 
+	Parameter st_c bound to: 3'b010 
+	Parameter st_d bound to: 3'b011 
+	Parameter st_e bound to: 3'b100 
+	Parameter st_f bound to: 3'b101 
+	Parameter st_g bound to: 3'b110 
+INFO: [Synth 8-6155] done synthesizing module 'FSM_SEQ_DETECTOR' (1#1) [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:26]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab11/seq_detect_driver.v:71]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+	Parameter n bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit' (2#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+INFO: [Synth 8-6157] synthesizing module 'mux_8t1_nb' [/home/victor/CPE133/Modules/mux_8t1_nb.v:38]
+	Parameter n bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/Modules/mux_8t1_nb.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'mux_8t1_nb' (3#1) [/home/victor/CPE133/Modules/mux_8t1_nb.v:38]
+INFO: [Synth 8-6157] synthesizing module 'cntr_udclr_nb' [/home/victor/CPE133/Modules/cntr_udr_nb.v:32]
+	Parameter n bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cntr_udclr_nb' (4#1) [/home/victor/CPE133/Modules/cntr_udr_nb.v:32]
+INFO: [Synth 8-6157] synthesizing module 'cntr_udclr_nb__parameterized0' [/home/victor/CPE133/Modules/cntr_udr_nb.v:32]
+	Parameter n bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cntr_udclr_nb__parameterized0' (4#1) [/home/victor/CPE133/Modules/cntr_udr_nb.v:32]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit__parameterized0' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+	Parameter n bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit__parameterized0' (4#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+INFO: [Synth 8-6157] synthesizing module 'stand_dcdr_2t4_1cold' [/home/victor/CPE133/Modules/stand_dcdr_2t4_1cold.v:30]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/Modules/stand_dcdr_2t4_1cold.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'stand_dcdr_2t4_1cold' (5#1) [/home/victor/CPE133/Modules/stand_dcdr_2t4_1cold.v:30]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab11/seq_detect_driver.v:141]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab11/seq_detect_driver.v:153]
+INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
+	Parameter n bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (6#1) [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'seq_detect_driver' (7#1) [/home/victor/CPE133/lab11/seq_detect_driver.v:38]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.605 ; gain = 117.316 ; free physical = 10345 ; free virtual = 16592
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.605 ; gain = 117.316 ; free physical = 10346 ; free virtual = 16593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.605 ; gain = 117.316 ; free physical = 10346 ; free virtual = 16593
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/victor/CPE133/lab11/seg_detect_exp_v1_00.xdc]
+Finished Parsing XDC File [/home/victor/CPE133/lab11/seg_detect_exp_v1_00.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/victor/CPE133/lab11/seg_detect_exp_v1_00.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/seq_detect_driver_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/seq_detect_driver_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1589.957 ; gain = 0.000 ; free physical = 10119 ; free virtual = 16343
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10193 ; free virtual = 16417
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10193 ; free virtual = 16417
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10195 ; free virtual = 16419
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'FSM_SEQ_DETECTOR'
+INFO: [Synth 8-5544] ROM "Z" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_NS_reg' [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NS_reg' [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:52]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    st_a |                          0000001 |                              000
+                    st_b |                          0000010 |                              001
+                    st_c |                          0000100 |                              010
+                    st_d |                          0001000 |                              011
+                    st_e |                          0010000 |                              100
+                    st_f |                          0100000 |                              101
+                    st_g |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'one-hot' in module 'FSM_SEQ_DETECTOR'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NS_reg' [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'rco_reg' [/home/victor/CPE133/Modules/cntr_udr_nb.v:58]
+WARNING: [Synth 8-327] inferring latch for variable 'rco_reg' [/home/victor/CPE133/Modules/cntr_udr_nb.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10185 ; free virtual = 16410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	   7 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 12    
+	   4 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module seq_detect_driver 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+Module FSM_SEQ_DETECTOR 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 12    
+	   7 Input      3 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module cntr_udclr_nb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module cntr_udclr_nb__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module stand_dcdr_2t4_1cold 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module mux_2t1_nb 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design seq_detect_driver has port segs[3] driven by constant 0
+WARNING: [Synth 8-3917] design seq_detect_driver has port segs[0] driven by constant 1
+WARNING: [Synth 8-3332] Sequential element (my_led_clk/rco_reg) is unused and will be removed from module seq_detect_driver.
+WARNING: [Synth 8-3332] Sequential element (my_disp_multiplex_cntr/rco_reg) is unused and will be removed from module seq_detect_driver.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10174 ; free virtual = 16400
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10052 ; free virtual = 16279
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10052 ; free virtual = 16278
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10051 ; free virtual = 16277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10051 ; free virtual = 16278
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10051 ; free virtual = 16278
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10051 ; free virtual = 16278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10051 ; free virtual = 16278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10051 ; free virtual = 16278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10051 ; free virtual = 16278
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    11|
+|3     |LUT1   |     4|
+|4     |LUT2   |     7|
+|5     |LUT3   |    14|
+|6     |LUT4   |     4|
+|7     |LUT5   |     3|
+|8     |LUT6   |     5|
+|9     |FDCE   |     3|
+|10    |FDRE   |    49|
+|11    |LD     |     7|
+|12    |IBUF   |    11|
+|13    |OBUF   |    20|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------+---------------------------------+------+
+|      |Instance                 |Module                           |Cells |
++------+-------------------------+---------------------------------+------+
+|1     |top                      |                                 |   139|
+|2     |  MY_DIV                 |clk_divider_nbit                 |    34|
+|3     |  mux_display_clk        |clk_divider_nbit__parameterized0 |    19|
+|4     |  my_disp_multiplex_cntr |cntr_udclr_nb__parameterized0    |    13|
+|5     |  my_fsm                 |FSM_SEQ_DETECTOR                 |    18|
+|6     |  my_led_clk             |cntr_udclr_nb                    |    23|
++------+-------------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.957 ; gain = 436.668 ; free physical = 10051 ; free virtual = 16278
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1589.957 ; gain = 117.316 ; free physical = 10106 ; free virtual = 16332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1589.965 ; gain = 436.668 ; free physical = 10106 ; free virtual = 16332
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  LD => LDCE: 7 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1589.965 ; gain = 436.859 ; free physical = 10106 ; free virtual = 16332
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/victor/CPE133/lab11/lab11/lab11.runs/synth_1/seq_detect_driver.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file seq_detect_driver_utilization_synth.rpt -pb seq_detect_driver_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1613.969 ; gain = 0.000 ; free physical = 10106 ; free virtual = 16332
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 11 21:54:07 2018...

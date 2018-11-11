@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Nov 11 21:53:32 2018
+# Process ID: 4198
+# Current directory: /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1
+# Command line: vivado -log seq_detect_driver.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seq_detect_driver.tcl
+# Log file: /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1/seq_detect_driver.vds
+# Journal file: /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source seq_detect_driver.tcl -notrace

@@ -115,8 +115,9 @@ set_property PACKAGE_PIN W4 [get_ports {an[0]}]
 ##Buttons
 set_property PACKAGE_PIN U18 [get_ports btn]						
 	set_property IOSTANDARD LVCMOS33 [get_ports btn]
-#set_property PACKAGE_PIN T18 [get_ports {BUTTONS[0]}]						
-#	set_property IOSTANDARD LVCMOS33 [get_ports {BUTTONS[0]}]
+
+set_property PACKAGE_PIN T18 [get_ports reset]						
+	set_property IOSTANDARD LVCMOS33 [get_ports reset]
 #set_property PACKAGE_PIN W19 [get_ports {BUTTONS[1]}]						
 #	set_property IOSTANDARD LVCMOS33 [get_ports {BUTTONS[1]}]
 #set_property PACKAGE_PIN T17 [get_ports {BUTTONS[2]}]						
@@ -209,7 +210,7 @@ set_property PACKAGE_PIN U18 [get_ports btn]
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[7]}]
 
 
-##Pmod Header JXADC
+#Pmod Header JXADC
 ##Sch name = XA1_P
 #set_property PACKAGE_PIN J3 [get_ports {JXADC[0]}]				
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JXADC[0]}]
