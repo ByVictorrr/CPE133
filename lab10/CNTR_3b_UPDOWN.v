@@ -20,14 +20,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore); 
-    input  RST, UP, EVEN, OOD, CLK; 
+module CNTR_3b_UPDOWN(RST, HOLD, UP,EVEN,ODD, CLK, mealy, moore); 
+    input  RST, UP, EVEN, ODD, CLK, HOLD; 
     output reg [2:0] mealy, moore;
      
     //- next state & present state variables
     reg [2:0] NS, PS; 
     //- bit-level state representations
-    parameter [2:0] st_0= 2'b00, st_1 = st_0 + 1, st_2 = st_1 + 1,  st_3 = st_2 + 1,  st_4 = st_3 + 1, st_5 = st_4 + 1, st_6 = st_5 + 1, st_7 = st_6 +1;
+    parameter [2:0] st_0= 2'b000, st_1 = 3'b001, st_2 = 3'b010,  st_3 = 3'b011,  st_4 = 3'b100, st_5 = 3'b101, st_6 = 3'b110, st_7 = 3'b111;
     
 
     //- model the state registers
@@ -41,7 +41,7 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
     //- model the next-state and output decoders
     always @ (*)
     begin
-       mealy = 0; moore = 0; // assign all outputs
+       mealy = 3'b000; moore = 3'b000; // assign all outputs
        case(PS)
           st_0:
           begin
@@ -62,6 +62,7 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
 		end
 	     end
 	     else NS = PS; //if hold is asserted
+          end
           st_1:
  	  begin
              moore = 3'b001;
@@ -81,7 +82,7 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
 		end
 	     end
 	     else NS = PS; //if hold is asserted
-	     
+	     end
           st_2:
           begin
              moore = 3'b010;
@@ -101,6 +102,7 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
 		end
 	     end
 	     else NS = PS; //if hold is asserted
+	     end
           st_3:
  	  begin
              moore = 3'b011;
@@ -120,7 +122,7 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
 		end
 	     end
 	     else NS = PS; //if hold is asserted
-	     
+	     end
           st_4:
           begin
              moore = 3'b100;
@@ -140,9 +142,10 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
 		end
 	     end
 	     else NS = PS; //if hold is asserted
+          end
           st_5:
  	  begin
-             moore = 3'101;
+             moore = 3'b101;
 	     //if not held then 8 + 1 possible transistions
              if(HOLD != 1 )
 	       begin
@@ -159,7 +162,7 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
 		end
 	     end
 	     else NS = PS; //if hold is asserted
-	     
+	     end
           st_6:
           begin
              moore = 3'b110;
@@ -179,6 +182,7 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
 		end
 	     end
 	     else NS = PS; //if hold is asserted
+          end
           st_7:
  	  begin
              moore = 3'b111;
@@ -198,9 +202,10 @@ module CNTR_3b_UPDOWN(RST, UP,EVEN,ODD, CLK, mealy, moore);
 		end
 	     end
 	     else NS = PS; //if hold is asserted
-
+	   end   
           default: NS = st_0; 
+          
           endcase
-      end              
+       end        
 endmodule
 
