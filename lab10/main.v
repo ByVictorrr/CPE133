@@ -1,3 +1,26 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company:  VANE
+// Engineer:  Victor Delaplaine, Esteban Rbuio
+// 
+// Create Date: 07/07/2018 08:05:03 AM
+// Design Name: 
+// Module Name: main
+// Project Name: Exp. 10
+// Target Devices: Basys3
+// Tool Versions: 
+// Description: The main module just displays our CNTR_3b_UPDOWN module on the
+// basys board.
+// Dependencies: clk_divider_nbit.v, univ_sseg.v 
+// 
+// Revision:
+// Revision 1.00 - File Created (07-07-2018) 
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 `timescale 1ns/1ps
 

@@ -1,15 +1,19 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:  Ratner Surf Designs
-// Engineer:  James Ratner
+// Company:  VANE
+// Engineer:  Victor Delaplaine, Esteban Rbuio
 // 
 // Create Date: 07/07/2018 08:05:03 AM
 // Design Name: 
-// Module Name: fsm_template
-// Project Name: 
-// Target Devices: 
+// Module Name: CNTR_3b_UPDOWN
+// Project Name:  Exp 10
+// Target Devices: Basys3
 // Tool Versions: 
-// Description: Generic FSM model with both Mealy & Moore outputs. 
+// Description: A 3bit counter that that has a RST asynchrounous,
+// HOLD,UP,EVEN,ODD synchrounous inputs and a mealy and moore ouput. These
+// inputs controls the count sequence of the counter; if Up is asserted it
+// counts in a upward sequence (ODD or even). Otherwise counts in a downard
+// seqence determined by (ODD or even).   
 //    Note: data widths of state variables are not specified 
 //
 // Dependencies: 
