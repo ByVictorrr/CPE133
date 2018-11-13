@@ -61,12 +61,99 @@ proc step_failed { step } {
 }
 
 
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir /home/victor/CPE133/lab11/lab11/lab11.cache/wt [current_project]
+  set_property parent.project_path /home/victor/CPE133/lab11/lab11/lab11.xpr [current_project]
+  set_property ip_output_repo /home/victor/CPE133/lab11/lab11/lab11.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1/seq_detect_driver.dcp
+  read_xdc /home/victor/CPE133/lab11/seg_detect_exp_v1_00.xdc
+  link_design -top seq_detect_driver -part xc7a35tcpg236-1
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force seq_detect_driver_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file seq_detect_driver_drc_opted.rpt -pb seq_detect_driver_drc_opted.pb -rpx seq_detect_driver_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
+  place_design 
+  write_checkpoint -force seq_detect_driver_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file seq_detect_driver_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file seq_detect_driver_utilization_placed.rpt -pb seq_detect_driver_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file seq_detect_driver_control_sets_placed.rpt"
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design 
+  write_checkpoint -force seq_detect_driver_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file seq_detect_driver_drc_routed.rpt -pb seq_detect_driver_drc_routed.pb -rpx seq_detect_driver_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file seq_detect_driver_methodology_drc_routed.rpt -pb seq_detect_driver_methodology_drc_routed.pb -rpx seq_detect_driver_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file seq_detect_driver_power_routed.rpt -pb seq_detect_driver_power_summary_routed.pb -rpx seq_detect_driver_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file seq_detect_driver_route_status.rpt -pb seq_detect_driver_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file seq_detect_driver_timing_summary_routed.rpt -pb seq_detect_driver_timing_summary_routed.pb -rpx seq_detect_driver_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file seq_detect_driver_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file seq_detect_driver_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file seq_detect_driver_bus_skew_routed.rpt -pb seq_detect_driver_bus_skew_routed.pb -rpx seq_detect_driver_bus_skew_routed.rpx"
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force seq_detect_driver_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  open_checkpoint seq_detect_driver_routed.dcp
-  set_property webtalk.parent_dir /home/victor/CPE133/lab11/lab11/lab11.cache/wt [current_project]
   catch { write_mem_info -force seq_detect_driver.mmi }
   write_bitstream -force seq_detect_driver.bit 
   catch {write_debug_probes -quiet -force seq_detect_driver}

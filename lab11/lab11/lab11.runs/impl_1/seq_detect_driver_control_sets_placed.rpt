@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Sun Nov 11 21:54:54 2018
+| Date         : Mon Nov 12 19:50:52 2018
 | Host         : TheShell running 64-bit unknown
 | Command      : report_control_sets -verbose -file seq_detect_driver_control_sets_placed.rpt
 | Design       : seq_detect_driver
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     5 |
-| Unused register locations in slices containing registers |    10 |
+| Number of unique control sets                            |     4 |
+| Unused register locations in slices containing registers |     8 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,8 +35,7 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      4 |            1 |
-|      6 |            1 |
-|     14 |            2 |
+|      6 |            2 |
 |    16+ |            1 |
 +--------+--------------+
 
@@ -47,8 +46,8 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             112 |           15 |
-| No           | No                    | Yes                    |               6 |            2 |
+| No           | No                    | No                     |              90 |           13 |
+| No           | No                    | Yes                    |               6 |            1 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -63,9 +62,8 @@ Table of Contents
 |     Clock Signal    | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +---------------------+---------------+------------------+------------------+----------------+
 |  mux_display_clk/O7 |               |                  |                1 |              4 |
-|  MY_DIV/CLK         |               | reset_IBUF       |                2 |              6 |
-|  MY_DIV/CLK         |               |                  |                1 |             14 |
-|  my_fsm/NS          |               |                  |                2 |             14 |
+|  MY_DIV/CLK         |               |                  |                1 |              6 |
+|  MY_DIV/CLK         |               | reset_IBUF       |                1 |              6 |
 |  clk_IBUF_BUFG      |               |                  |               11 |             80 |
 +---------------------+---------------+------------------+------------------+----------------+
 

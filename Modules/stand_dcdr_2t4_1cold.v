@@ -35,7 +35,7 @@
     //- standard decoder for display multiplex 
     always @ (SEL)
     begin
-       case (m_cnt)
+       case (SEL)
           0: D_OUT = 4'b1110;  
           1: D_OUT = 4'b1101; 
           2: D_OUT = 4'b1011;

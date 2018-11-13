@@ -31,7 +31,7 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
     reg [2:0] NS, PS; 
     //- bit-level state representations
 
-    parameter [2:0] st_a= 3'b000, st_b = 3'b001, st_c = 3'b010,  st_d = 3'b011,  st_e = 3'b100, st_f = 3'b101, st_g = 3'b110;
+    parameter [2:0] st_a= 3'b000, st_b = 3'b001, st_c = 3'b010,  st_d = 3'b011,  st_e = 3'b100, st_f = 3'b101, st_g = 3'b110, st_h = 3'b111;
     
     //- model the state registers
     always @ ( posedge CLK)
@@ -59,7 +59,7 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
 	     if(BTN == 1 )
 	       begin
 		if(X==1) NS = st_c;
-		else NS=st_b; //self-loop
+		else NS=st_a; //self-loop
 		end
 	      else //if button =0
 		begin
@@ -73,12 +73,12 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
 	     if(BTN == 1)
 	       begin
 		if(X==1) NS = st_d;
-		else NS=st_c;
+		else NS=st_a;
 		end
 	      else
 		begin
 		if(X==1) NS = st_d;
-		else NS = st_c;
+		else NS = st_a;
 		end
 	     end
           st_d:
@@ -87,12 +87,12 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
 	     if(BTN == 1 )
 	       begin
 		if(X==1) NS = st_e;
-		else NS=st_d;
+		else NS=st_a;
 		end
 	      else //if button =0
 		begin
-		if(X!=1) NS = st_b;
-		else NS = st_d; //default
+		if(X!=1) NS = st_h;
+		else NS = st_a; //default
 		end
 	     end
 
@@ -102,9 +102,9 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
 	     if(BTN == 1)
 	       begin
 		if(X!=1) NS = st_f;
-		else NS=st_e;
+		else NS=st_a;
 		end
-	      else NS = st_e;
+	      else NS = st_a;
 	     end
           st_f:
           begin
@@ -112,21 +112,31 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
 	     if(BTN == 1)
 	       begin
 		if(X==1) NS = st_g;
-		else NS=st_f;
+		else NS=st_a;
 		end
 	      else //if button =0
 		begin
 		if(X==1) NS = st_g;
-		else NS = st_f; //default
+		else NS = st_a; //default
 		end
 	     end
           st_g:
-		  //unsure
           begin
              Z=1;
 		if(X==1) NS = st_a;
 		else NS=st_f;
 	    end
+    	st_h:
+	begin
+              Z=0;
+	     if(BTN == 1) NS = st_a;
+	      else //if button =0
+		begin
+		if(X!=1) NS = st_f;
+		else NS = st_a; //default
+		end
+	     end
+
 		default: NS = st_a; 
           
           endcase
