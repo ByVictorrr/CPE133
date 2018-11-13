@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Nov 12 19:49:31 2018
-# Process ID: 12166
+# Start of session at: Tue Nov 13 08:06:37 2018
+# Process ID: 12363
 # Current directory: /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1
 # Command line: vivado -log seq_detect_driver.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seq_detect_driver.tcl
 # Log file: /home/victor/CPE133/lab11/lab11/lab11.runs/synth_1/seq_detect_driver.vds
@@ -15,21 +15,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12198 
+INFO: Helper process launched with PID 12404 
 WARNING: [Synth 8-2490] overwriting previous definition of module FSM_SEQ_DETECTOR [/home/victor/CPE133/lab11/./FSM_SEQ_DETECTOR.v:26]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1242.477 ; gain = 89.180 ; free physical = 8787 ; free virtual = 17458
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1242.480 ; gain = 89.180 ; free physical = 4590 ; free virtual = 14204
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'seq_detect_driver' [/home/victor/CPE133/lab11/seq_detect_driver.v:38]
 INFO: [Synth 8-6157] synthesizing module 'FSM_SEQ_DETECTOR' [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:26]
-	Parameter st_a bound to: 3'b000 
-	Parameter st_b bound to: 3'b001 
-	Parameter st_c bound to: 3'b010 
-	Parameter st_d bound to: 3'b011 
-	Parameter st_e bound to: 3'b100 
-	Parameter st_f bound to: 3'b101 
-	Parameter st_g bound to: 3'b110 
-	Parameter st_h bound to: 3'b111 
+	Parameter st_0 bound to: 3'b000 
+	Parameter st_1 bound to: 3'b001 
+	Parameter st_2 bound to: 3'b010 
+	Parameter st_3 bound to: 3'b011 
+	Parameter st_4 bound to: 3'b100 
+	Parameter st_5 bound to: 3'b101 
+	Parameter st_6 bound to: 3'b110 
+	Parameter st_7 bound to: 3'b111 
 INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:45]
 INFO: [Synth 8-6155] done synthesizing module 'FSM_SEQ_DETECTOR' (1#1) [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:26]
 INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab11/seq_detect_driver.v:71]
@@ -59,7 +59,7 @@ INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [/home/victor/CPE133/Modul
 INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (6#1) [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
 INFO: [Synth 8-6155] done synthesizing module 'seq_detect_driver' (7#1) [/home/victor/CPE133/lab11/seq_detect_driver.v:38]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.602 ; gain = 117.305 ; free physical = 8804 ; free virtual = 17476
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.605 ; gain = 117.305 ; free physical = 4607 ; free virtual = 14221
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -72,10 +72,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.602 ; gain = 117.305 ; free physical = 8804 ; free virtual = 17476
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.605 ; gain = 117.305 ; free physical = 4606 ; free virtual = 14221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.602 ; gain = 117.305 ; free physical = 8804 ; free virtual = 17476
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1270.605 ; gain = 117.305 ; free physical = 4606 ; free virtual = 14221
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -91,52 +91,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1594.477 ; gain = 0.000 ; free physical = 8487 ; free virtual = 17167
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1595.480 ; gain = 0.000 ; free physical = 4356 ; free virtual = 13971
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8626 ; free virtual = 17302
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4432 ; free virtual = 14047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8626 ; free virtual = 17302
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4432 ; free virtual = 14047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8628 ; free virtual = 17304
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4433 ; free virtual = 14048
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'FSM_SEQ_DETECTOR'
-INFO: [Synth 8-5544] ROM "Z" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_NS_reg' [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:52]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NS_reg' [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:52]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    st_a |                              000 |                              000
-                    st_b |                              001 |                              001
-                    st_c |                              010 |                              010
-                    st_d |                              011 |                              011
-                    st_e |                              100 |                              100
-                    st_h |                              101 |                              111
-                    st_f |                              110 |                              101
-                    st_g |                              111 |                              110
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'FSM_SEQ_DETECTOR'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_NS_reg' [/home/victor/CPE133/lab11/FSM_SEQ_DETECTOR.v:52]
 WARNING: [Synth 8-327] inferring latch for variable 'rco_reg' [/home/victor/CPE133/Modules/cntr_udr_nb.v:58]
 WARNING: [Synth 8-327] inferring latch for variable 'rco_reg' [/home/victor/CPE133/Modules/cntr_udr_nb.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8622 ; free virtual = 17295
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4424 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -152,16 +127,17 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	                3 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 +---Muxes : 
 	   3 Input      8 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 15    
-	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
 	   8 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -178,9 +154,13 @@ Detailed RTL Component Info :
 	   4 Input      8 Bit        Muxes := 2     
 Module FSM_SEQ_DETECTOR 
 Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
 +---Muxes : 
-	   8 Input      3 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 14    
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
 	   8 Input      1 Bit        Muxes := 1     
 Module cntr_udclr_nb 
 Detailed RTL Component Info : 
@@ -227,13 +207,10 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 WARNING: [Synth 8-3917] design seq_detect_driver has port segs[3] driven by constant 0
 WARNING: [Synth 8-3917] design seq_detect_driver has port segs[0] driven by constant 1
-WARNING: [Synth 8-3332] Sequential element (my_fsm/FSM_sequential_NS_reg[2]) is unused and will be removed from module seq_detect_driver.
-WARNING: [Synth 8-3332] Sequential element (my_fsm/FSM_sequential_NS_reg[1]) is unused and will be removed from module seq_detect_driver.
-WARNING: [Synth 8-3332] Sequential element (my_fsm/FSM_sequential_NS_reg[0]) is unused and will be removed from module seq_detect_driver.
 WARNING: [Synth 8-3332] Sequential element (my_led_clk/rco_reg) is unused and will be removed from module seq_detect_driver.
 WARNING: [Synth 8-3332] Sequential element (my_disp_multiplex_cntr/rco_reg) is unused and will be removed from module seq_detect_driver.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8610 ; free virtual = 17284
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4414 ; free virtual = 14030
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -245,13 +222,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8487 ; free virtual = 17160
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4302 ; free virtual = 13904
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8486 ; free virtual = 17159
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4301 ; free virtual = 13904
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -263,7 +240,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8485 ; free virtual = 17159
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4301 ; free virtual = 13904
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -287,7 +264,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8485 ; free virtual = 17159
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4273 ; free virtual = 13876
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -300,7 +277,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8485 ; free virtual = 17159
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4273 ; free virtual = 13876
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -312,25 +289,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8485 ; free virtual = 17159
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4273 ; free virtual = 13876
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8485 ; free virtual = 17159
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4273 ; free virtual = 13876
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8485 ; free virtual = 17159
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4273 ; free virtual = 13876
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8485 ; free virtual = 17159
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4273 ; free virtual = 13876
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -372,11 +349,11 @@ Report Instance Areas:
 |6     |  my_led_clk             |cntr_udclr_nb                    |    17|
 +------+-------------------------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1594.477 ; gain = 441.180 ; free physical = 8485 ; free virtual = 17159
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1595.480 ; gain = 442.180 ; free physical = 4273 ; free virtual = 13876
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1594.477 ; gain = 117.305 ; free physical = 8540 ; free virtual = 17214
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1594.484 ; gain = 441.180 ; free physical = 8540 ; free virtual = 17214
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1595.480 ; gain = 117.305 ; free physical = 4326 ; free virtual = 13929
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1595.488 ; gain = 442.180 ; free physical = 4326 ; free virtual = 13929
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 23 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -386,11 +363,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-46 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1594.484 ; gain = 441.383 ; free physical = 8540 ; free virtual = 17214
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 1595.488 ; gain = 442.383 ; free physical = 4327 ; free virtual = 13930
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/victor/CPE133/lab11/lab11/lab11.runs/synth_1/seq_detect_driver.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file seq_detect_driver_utilization_synth.rpt -pb seq_detect_driver_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1618.488 ; gain = 0.000 ; free physical = 8541 ; free virtual = 17215
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 12 19:50:06 2018...
+report_utilization: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1619.492 ; gain = 0.000 ; free physical = 4328 ; free virtual = 13930
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 13 08:07:13 2018...

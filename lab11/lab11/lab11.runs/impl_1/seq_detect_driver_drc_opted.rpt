@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Mon Nov 12 19:50:50 2018
+| Date         : Tue Nov 13 08:07:57 2018
 | Host         : TheShell running 64-bit unknown
 | Command      : report_drc -file seq_detect_driver_drc_opted.rpt -pb seq_detect_driver_drc_opted.pb -rpx seq_detect_driver_drc_opted.rpx
 | Design       : seq_detect_driver

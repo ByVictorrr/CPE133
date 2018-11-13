@@ -31,7 +31,7 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
     reg [2:0] NS, PS; 
     //- bit-level state representations
 
-    parameter [2:0] st_a= 3'b000, st_b = 3'b001, st_c = 3'b010,  st_d = 3'b011,  st_e = 3'b100, st_f = 3'b101, st_g = 3'b110, st_h = 3'b111;
+    parameter [2:0] st_0= 3'b000, st_1 = 3'b001, st_2 = 3'b010,  st_3 = 3'b011,  st_4 = 3'b100, st_5 = 3'b101, st_6 = 3'b110, st_7 = 3'b111;
     
     //- model the state registers
     always @ ( posedge CLK)
@@ -43,102 +43,81 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
     begin
        Z = 0; // assign all outputs
        case(PS)
-          st_a:
+          st_0:
           begin
              Z=0;
-	     //unconditional for btn
-	     if(BTN == 1 || BTN == 0)
-	       begin
-		if(X!=1) NS = st_b;
-		else NS=st_a;
-		end
+		if(X!=1) NS = st_1;
+		else NS=st_0;
 	     end
-          st_b:
+          st_1:
+          begin
+             Z=0;
+		if(X==1) NS = st_2;
+		else NS=st_0; //self-loop
+	     end
+          st_2:
+          begin
+             Z=0;
+		if(X==1) NS = st_3;
+		else NS=st_1;
+	     end
+          st_3:
           begin
              Z=0;
 	     if(BTN == 1 )
 	       begin
-		if(X==1) NS = st_c;
-		else NS=st_a; //self-loop
+		if(X==0) NS = st_4;
+		else NS=st_0; 
 		end
 	      else //if button =0
 		begin
-		if(X!=1) NS = st_f;
-		else NS = st_c; //default
-		end
-	     end
-          st_c:
-          begin
-             Z=0;
-	     if(BTN == 1)
-	       begin
-		if(X==1) NS = st_d;
-		else NS=st_a;
-		end
-	      else
-		begin
-		if(X==1) NS = st_d;
-		else NS = st_a;
-		end
-	     end
-          st_d:
-          begin
-             Z=0;
-	     if(BTN == 1 )
-	       begin
-		if(X==1) NS = st_e;
-		else NS=st_a;
-		end
-	      else //if button =0
-		begin
-		if(X!=1) NS = st_h;
-		else NS = st_a; //default
+		if(X==1) NS = st_5;
+		else NS = st_1; //default
 		end
 	     end
 
-	  st_e:
+	  st_4:
           begin
 	    Z=0;
 	     if(BTN == 1)
 	       begin
-		if(X!=1) NS = st_f;
-		else NS=st_a;
+		if(X==1) NS = st_2;
+		else NS=st_6;
 		end
-	      else NS = st_a;
+	      else
+	        begin 
+		if(X==1)NS = st_2;
+		else NS = st_1;
 	     end
-          st_f:
+     	end
+          st_5:
           begin
              Z=0;
 	     if(BTN == 1)
 	       begin
-		if(X==1) NS = st_g;
-		else NS=st_a;
+		if(X==1) NS = st_0;
+		else NS=st_1;
 		end
 	      else //if button =0
 		begin
-		if(X==1) NS = st_g;
-		else NS = st_a; //default
+		if(X==1) NS = st_0;
+		else NS = st_6; //default
 		end
 	     end
-          st_g:
+          st_6: //might need button condition 
           begin
-             Z=1;
-		if(X==1) NS = st_a;
-		else NS=st_f;
-	    end
-    	st_h:
-	begin
-              Z=0;
-	     if(BTN == 1) NS = st_a;
-	      else //if button =0
-		begin
-		if(X!=1) NS = st_f;
-		else NS = st_a; //default
-		end
+    	      Z=0;
+		if(X==1) NS = st_7; //reached the goal
+		else NS=st_1;
 	     end
 
-		default: NS = st_a; 
-          
+	st_7:
+	begin
+   	Z=1;
+	if(X==1) NS = st_0; //reached the goal
+	else NS=st_1;
+	end
+	default: NS = st_0; 
           endcase
        end        
 endmodule
