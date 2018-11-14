@@ -5,18 +5,16 @@
 // 
 // Create Date: 07/07/2018 08:05:03 AM
 // Design Name: 
-// Module Name: CNTR_3b_UPDOWN
-// Project Name:  Exp 10
+// Module Name: FSM_SEQ_DETECTOR
+// Project Name:  Exp 11
 // Target Devices: Basys3
 // Tool Versions: 
-// Description: A 3bit counter that that has a RST asynchrounous,
-// HOLD,UP,EVEN,ODD synchrounous inputs and a mealy and moore ouput. These
-// inputs controls the count sequence of the counter; if Up is asserted it
-// counts in a upward sequence (ODD or even). Otherwise counts in a downard
-// seqence determined by (ODD or even).   
-//    Note: data widths of state variables are not specified 
+// Description: A seqence detector built from a the fsm module that will
+// detect the sequence of bits {0,1,1,1,0,1} when the button is clicked and
+// {0,1,1,0,0,1} when the button isnt clicked. 
+//   
 //
-// Dependencies: 
+// Dependencies: n/a
 // 
 // Revision:
 // Revision 1.00 - File Created (07-07-2018) 
@@ -64,7 +62,7 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
           st_3:
           begin
              Z=0;
-	     if(BTN == 1 )
+	     if(BTN == 0 )
 	       begin
 		if(X==0) NS = st_4;
 		else NS=st_0; 
@@ -82,12 +80,12 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
 	     if(BTN == 1)
 	       begin
 		if(X==1) NS = st_2;
-		else NS=st_6;
+		else NS=st_1;
 		end
 	      else
 	        begin 
 		if(X==1)NS = st_2;
-		else NS = st_1;
+		else NS = st_6;
 	     end
      	end
           st_5:
@@ -96,12 +94,12 @@ module  FSM_SEQ_DETECTOR(X,BTN, CLK,Z);
 	     if(BTN == 1)
 	       begin
 		if(X==1) NS = st_0;
-		else NS=st_1;
+		else NS=st_6;
 		end
 	      else //if button =0
 		begin
 		if(X==1) NS = st_0;
-		else NS = st_6; //default
+		else NS = st_1; //default
 		end
 	     end
           st_6: //might need button condition 
