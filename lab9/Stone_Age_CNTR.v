@@ -7,14 +7,8 @@
 
 
 
-module Stone_Age_CNTR(  BTN,
-			CLK,
-			ST,
-			led_mealy,
+module Stone_Age_CNTR(BTN,CLK,ST,led_mealy );	
 		
-       	       );
-			
-			
  input  BTN, CLK;
  output  [15:0] led_mealy;
  wire CLK_REG;
