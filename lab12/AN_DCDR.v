@@ -27,7 +27,8 @@ output reg [3:0] an;
 
 wire 
 
-mux_2t1_nb(.SEL(CLK),.D0(a),.D1(),D_OUT());
+mux_2t1_nb #(.n(4)) lowerNums(.SEL(CLK),.D0(a),.D1(),D_OUT());
+mux_2t1_nb #(.n(4)) highrNums(.SEL(CLK),.D0(a),.D1(),D_OUT());
 
 	if(CLK == 1'b1) an = 4'b1101;
 	else an = 4'b1110;

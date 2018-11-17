@@ -20,23 +20,18 @@
 ////////////////////////////////////////////////////////////////////////////////////
 //
 
-`include "Multiplexed_Display.v"
-`include "./SORT_4b.v"
+`include "./FSM_4b_SORT.v"
+`include "./SLAVE_CIRCUIT.v"
 
-module main(input BTN,input CLK, output [7:0] seg, output [3:0] an, output led);
+//overall module
+module SORT_4b(input BTN, input CLR, input CLK, output led);
+
+//controller circuit
+FSM_4b_SORT fsm(.CLK(), .CLR(), .BTN(), .LT(), .led(), .SEL(), .LD()); 
 
 
-
-SORT_4b ckt(BTN(), .CLR(), .CLK(), .led());
-
-//faster clock than reg
-Multiplexed_Display Display(
-                      	    .CLK(CLK),
-                            .x(M), //mux output is sorted values
-                            .seg(seg),
-                            .an(an)
-
-);
+//slave circuit instantion
+SLAVE_CIRCUIT fsmControlled(.CLK(), .SEL(), .LD(), .LT()); 
 
 
 
