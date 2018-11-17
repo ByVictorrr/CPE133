@@ -26,7 +26,7 @@
 `include "../Modules/clk_divider_nbit.v"
 
 
-module SLAVE_CIRCUIT(input CLK, input [5:0]SEL, input [3:0] LD, output [2:0] LT); 
+module SLAVE_CIRCUIT(input CLK, input [15:0] SW, input [5:0]SEL, input [3:0] LD, output [2:0] LT); 
      	
 	parameter arr[3:0][3:0]; //[rows] [columns]
 	//array of registers

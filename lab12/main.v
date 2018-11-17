@@ -23,7 +23,7 @@
 `include "Multiplexed_Display.v"
 `include "./SORT_4b.v"
 
-module main(input BTN,input CLK, output [7:0] seg, output [3:0] an, output led);
+module main(input BTN,input CLK,input CLR,input [15:0]SW, output [7:0] seg, output [3:0] an, output led);
 
 
 
