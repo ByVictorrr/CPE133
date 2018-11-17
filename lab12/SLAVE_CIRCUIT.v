@@ -19,70 +19,21 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+`include "../Modules/mux_2t1_nb.v"
+`include "../Modules/mux_4t1_nb.v"
+`include "../Modules/reg_nb.v"
+`include "../Modules/comp_nb.v"
+`include "../Modules/clk_divider_nbit.v"
 
-module fsm_template(reset_n, x_in, clk, mealy, moore); 
-    input  reset_n, x_in, clk; 
-    output reg mealy, moore;
-     
-    //- next state & present state variables
-    reg [1:0] NS, PS; 
-    //- bit-level state representations
-    parameter [1:0] st_A=2'b00, st_B=2'b01, st_C=2'b11; 
-    
 
-    //- model the state registers
-    always @ (negedge reset_n, posedge clk)
-       if (reset_n == 0) 
-          PS <= st_A; 
-       else
-          PS <= NS; 
-    
-    
-    //- model the next-state and output decoders
-    always @ (x_in,PS)
-    begin
-       mealy = 0; moore = 0; // assign all outputs
-       case(PS)
-          st_A:
-          begin
-             moore = 1;        
-             if (x_in == 1)
-             begin
-                mealy = 0;   
-                NS = st_A; 
-             end  
-             else
-             begin
-                mealy = 1; 
-                NS = st_B; 
-             end  
-          end
-          
-          st_B:
-             begin
-                moore = 0;
-                mealy = 1;
-                NS = st_C;
-             end   
-             
-          st_C:
-             begin
-                 moore = 1; 
-                 if (x_in == 1)
-                 begin
-                    mealy = 1; 
-                    NS = st_B; 
-                 end  
-                 else
-                 begin
-                    mealy = 0; 
-                    NS = st_A; 
-                 end  
-             end
-             
-          default: NS = st_A; 
-            
-          endcase
-      end              
+module SLAVE_CIRCUIT(input CLK, input [5:0]SEL, input [3:0] LD, output [2:0] LT); 
+     	
+	parameter arr[3:0][3:0]; //[rows] [columns]
+	//array of registers
+  	reg_nb #(.n(4)) REG[3:0](.data_in(), .clk(), .clr(), .ld(), .data_out());
+      	mux_2t1_nb #(.n(4)) M[1:0]();
+	mux_4t1_nb #(.n(4)) M[1:0]();
+	comp_nb #(.n(4))();
+
 endmodule
 
