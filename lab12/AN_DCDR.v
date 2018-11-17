@@ -18,18 +18,19 @@
 //// 
 ////////////////////////////////////////////////////////////////////////////////////
 //
+`include "../Modules/mux_2t1_nb.v"
+
 module AN_DCDR(CLK,an);
 
 input CLK;
 output reg [3:0] an;
 
-always @(*)
+wire 
 
-begin
+mux_2t1_nb(.SEL(CLK),.D0(a),.D1(),D_OUT());
 
 	if(CLK == 1'b1) an = 4'b1101;
 	else an = 4'b1110;
 
-end
 
 endmodule

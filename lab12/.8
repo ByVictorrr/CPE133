@@ -1,0 +1,71 @@
+`timescale 1ns / 1ps
+
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: Victor Delaplaine, Esteben Rubios
+// 
+// Create Date: 10/07/2018 10:23:19 PM
+// Design Name: VANE
+// Module Name: BCD_Decoder
+// Project Name: 7 - Segment BCD decoder
+// Target Devices: 
+// Tool Versions: 
+// Description: A project in which we learned to convert binary inputs into a display of decimal
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module BCH_Decoder(
+    input [3:0] =
+    output reg [7:0] seg);
+    
+
+    always @(=
+    
+    begin
+    //cases for x
+        case(=
+	4'b0000 :      	//He=decimal 0
+	== ~ 8'b11111100;
+	4'b0001 :    		//He=decimal 1
+	== ~ 8'b01100000;
+	4'b0010 :  		// He=decimal 2
+	== ~ 8'b11011010; 
+	4'b0011 : 		// He=decimal 3
+	== ~  8'b11110010;
+	4'b0100 :		// He=decimal 4
+	== ~ 8'b01100110;
+	4'b0101 :		// He=decimal 5
+	== ~ 8'b10110110;  
+	4'b0110 :		// He=decimal 6
+	== ~ 8'b10111110;
+	4'b0111 :		// He=decimal 7
+	== ~ 8'b11100000;
+	4'b1000 :     		 //He=decimal 8
+	== ~8'b11111110;
+	4'b1001 :    		//He=decimal 9
+	=8'b11110110;
+	4'b1010 :  		// He=decimal A
+	=8'b11101110; 
+	4'b1011 : 		// He=decimal B
+	=8'b00111110;
+	4'b1100 :		// He=decimal C
+	=8'b10011100;
+	4'b1101 :		// He=decimal D
+	=8'b01111010;
+	4'b1110 :		// He=decimal E
+	=8'b10011110;
+	4'b1111 :		// He=decimal F
+	== ~ 7'b10001110;
+
+	default: =7'b0000000;
+	endcase
+end
+
+endmodule
