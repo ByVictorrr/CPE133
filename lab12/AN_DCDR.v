@@ -18,20 +18,10 @@
 //// 
 ////////////////////////////////////////////////////////////////////////////////////
 //
-`include "../Modules/mux_2t1_nb.v"
+`include "../Modules/mux_4t1_nb.v"
 
-module AN_DCDR(CLK,an);
+module AN_DCDR(input CLK_S, input CLK_F ,output reg [3:0] an);
 
-input CLK;
-output reg [3:0] an;
-
-wire 
-
-mux_2t1_nb #(.n(4)) lowerNums(.SEL(CLK),.D0(a),.D1(),D_OUT());
-mux_2t1_nb #(.n(4)) highrNums(.SEL(CLK),.D0(a),.D1(),D_OUT());
-
-	if(CLK == 1'b1) an = 4'b1101;
-	else an = 4'b1110;
-
+mux_4t1_nb #(.n(4)) anDCDR(.SEL({CLK_S, CLK_F}),.D0(4'b1110),.D1(4'b1101),.D2(4'b1011),.D3(4'b0111),.D_OUT(an));
 
 endmodule
