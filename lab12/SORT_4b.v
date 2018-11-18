@@ -24,20 +24,20 @@
 `include "./SLAVE_CIRCUIT.v"
 `include "../Modules/clk_divider_nbit.v"
 
-module SORT_4b(input BTN, input CLK, output led);
+module SORT_4b(input BTN, input [15:0] SW,  input CLK, output led, output [3:0] arr_0, output [3:0] arr_1, output [3:0] arr_2, output [3:0] arr_3); 
 
-wire CLK_SLOWER;
 
+wire CLK_SLOWER, CLR;
 wire [2:0] LT;
 wire [3:0] LD;
 wire [5:0] SEL;
 
 clk_divider_nbit #(.n(25)) slowerCLK(.clockin(CLK),.clockout(CLK_SLOWER));
 //controller circuit
-FSM_4b_SORT fsm(.CLK(CLK_SLOWER), .BTN(BTN), .LT(LT), .led(led), .SEL(SEL), .LD(LD)); 
+FSM_4b_SORT fsm(.CLK(CLK_SLOWER), .BTN(BTN), .LT(LT), .led(led), .SEL(SEL), .LD(LD), .CLR(CLR)); 
 
 //slave circuit instantion
-SLAVE_CIRCUIT fsmControlled(.CLK(CLK_SLOWER), .SEL(SEL), .LD(LD), .LT(LT)); 
+SLAVE_CIRCUIT fsmControlled(.CLK(CLK_SLOWER),.CLR(CLR),.SW(SW),.SEL(SEL), .LD(LD), .LT(LT),.arr_0(arr_0),.arr_1(arr_1),.arr_2(arr_2),.arr_3(arr_3)); 
 
 
 endmodule

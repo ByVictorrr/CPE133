@@ -48,7 +48,6 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
 
           st_0:
 	  begin
-		CLR = 0;
 	        led = 0; // sort is starting
 	  	SEL = 6'b000000; //selecting x,y,z,w which are all the inital values
 		LD  = 4'b1111; //loads all of the inital values on the next state
