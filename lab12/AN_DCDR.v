@@ -20,7 +20,7 @@
 //
 `include "../Modules/mux_4t1_nb.v"
 
-module AN_DCDR(input CLK_S, input CLK_F ,output reg [3:0] an);
+module AN_DCDR(input CLK_S, input CLK_F ,output [3:0] an);
 
 mux_4t1_nb #(.n(4)) anDCDR(.SEL({CLK_S, CLK_F}),.D0(4'b1110),.D1(4'b1101),.D2(4'b1011),.D3(4'b0111),.D_OUT(an));
 
