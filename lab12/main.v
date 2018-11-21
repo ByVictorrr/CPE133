@@ -30,7 +30,7 @@ wire [3:0] arr_0, arr_1, arr_2, arr_3;
 SORT_4b ckt(.BTN(BTN), .SW(SW), .CLK(CLK), .led(led), .arr_0(arr_0), .arr_1(arr_1), .arr_2(arr_2), .arr_3(arr_3)); 
 
 //faster clock than reg
-Multiplexed_Display Display(.CLK(CLK), .arr_0(arr_0), .arr_1(arr_1), arr_2(arr_2), .arr_3(arr_3), .an(an), .seg(seg));
+  Multiplexed_Display Display(.CLK(CLK), .arr_0(arr_0), .arr_1(arr_1), .arr_2(arr_2), .arr_3(arr_3), .an(an), .seg(seg));
 
 
 endmodule
