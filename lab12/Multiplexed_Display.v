@@ -34,10 +34,10 @@ wire CLK_S, CLK_F; //used for the input of the mux selectors
 wire [3:0] F_SORTED;
 
 //T_S - slower clock used for SEL[1] for 4-t-1 mux
-clk_divider_nbit #(.n(12)) clk_s(.clockin(CLK), .clockout(CLK_S));
+clk_divider_nbit #(.n(7)) clk_s(.clockin(CLK), .clockout(CLK_S));
 
 //T_F = (1/2)T_S - used for SEL[0] for 4-to-1 mux
-clk_divider_nbit #(.n(24)) clk_faster(.clockin(CLK), .clockout(CLK_F));
+clk_divider_nbit #(.n(14)) clk_faster(.clockin(CLK), .clockout(CLK_F));
 
 mux_4t1_nb #(.n(4)) sorted(.SEL({CLK_S, CLK_F}), .D0(arr_0), .D1(arr_1), .D2(arr_2), .D3(arr_3), .D_OUT(F_SORTED));
 

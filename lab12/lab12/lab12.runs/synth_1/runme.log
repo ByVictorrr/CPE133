@@ -1,0 +1,409 @@
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18456 
+WARNING: [Synth 8-2490] overwriting previous definition of module FSM_4b_SORT [/home/victor/CPE133/lab12/./FSM_4b_SORT.v:24]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_2t1_nb [/home/victor/CPE133/lab12/../Modules/mux_2t1_nb.v:32]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_4t1_nb [/home/victor/CPE133/lab12/../Modules/mux_4t1_nb.v:35]
+WARNING: [Synth 8-2490] overwriting previous definition of module reg_nb [/home/victor/CPE133/lab12/../Modules/reg_nb.v:32]
+WARNING: [Synth 8-2490] overwriting previous definition of module comp_nb [/home/victor/CPE133/lab12/../Modules/comp_nb.v:34]
+WARNING: [Synth 8-2490] overwriting previous definition of module clk_divider_nbit [/home/victor/CPE133/lab12/../Modules/clk_divider_nbit.v:29]
+WARNING: [Synth 8-2490] overwriting previous definition of module SLAVE_CIRCUIT [/home/victor/CPE133/lab12/./SLAVE_CIRCUIT.v:29]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_4t1_nb [/home/victor/CPE133/lab12/../Modules/mux_4t1_nb.v:35]
+WARNING: [Synth 8-2490] overwriting previous definition of module clk_divider_nbit [/home/victor/CPE133/lab12/../Modules/clk_divider_nbit.v:29]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_4t1_nb [/home/victor/CPE133/lab12/../Modules/mux_4t1_nb.v:35]
+WARNING: [Synth 8-2490] overwriting previous definition of module AN_DCDR [/home/victor/CPE133/lab12/./AN_DCDR.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module BCH_Decoder [/home/victor/CPE133/lab12/BCH_Decoder.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_2t1_nb [/home/victor/CPE133/lab12/../Modules/mux_2t1_nb.v:32]
+WARNING: [Synth 8-2490] overwriting previous definition of module FSM_4b_SORT [/home/victor/CPE133/lab12/./FSM_4b_SORT.v:24]
+WARNING: [Synth 8-2490] overwriting previous definition of module reg_nb [/home/victor/CPE133/lab12/../Modules/reg_nb.v:32]
+WARNING: [Synth 8-2490] overwriting previous definition of module comp_nb [/home/victor/CPE133/lab12/../Modules/comp_nb.v:34]
+WARNING: [Synth 8-2490] overwriting previous definition of module SLAVE_CIRCUIT [/home/victor/CPE133/lab12/./SLAVE_CIRCUIT.v:29]
+WARNING: [Synth 8-2490] overwriting previous definition of module SORT_4b [/home/victor/CPE133/lab12/./SORT_4b.v:27]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1242.480 ; gain = 89.191 ; free physical = 2131 ; free virtual = 6678
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/home/victor/CPE133/lab12/main.v:26]
+INFO: [Synth 8-6157] synthesizing module 'SORT_4b' [/home/victor/CPE133/lab12/SORT_4b.v:27]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+	Parameter n bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit' (1#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+INFO: [Synth 8-6157] synthesizing module 'FSM_4b_SORT' [/home/victor/CPE133/lab12/FSM_4b_SORT.v:24]
+	Parameter st_0 bound to: 4'b0000 
+	Parameter st_1 bound to: 4'b0001 
+	Parameter st_2 bound to: 4'b0010 
+	Parameter st_3 bound to: 4'b0011 
+	Parameter st_4 bound to: 4'b0100 
+	Parameter st_5 bound to: 4'b0101 
+	Parameter st_6 bound to: 4'b0110 
+	Parameter st_7 bound to: 4'b0111 
+	Parameter st_8 bound to: 4'b1000 
+	Parameter st_9 bound to: 4'b1001 
+	Parameter st_10 bound to: 4'b1010 
+INFO: [Synth 8-6155] done synthesizing module 'FSM_4b_SORT' (2#1) [/home/victor/CPE133/lab12/FSM_4b_SORT.v:24]
+INFO: [Synth 8-6157] synthesizing module 'SLAVE_CIRCUIT' [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:29]
+INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (3#1) [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
+INFO: [Synth 8-6157] synthesizing module 'mux_4t1_nb' [/home/victor/CPE133/Modules/mux_4t1_nb.v:35]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_4t1_nb' (4#1) [/home/victor/CPE133/Modules/mux_4t1_nb.v:35]
+INFO: [Synth 8-6157] synthesizing module 'reg_nb' [/home/victor/CPE133/Modules/reg_nb.v:32]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_nb' (5#1) [/home/victor/CPE133/Modules/reg_nb.v:32]
+INFO: [Synth 8-6157] synthesizing module 'comp_nb' [/home/victor/CPE133/Modules/comp_nb.v:34]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'comp_nb' (6#1) [/home/victor/CPE133/Modules/comp_nb.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'eq' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:54]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'gt' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:54]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:54]
+WARNING: [Synth 8-689] width (32) of port connection 'eq' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:55]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:55]
+WARNING: [Synth 8-689] width (32) of port connection 'gt' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:55]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:55]
+WARNING: [Synth 8-689] width (32) of port connection 'eq' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:56]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:56]
+WARNING: [Synth 8-689] width (32) of port connection 'gt' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:56]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'SLAVE_CIRCUIT' (7#1) [/home/victor/CPE133/lab12/SLAVE_CIRCUIT.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'SORT_4b' (8#1) [/home/victor/CPE133/lab12/SORT_4b.v:27]
+INFO: [Synth 8-6157] synthesizing module 'Multiplexed_Display' [/home/victor/CPE133/lab12/Multiplexed_Display.v:30]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit__parameterized0' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+	Parameter n bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit__parameterized0' (8#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit__parameterized1' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+	Parameter n bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit__parameterized1' (8#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+INFO: [Synth 8-6157] synthesizing module 'BCH_Decoder' [/home/victor/CPE133/lab12/BCH_Decoder.v:23]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab12/BCH_Decoder.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'BCH_Decoder' (9#1) [/home/victor/CPE133/lab12/BCH_Decoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'AN_DCDR' [/home/victor/CPE133/lab12/AN_DCDR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'AN_DCDR' (10#1) [/home/victor/CPE133/lab12/AN_DCDR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Multiplexed_Display' (11#1) [/home/victor/CPE133/lab12/Multiplexed_Display.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'main' (12#1) [/home/victor/CPE133/lab12/main.v:26]
+WARNING: [Synth 8-3331] design main has unconnected port CLR
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.730 ; gain = 117.441 ; free physical = 2148 ; free virtual = 6697
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.730 ; gain = 117.441 ; free physical = 2147 ; free virtual = 6696
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.730 ; gain = 117.441 ; free physical = 2147 ; free virtual = 6696
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/victor/CPE133/lab12/hardwareConfig.xdc]
+Finished Parsing XDC File [/home/victor/CPE133/lab12/hardwareConfig.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/victor/CPE133/lab12/hardwareConfig.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1601.590 ; gain = 0.000 ; free physical = 1873 ; free virtual = 6447
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1951 ; free virtual = 6524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1950 ; free virtual = 6524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1953 ; free virtual = 6526
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [/home/victor/CPE133/lab12/FSM_4b_SORT.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'NS_reg' [/home/victor/CPE133/lab12/FSM_4b_SORT.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'CLR_reg' [/home/victor/CPE133/lab12/FSM_4b_SORT.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1943 ; free virtual = 6516
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	  12 Input      2 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module FSM_4b_SORT 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	  12 Input      2 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+Module mux_2t1_nb 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      4 Bit        Muxes := 1     
+Module mux_4t1_nb 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+Module reg_nb 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module clk_divider_nbit__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design main has unconnected port CLR
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1928 ; free virtual = 6505
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1796 ; free virtual = 6380
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1790 ; free virtual = 6374
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1789 ; free virtual = 6373
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1789 ; free virtual = 6373
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1789 ; free virtual = 6373
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1789 ; free virtual = 6373
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1789 ; free virtual = 6373
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1788 ; free virtual = 6372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1788 ; free virtual = 6372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    11|
+|3     |LUT1   |     3|
+|4     |LUT2   |     7|
+|5     |LUT3   |    11|
+|6     |LUT4   |    18|
+|7     |LUT5   |    17|
+|8     |LUT6   |    14|
+|9     |FDCE   |    16|
+|10    |FDRE   |    53|
+|11    |LD     |     6|
+|12    |IBUF   |    18|
+|13    |OBUF   |    13|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+---------------------------------+------+
+|      |Instance          |Module                           |Cells |
++------+------------------+---------------------------------+------+
+|1     |top               |                                 |   188|
+|2     |  Display         |Multiplexed_Display              |    41|
+|3     |    clk_faster    |clk_divider_nbit__parameterized1 |    21|
+|4     |    clk_s         |clk_divider_nbit__parameterized0 |    20|
+|5     |  ckt             |SORT_4b                          |   115|
+|6     |    fsm           |FSM_4b_SORT                      |    26|
+|7     |    fsmControlled |SLAVE_CIRCUIT                    |    55|
+|8     |      REG_0       |reg_nb                           |    10|
+|9     |      REG_1       |reg_nb_0                         |    10|
+|10    |      REG_2       |reg_nb_1                         |    19|
+|11    |      REG_3       |reg_nb_2                         |    16|
+|12    |    slowerCLK     |clk_divider_nbit                 |    34|
++------+------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1601.590 ; gain = 448.301 ; free physical = 1788 ; free virtual = 6372
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1601.590 ; gain = 117.441 ; free physical = 1843 ; free virtual = 6428
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 1601.598 ; gain = 448.301 ; free physical = 1843 ; free virtual = 6428
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  LD => LDCE: 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 1601.598 ; gain = 448.492 ; free physical = 1842 ; free virtual = 6426
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/victor/CPE133/lab12/lab12/lab12.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1625.602 ; gain = 0.000 ; free physical = 1843 ; free virtual = 6427
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 22 18:32:23 2018...

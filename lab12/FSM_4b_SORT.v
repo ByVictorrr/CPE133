@@ -28,9 +28,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
     //- bit-level state representations
 
     parameter [3:0] st_0= 4'b0000, st_1 = 4'b0001, st_2 = 4'b0010,  st_3 = 4'b0011,  st_4 = 4'b0100, st_5 = 4'b0101, st_6 = 4'b0110, st_7 = 4'b0111, st_8 = 4'b1000, st_9 = 4'b1001, st_10 = 4'b1010;
-    
-    
-    
+  
     always @ ( posedge CLK)
     	begin
 	    PS <= NS; 
@@ -58,10 +56,11 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
 	  begin
 		CLR = 0;
 	  	led = 0;
-		if(LT == 3'b000) //if arr[0] > arr[1]
+		if(LT[0] == 1'b0) //if arr[0] > arr[1]
 	      	begin
 		//swap(arr[0],arr[1])
-		SEL = 6'b000011; //SEL[2:0] //Three select signals
+		   SEL = 6'b000011; //SEL[2:0] //Three select signals
+		   
 		//SEL[0] feeds arr[0] to the input of REG[1]
 		//SEL[2:1] feeds arr[1] to the input of REG[0]
 		//Therefore swapping them
@@ -75,7 +74,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
           begin
 		  CLR = 0;
 		  led = 0;
-		if(LT == 3'b000) //if arr[1] > arr[2]
+		if(LT[1] == 1'b0) //if arr[1] > arr[2]
                 begin
                 //swap(arr[1],arr[2])
                 SEL = 6'b010100; //SEL[3:1] //four select signals
@@ -92,7 +91,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
           begin
 		  CLR =0;
 		  led = 0;
-		if(LT == 3'b000) //if arr[2] > arr[3]
+		if(LT[2] == 3'b0) //if arr[2] > arr[3]
                 begin
                 //swap(arr[2],arr[3])
                 SEL = 6'b101000; //SEL[5:3] //three select signals
@@ -109,7 +108,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
        	   begin
 		CLR = 0;
         	led=0;
-		if(LT == 3'b000) //if arr[0] > arr[1]
+		if(LT[0] == 1'b0) //if arr[0] > arr[1]
 	      	begin
 		//swap(arr[0],arr[1])
 		SEL = 6'b000011; //SEL[2:0] //Three select signals
@@ -126,7 +125,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
           begin
 		  CLR = 0;
 		  led = 0;
-		if(LT == 3'b000) //if arr[1] > arr[2]
+		if(LT[1] == 1'b0) //if arr[1] > arr[2]
                 begin
                 //swap(arr[1],arr[2])
                 SEL = 6'b010100; //SEL[3:1] //four select signals
@@ -143,7 +142,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
           begin
 		  CLR = 0;
 		  led = 0;
-		if(LT == 3'b000) //if arr[2] > arr[3]
+		if(LT[2] == 1'b0) //if arr[2] > arr[3]
                 begin
                 //swap(arr[2],arr[3])
                 SEL = 6'b101000; //SEL[5:3] //three select signals
@@ -160,7 +159,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
           begin
 		CLR = 0;
           	led=0;
-		if(LT == 3'b000) //if arr[0] > arr[1]
+		if(LT[0] == 1'b0) //if arr[0] > arr[1]
 	      	begin
 		//swap(arr[0],arr[1])
 		SEL = 6'b000011; //SEL[2:0] //Three select signals
@@ -177,7 +176,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
           begin
 		  CLR = 0;
 		  led = 0;
-		if(LT == 3'b000) //if arr[1] > arr[2]
+		if(LT[1] == 1'b0) //if arr[1] > arr[2]
                 begin
                 //swap(arr[1],arr[2])
                 SEL = 6'b010100; //SEL[3:1] //four select signals
@@ -194,7 +193,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
           begin
 		  CLR = 0;
 		  led = 0;
-		if(LT == 3'b000) //if arr[2] > arr[3]
+		if(LT[2] == 1'b0) //if arr[2] > arr[3]
                 begin
                 //swap(arr[2],arr[3])
                 SEL = 6'b101000; //SEL[5:3] //three select signals
@@ -205,7 +204,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
                 //LD[2] loads arr[3] to the ouput of REG[2] on the next state
                 ///LD[3] loads arr[2] to the ouput of REG[3] on the next state
 	         end
-	        else NS = st_9; //if btn not 1 then stay in same state
+	        else NS = st_10; //if btn not 1 then stay in same state
 	   end
 	   st_10: //waiting state
 	   begin
