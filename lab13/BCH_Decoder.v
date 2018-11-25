@@ -21,14 +21,19 @@
 
 
 module BCD_Decoder(
-    input [3:0] x,
+    input [4:0] x, // 5th bit is the odd or even oddd = 1 even =0;
     output reg [7:0] seg);
     
 
     always @(x)
     
     begin
-    //cases for x
+
+
+
+        seg = "01100001"; //EE
+	                   else
+	seg = "11000101"; //oo
 
         case(x)
             //if no inputs
@@ -51,9 +56,8 @@ module BCD_Decoder(
             4'b1000 :              //Hexadecimal 8
                 seg =  8'b00000001;
             4'b1001 :           
-                seg =  8'b00001001;
-             default: 
-                seg = 8'b11111111;
+                seg = 8'b00001001; //Hexadeciaml 9
+           default: seg = 8'b11111111;
       endcase
      end       
 endmodule
