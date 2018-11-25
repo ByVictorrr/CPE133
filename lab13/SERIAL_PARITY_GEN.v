@@ -11,7 +11,7 @@ wire [15:0] D_OUT;
 wire [1:0] SEL;
 wire EQ,CLR, CTRL;
 
-clk_divider_nbit #(.n(25)) SLOWER_CLK(.clockin(CLK),.clockout(CLK_SLOWER)); 
+clk_divider_nbit #(.n(17)) SLOWER_CLK(.clockin(CLK),.clockout(CLK_SLOWER)); 
 
 usr_nb #(.n(16))(.data_in(SW), .dbit(0), .sel(SEL), .clk(CLK_SLOWER), .clr(0), .data_out(D_OUT));
 

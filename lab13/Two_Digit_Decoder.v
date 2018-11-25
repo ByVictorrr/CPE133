@@ -20,65 +20,64 @@
 //// 
 ////////////////////////////////////////////////////////////////////////////////////
 //
-module Two_Digit_Decoder( input [3:0] x,output reg [3:0] F1, output reg [3:0] F2);
+module Two_Digit_Decoder( input [4:0] x,output reg [3:0] F1, output reg [3:0] F2);
 
 
 always @ (*)
 
 	begin
-	//case statement for ones place
-	case (x)
-		
-	        4'b0000 : F1 = x; 
-	        4'b0001 : F1 = x;
-	        4'b0001 : F1 = x;
-	        4'b0010: F1 = x;
-	        4'b0010: F1 = x;
-	        4'b0011: F1 = x;
-	        4'b0100: F1 = x;
-	        4'b0101: F1 = x; //five
-	        4'b0110: F1 = x;
-	        4'b0111: F1 = x;
-	        4'b1000: F1 = x;
-	        4'b1001: F1 = x; //nine
-	        4'b1010: F1 = 4'b0000; //ten
-	        4'b1011: F1 = 4'b0001; 
-	        4'b1100: F1 = 4'b0010; //twelve	        
-                4'b1101: F1 = 4'b0011;
-                4'b1110: F1 = 4'b0100 ; //fourteen  
-                4'b1111: F1 = 4'b0101 ; //fithteen 
+    //case statement for ones place
+        case (x)
+
+                5'b00000 : F1 = x;
+                5'b00001 : F1 = x;
+                5'b00001 : F1 = x;
+                5'b00010: F1 = x;
+                5'b00010: F1 = x;
+                5'b00011: F1 = x;
+                5'b00100: F1 = x;
+                5'b00101: F1 = x; //five
+                5'b00110: F1 = x;
+                5'b00111: F1 = x;
+                4'b01000: F1 = x;
+                4'b01001: F1 = x; //nine
+                5'b01010: F1 = 4'b0000; //ten
+                5'b01011: F1 = 4'b0001; 
+                5'b01100: F1 = 4'b0010; //twelve                
+                5'b01101: F1 = 4'b0011;
+                5'b01110: F1 = 4'b0100; //fourteen  
+                5'b01111: F1 = 4'b0101; //fithteen
+                5'b10000: F1 = 4'b0110; 
             default: F1=4'b0000;
-            
+
       endcase
-      
-      
-     
+
+
+
           //case statement for tens place
           case (x)
-              
-                  4'b0000 : F2 = 4'b0000; 
-                  4'b0001 : F2 = 4'b0000 ;
-                  4'b0010: F2 = 4'b0000;
-                  4'b0010: F2 = 4'b0000;
-                  4'b0011: F2 = 4'b0000;
-                  4'b0100: F2 = 4'b0000;
-                  4'b0101: F2 = 4'b0000; //five
-                  4'b0110: F2 = 4'b0000;
-                  4'b0111: F2 = 4'b0000;
-                  4'b1000: F2 = 4'b0000;
-                  4'b1001: F2 = 4'b0000; //nine
-                  4'b1010: F2 = 4'b0001; //ten
-                  4'b1011: F2 = 4'b0001; 
-                  4'b1100: F2 = 4'b0001; //twelve            
-                  4'b1101: F2 = 4'b0001;
-                  4'b1110: F2 = 4'b0001 ; //fourteen  
-                  4'b1111: F2 = 4'b0001 ; //fithteen 
-                    
-    		 default: F2 = 4'b0000;               
-	 endcase    
-      
-            
-	end
-	
+
+                  5'b00000 : F2 = 4'b0000;
+                  5'b00001 : F2 = 4'b0000 ;
+                  5'b00010: F2 = 4'b0000;
+                  5'b00010: F2 = 4'b0000;
+                  5'b00011: F2 = 4'b0000;
+                  5'b00100: F2 = 4'b0000;
+                  5'b00101: F2 = 4'b0000; //five
+                  5'b00110: F2 = 4'b0000;
+                  5'b00111: F2 = 4'b0000;
+                  5'b01000: F2 = 4'b0000;
+                  4'b01001: F2 = 4'b0000; //nine
+                  4'b01010: F2 = 4'b0001; //ten
+                  5'b01011: F2 = 4'b0001;
+                  5'b01100: F2 = 4'b0001; //twelve            
+                  5'b01101: F2 = 4'b0001;
+                  5'b01110: F2 = 4'b0001; //fourteen  
+                  5'b01111: F2 = 4'b0001; //fithteen 
+                  5'b10000: F2 = 4'b0001; //sixteen  
+                 default: F2 = 4'b0000;
+         endcase	
+         
+        end
 
 endmodule
