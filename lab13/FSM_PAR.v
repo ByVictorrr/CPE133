@@ -19,7 +19,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module FSM_PAR(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] SEL);
+module FSM_PAR(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] SEL, output reg CTRL);
      
     //- next state & present state variables
     reg [1:0] NS, PS; 
@@ -35,7 +35,7 @@ module FSM_PAR(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] 
     //- model the next-state and output decoders
     always @ (*)
     begin
-       CLR = 0; SEL = 2'b00; //LD = 0; // assign all outputs
+       CLR = 0; SEL = 2'b00; CTRL = 0;//LD = 0; // assign all outputs
        case(PS)
           st_0: //loads data into shift reg
           begin
@@ -49,6 +49,7 @@ module FSM_PAR(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] 
           SEL = 2'b10;
   	  //LD = 1;
 	  CLR = 0;
+	  CTRL = 1;
 		if(EQ == 1)NS = st_1;
 		else NS = st_2;
              end   
@@ -57,13 +58,15 @@ module FSM_PAR(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] 
              begin
 		 SEL = 2'b00;
 	     	 //LD = 1;
-		 CLR = 0;	
+		 CLR = 0;
+	         CTRL = 1;	 
 		 NS = st_3; 
              end
           st_3: //hold state
              begin
 		 SEL = 2'b00;
 	     	 //LD = 1;
+		 CTRL = 0;
 		 CLR = 0;
 	 	if(BTN == 0 )
 		 begin 	
