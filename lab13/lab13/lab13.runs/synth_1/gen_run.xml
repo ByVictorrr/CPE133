@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543117184">
-  <File Type="PA-TCL" Name="main.tcl"/>
-  <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
-  <File Type="RDS-RDS" Name="main.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1543124426">
+  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="main.dcp"/>
   <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="main_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="main.vds"/>
+  <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
+  <File Type="PA-TCL" Name="main.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../AN_DCDR.v">
