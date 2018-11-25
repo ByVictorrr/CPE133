@@ -7,17 +7,13 @@
 //its even or odd parity
 module main(input CLK, input BTN, input [15:0] SW, output [7:0] seg, output [3:0] an);
 
+wire [4:0] CNT;
 
-//Shift register stores the number of ones set that is the number of switches
-//asserted
+SERIAL_PARITY_GEN PAR_GEN(.CLK(CLK),.BTN(BTN), .SW(SW), .CNT_WITH_PARITY(CNT));
 
 
-//If an additional switch is added - shift register shift left - stored as
-//stoneage-binary
-//If one less switch is added  - shift register shift right 
+Multiplexed_display display(.CLK(CLK),.CNT(CNT),.an(an),.seg(seg));
 
-//if the number stored in the shift register is divisible by 2 its even parity
-//rant
 
 
 endmodule
