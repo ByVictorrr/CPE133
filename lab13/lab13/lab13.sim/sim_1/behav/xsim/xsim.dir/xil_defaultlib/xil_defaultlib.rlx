@@ -1,0 +1,20 @@
+0.6
+2018.2
+Jun 14 2018
+20:07:38
+/home/victor/CPE133/Modules/BCD_Decoder.v,1542882529,verilog,,,,BCD_Decoder,,,,,,,,
+/home/victor/CPE133/Modules/clk_divider_nbit.v,1542882529,verilog,,,,clk_divider_nbit,,,,,,,,
+/home/victor/CPE133/Modules/cntr_up_hold_nb.v,1543130881,verilog,,,,cntr_up_hold_nb,,,,,,,,
+/home/victor/CPE133/Modules/comp_nb.v,1542882529,verilog,,,,comp_nb,,,,,,,,
+/home/victor/CPE133/Modules/mux_2t1_nb.v,1542882529,verilog,,,,mux_2t1_nb,,,,,,,,
+/home/victor/CPE133/Modules/mux_4t1_nb.v,1542882529,verilog,,,,mux_4t1_nb,,,,,,,,
+/home/victor/CPE133/Modules/usr_nb.v,1543116055,verilog,,,,usr_nb,,,,,,,,
+/home/victor/CPE133/lab13/AN_DCDR.v,1543124242,verilog,,/home/victor/CPE133/lab13/FSM_PAR.v,/home/victor/CPE133/Modules/mux_4t1_nb.v,AN_DCDR,,,,,,,,
+/home/victor/CPE133/lab13/FSM_PAR.v,1543143670,verilog,,/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v,,FSM_PAR,,,,,,,,
+/home/victor/CPE133/lab13/Multiplexed_Display.v,1543140433,verilog,,/home/victor/CPE133/lab13/PAR_DCDR.v,/home/victor/CPE133/Modules/clk_divider_nbit.v;/home/victor/CPE133/lab13/AN_DCDR.v;/home/victor/CPE133/Modules/BCD_Decoder.v;/home/victor/CPE133/Modules/mux_2t1_nb.v;/home/victor/CPE133/Modules/mux_4t1_nb.v;/home/victor/CPE133/lab13/Two_Digit_Decoder.v,Multiplexed_Display,,,,,,,,
+/home/victor/CPE133/lab13/PAR_DCDR.v,1543124242,verilog,,/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v,/home/victor/CPE133/Modules/mux_2t1_nb.v,PAR_DCDR,,,,,,,,
+/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v,1543143961,verilog,,/home/victor/CPE133/lab13/lab13/lab13.srcs/sim_1/new/testbench.v,/home/victor/CPE133/Modules/clk_divider_nbit.v;/home/victor/CPE133/Modules/comp_nb.v;/home/victor/CPE133/Modules/usr_nb.v;/home/victor/CPE133/lab13/FSM_PAR.v;/home/victor/CPE133/Modules/cntr_up_hold_nb.v,SERIAL_PARITY_GEN,,,,,,,,
+/home/victor/CPE133/lab13/Two_Digit_Decoder.v,1543139520,verilog,,,,Two_Digit_Decoder,,,,,,,,
+/home/victor/CPE133/lab13/lab13/lab13.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+/home/victor/CPE133/lab13/lab13/lab13.srcs/sim_1/new/testbench.v,1543140903,verilog,,,,testbench,,,,,,,,
+/home/victor/CPE133/lab13/main.v,1543124254,verilog,,/home/victor/CPE133/lab13/lab13/lab13.srcs/sim_1/new/testbench.v,/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v;/home/victor/CPE133/lab13/Multiplexed_Display.v,main,,,,,,,,

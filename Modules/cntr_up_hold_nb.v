@@ -47,7 +47,7 @@ module cntr_up_hold_nb(clk, clr, up, ld, D, count, rco);
         else if (up == 1)   // count up (increment)
            count <= count + 1; 
         else if (up == 0)  // hold 
-           count <= count 
+           count <= count;
     end 
        
     

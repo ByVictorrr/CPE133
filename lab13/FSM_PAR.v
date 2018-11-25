@@ -22,9 +22,9 @@
 module FSM_PAR(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] SEL, output reg CTRL);
      
     //- next state & present state variables
-    reg [1:0] NS, PS; 
+    reg  NS, PS; 
     //- bit-level state representations
-    parameter [1:0] st_0=2'b00, st_1=2'b01, st_2=2'b10, st_3 = 2'b11; 
+    parameter st_0 = 1'b0, st_1=1'b1; 
     
 
     //- model the state registers
@@ -37,50 +37,34 @@ module FSM_PAR(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] 
     begin
        CLR = 0; SEL = 2'b00; CTRL = 0;//LD = 0; // assign all outputs
        case(PS)
+          
           st_0: //loads data into shift reg
           begin
+	  CTRL = 0;
+	   if(BTN ==1)
+	   begin 
              SEL = 2'b01; //loads in parrallel data
-     	     CLR = 0;
-	     //LD = 0;	     
+     	     CLR = 1;
              NS = st_1; 
+     	    end
+	    else 
+	    begin
+            SEL = 2'b00;
+	        CLR = 0;
+	        NS = st_0;
+            end
      	  end 
-          st_1: //
-          begin 
-          SEL = 2'b10;
-  	  //LD = 1;
+          
+          st_1: //shift state
+      begin
+	  SEL = 2'b11;
 	  CLR = 0;
 	  CTRL = 1;
-		if(EQ == 1)NS = st_1;
-		else NS = st_2;
-             end   
-             
-          st_2: //hold state
-             begin
-		 SEL = 2'b00;
-	     	 //LD = 1;
-		 CLR = 0;
-	         CTRL = 1;	 
-		 NS = st_3; 
-             end
-          st_3: //hold state
-             begin
-		 SEL = 2'b00;
-	     	 //LD = 1;
-		 CTRL = 0;
-		 CLR = 0;
-	 	if(BTN == 0 )
-		 begin 	
-		 CLR = 0;
-		 NS = st_3; 
-            	end
-		else //if button is pressed
-		begin
-		NS = st_0;	
-		end
-	     end
-             
-          default: NS = st_0; 
-            
+		if(EQ == 1)NS = st_0;
+		else NS = st_1;
+           end   
+    default: NS = st_0;      
+       
           endcase
       end              
 endmodule

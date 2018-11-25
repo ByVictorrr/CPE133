@@ -73,7 +73,7 @@ always @ (*)
                   4'b1101: F2 = 4'b0001;
                   4'b1110: F2 = 4'b0001 ; //fourteen  
                   4'b1111: F2 = 4'b0001 ; //fithteen 
-                   
+                    
     		 default: F2 = 4'b0000;               
 	 endcase    
       

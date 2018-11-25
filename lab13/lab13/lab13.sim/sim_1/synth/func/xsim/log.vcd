@@ -1,0 +1,299 @@
+$date
+   Sun Nov 25 03:02:18 2018
+$end
+$version
+  2018.2
+$end
+$timescale
+  1ps
+$end
+$scope module testbench $end
+$var reg 1 ! CLK $end
+$var reg 1 " BTN $end
+$var reg 16 # SW [15:0] $end
+$var wire 8 $ seg [7:0] $end
+$var wire 4 % an [3:0] $end
+$scope module PAR $end
+$var wire 1 & BTN $end
+$var wire 16 ' SW [15:0] $end
+$var wire 1 ( CLK $end
+$var wire 1 ) CLK_IBUF $end
+$var wire 1 * CLK_IBUF_BUFG $end
+$var wire 4 % an [3:0] $end
+$var wire 4 + an_OBUF [3:0] $end
+$var wire 8 $ seg [7:0] $end
+$var wire 5 , seg_OBUF [5:1] $end
+$scope module display $end
+$var wire 1 - CLK_F $end
+$var wire 1 * I3 $end
+$var wire 4 + an_OBUF [3:0] $end
+$var wire 2 . seg_OBUF [1:0] $end
+$scope module clk_faster $end
+$var wire 1 - CLK_F $end
+$var wire 1 * I3 $end
+$var wire 1 / Q [0:0] $end
+$var wire 3 0 an_OBUF [2:0] $end
+$var wire 1 1 \count[0]_i_2_n_0  $end
+$var wire 1 2 \count_reg[0]_i_1_n_0  $end
+$var wire 1 3 \count_reg[0]_i_1_n_1  $end
+$var wire 1 4 \count_reg[0]_i_1_n_2  $end
+$var wire 1 5 \count_reg[0]_i_1_n_3  $end
+$var wire 1 6 \count_reg[0]_i_1_n_4  $end
+$var wire 1 7 \count_reg[0]_i_1_n_5  $end
+$var wire 1 8 \count_reg[0]_i_1_n_6  $end
+$var wire 1 9 \count_reg[0]_i_1_n_7  $end
+$var wire 1 : \count_reg[12]_i_1_n_2  $end
+$var wire 1 ; \count_reg[12]_i_1_n_3  $end
+$var wire 1 < \count_reg[12]_i_1_n_5  $end
+$var wire 1 = \count_reg[12]_i_1_n_6  $end
+$var wire 1 > \count_reg[12]_i_1_n_7  $end
+$var wire 1 ? \count_reg[4]_i_1_n_0  $end
+$var wire 1 @ \count_reg[4]_i_1_n_1  $end
+$var wire 1 A \count_reg[4]_i_1_n_2  $end
+$var wire 1 B \count_reg[4]_i_1_n_3  $end
+$var wire 1 C \count_reg[4]_i_1_n_4  $end
+$var wire 1 D \count_reg[4]_i_1_n_5  $end
+$var wire 1 E \count_reg[4]_i_1_n_6  $end
+$var wire 1 F \count_reg[4]_i_1_n_7  $end
+$var wire 1 G \count_reg[8]_i_1_n_0  $end
+$var wire 1 H \count_reg[8]_i_1_n_1  $end
+$var wire 1 I \count_reg[8]_i_1_n_2  $end
+$var wire 1 J \count_reg[8]_i_1_n_3  $end
+$var wire 1 K \count_reg[8]_i_1_n_4  $end
+$var wire 1 L \count_reg[8]_i_1_n_5  $end
+$var wire 1 M \count_reg[8]_i_1_n_6  $end
+$var wire 1 N \count_reg[8]_i_1_n_7  $end
+$var wire 1 O \count_reg_n_0_[0]  $end
+$var wire 1 P \count_reg_n_0_[10]  $end
+$var wire 1 Q \count_reg_n_0_[11]  $end
+$var wire 1 R \count_reg_n_0_[12]  $end
+$var wire 1 S \count_reg_n_0_[13]  $end
+$var wire 1 T \count_reg_n_0_[1]  $end
+$var wire 1 U \count_reg_n_0_[2]  $end
+$var wire 1 V \count_reg_n_0_[3]  $end
+$var wire 1 W \count_reg_n_0_[4]  $end
+$var wire 1 X \count_reg_n_0_[5]  $end
+$var wire 1 Y \count_reg_n_0_[6]  $end
+$var wire 1 Z \count_reg_n_0_[7]  $end
+$var wire 1 [ \count_reg_n_0_[8]  $end
+$var wire 1 \ \count_reg_n_0_[9]  $end
+$var wire 2 ] \NLW_count_reg[12]_i_1_CO_UNCONNECTED  [3:2] $end
+$var wire 1 ^ \NLW_count_reg[12]_i_1_O_UNCONNECTED  [3:3] $end
+$upscope $end
+$scope module clk_s $end
+$var wire 1 - CLK_F $end
+$var wire 1 * I3 $end
+$var wire 1 / Q [0:0] $end
+$var wire 1 _ an_OBUF [0:0] $end
+$var wire 1 ` \count[7]_i_2_n_0  $end
+$var wire 1 a \count_reg_n_0_[0]  $end
+$var wire 1 b \count_reg_n_0_[1]  $end
+$var wire 1 c \count_reg_n_0_[2]  $end
+$var wire 1 d \count_reg_n_0_[3]  $end
+$var wire 1 e \count_reg_n_0_[4]  $end
+$var wire 1 f \count_reg_n_0_[5]  $end
+$var wire 1 g \count_reg_n_0_[6]  $end
+$var wire 8 h p_0_in [7:0] $end
+$var wire 1 i seg_OBUF [0:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+b1001010 #
+b0xx000x1 $
+bx %
+z&
+b1001010 '
+0(
+0)
+0*
+bx +
+bxzzzx ,
+x-
+bx .
+x/
+bx 0
+x1
+x2
+x3
+x4
+x5
+x6
+x7
+x8
+x9
+x:
+x;
+x<
+x=
+x>
+x?
+x@
+xA
+xB
+xC
+xD
+xE
+xF
+xG
+xH
+xI
+xJ
+xK
+xL
+xM
+xN
+xO
+xP
+xQ
+xR
+xS
+xT
+xU
+xV
+xW
+xX
+xY
+xZ
+x[
+x\
+b0x ]
+x^
+x_
+x`
+xa
+xb
+xc
+xd
+xe
+xf
+xg
+bx h
+xi
+$end
+#5
+1!
+1(
+1)
+1*
+#10
+0!
+0(
+0)
+0*
+#15
+1!
+1(
+1)
+1*
+#20
+0!
+0(
+0)
+0*
+#25
+1!
+1(
+1)
+1*
+#30
+0!
+0(
+0)
+0*
+#35
+1!
+1(
+1)
+1*
+#40
+0!
+0(
+0)
+0*
+#45
+1!
+1(
+1)
+1*
+#50
+0!
+0(
+0)
+0*
+#55
+1!
+1(
+1)
+1*
+#60
+0!
+0(
+0)
+0*
+#65
+1!
+1(
+1)
+1*
+#70
+0!
+0(
+0)
+0*
+#75
+1!
+1(
+1)
+1*
+#80
+0!
+0(
+0)
+0*
+#85
+1!
+1(
+1)
+1*
+#90
+0!
+0(
+0)
+0*
+#95
+1!
+1(
+1)
+1*
+#100
+b0zzzx ,
+0-
+b0x .
+0/
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0a
+0b
+0c
+0d
+0e
+0f
+0g

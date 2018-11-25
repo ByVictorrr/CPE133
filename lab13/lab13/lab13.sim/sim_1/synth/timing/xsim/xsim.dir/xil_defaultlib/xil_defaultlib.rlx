@@ -1,0 +1,12 @@
+0.6
+2018.2
+Jun 14 2018
+20:07:38
+/home/victor/CPE133/Modules/clk_divider_nbit.v,1542882529,verilog,,,,clk_divider_nbit,,,,,,,,
+/home/victor/CPE133/Modules/cntr_up_hold_nb.v,1543130881,verilog,,,,cntr_up_hold_nb,,,,,,,,
+/home/victor/CPE133/Modules/comp_nb.v,1542882529,verilog,,,,comp_nb,,,,,,,,
+/home/victor/CPE133/Modules/usr_nb.v,1543116055,verilog,,,,usr_nb,,,,,,,,
+/home/victor/CPE133/lab13/FSM_PAR.v,1543143670,verilog,,/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v,,FSM_PAR,,,,,,,,
+/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v,1543143961,verilog,,/home/victor/CPE133/lab13/lab13/lab13.srcs/sim_1/new/testbench.v,/home/victor/CPE133/Modules/clk_divider_nbit.v;/home/victor/CPE133/Modules/comp_nb.v;/home/victor/CPE133/Modules/usr_nb.v;/home/victor/CPE133/lab13/FSM_PAR.v;/home/victor/CPE133/Modules/cntr_up_hold_nb.v,SERIAL_PARITY_GEN,,,,,,,,
+/home/victor/CPE133/lab13/lab13/lab13.sim/sim_1/synth/timing/xsim/testbench_time_synth.v,1543144408,verilog,,/home/victor/CPE133/lab13/FSM_PAR.v,,Multiplexed_Display;clk_divider_nbit__parameterized0;clk_divider_nbit__parameterized1;glbl;main,,,,,,,,
+/home/victor/CPE133/lab13/lab13/lab13.srcs/sim_1/new/testbench.v,1543143876,verilog,,,,testbench,,,,,,,,

@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../AN_DCDR.v" \
+"../../../../../FSM_PAR.v" \
+"../../../../../Multiplexed_Display.v" \
+"../../../../../PAR_DCDR.v" \
+"../../../../../SERIAL_PARITY_GEN.v" \
+"../../../../../main.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

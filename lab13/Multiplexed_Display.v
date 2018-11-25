@@ -31,11 +31,9 @@
 module Multiplexed_Display(input CLK, input [4:0 ] CNT, output [3:0] an, output [7:0] seg);
 
 wire CLK_S, CLK_F; //used for the input of the mux selectors
-
-wire [3:0] numOfBitSet;
-wire PAR;
-wire [3:0] F1, F2;
+wire [3:0] F1, F2; //F1 - ones place, F2 - tens place
 wire [7:0] F1_seg, F2_seg, PAR_seg;
+
 //T_S - slower clock used for SEL[1] for 4-t-1 mux
 clk_divider_nbit #(.n(7)) clk_s(.clockin(CLK), .clockout(CLK_S));
 
