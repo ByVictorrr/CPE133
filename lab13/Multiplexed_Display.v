@@ -1,6 +1,6 @@
 `include "../Modules/clk_divider_nbit.v"
 `include "./AN_DCDR.v"
-`include "BCH_Decoder.v"
+`include "../Modules/BCD_Decoder.v"
 `include "../Modules/mux_2t1_nb.v"
 `include "../Modules/mux_4t1_nb.v"
 `include "./Two_Digit_Decoder.v"

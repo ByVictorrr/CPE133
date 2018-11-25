@@ -19,8 +19,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module FSM_PAR FSM(input CLK, input BTN, input EQ, output reg CLR,output reg [1:0] SEL);
-
+module FSM_PAR(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] SEL);
      
     //- next state & present state variables
     reg [1:0] NS, PS; 
@@ -29,12 +28,12 @@ module FSM_PAR FSM(input CLK, input BTN, input EQ, output reg CLR,output reg [1:
     
 
     //- model the state registers
-    always @ (negedge reset_n, posedge CLK)
+    always @ ( posedge CLK)
           PS <= NS; 
     
     
     //- model the next-state and output decoders
-    always @ (x_in,PS)
+    always @ (*)
     begin
        CLR = 0; SEL = 2'b00; //LD = 0; // assign all outputs
        case(PS)

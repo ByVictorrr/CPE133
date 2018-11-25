@@ -1,0 +1,497 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Nov 24 19:39:46 2018
+# Process ID: 13718
+# Current directory: /home/victor/CPE133/lab13/lab13/lab13.runs/synth_1
+# Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: /home/victor/CPE133/lab13/lab13/lab13.runs/synth_1/main.vds
+# Journal file: /home/victor/CPE133/lab13/lab13/lab13.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13723 
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_4t1_nb [/home/victor/CPE133/lab13/../Modules/mux_4t1_nb.v:35]
+WARNING: [Synth 8-2490] overwriting previous definition of module AN_DCDR [/home/victor/CPE133/lab13/./AN_DCDR.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module Two_Digit_Decoder [/home/victor/CPE133/lab13/./Two_Digit_Decoder.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_2t1_nb [/home/victor/CPE133/lab13/../Modules/mux_2t1_nb.v:32]
+WARNING: [Synth 8-2490] overwriting previous definition of module clk_divider_nbit [/home/victor/CPE133/lab13/../Modules/clk_divider_nbit.v:29]
+WARNING: [Synth 8-2490] overwriting previous definition of module FSM_PAR [/home/victor/CPE133/lab13/./FSM_PAR.v:22]
+WARNING: [Synth 8-2490] overwriting previous definition of module clk_divider_nbit [/home/victor/CPE133/lab13/../Modules/clk_divider_nbit.v:29]
+WARNING: [Synth 8-2490] overwriting previous definition of module comp_nb [/home/victor/CPE133/lab13/../Modules/comp_nb.v:34]
+WARNING: [Synth 8-2490] overwriting previous definition of module usr_nb [/home/victor/CPE133/lab13/../Modules/usr_nb.v:41]
+WARNING: [Synth 8-2490] overwriting previous definition of module cntr_up_clr_nb [/home/victor/CPE133/lab13/../Modules/cntr_up_clr_nb.v:33]
+WARNING: [Synth 8-2490] overwriting previous definition of module FSM_PAR [/home/victor/CPE133/lab13/FSM_PAR.v:22]
+WARNING: [Synth 8-2490] overwriting previous definition of module SERIAL_PARITY_GEN [/home/victor/CPE133/lab13/./SERIAL_PARITY_GEN.v:7]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_4t1_nb [/home/victor/CPE133/lab13/../Modules/mux_4t1_nb.v:35]
+WARNING: [Synth 8-2490] overwriting previous definition of module AN_DCDR [/home/victor/CPE133/lab13/AN_DCDR.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module BCD_Decoder [/home/victor/CPE133/lab13/../Modules/BCD_Decoder.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module mux_2t1_nb [/home/victor/CPE133/lab13/../Modules/mux_2t1_nb.v:32]
+WARNING: [Synth 8-2490] overwriting previous definition of module Two_Digit_Decoder [/home/victor/CPE133/lab13/Two_Digit_Decoder.v:23]
+WARNING: [Synth 8-2490] overwriting previous definition of module Multiplexed_Display [/home/victor/CPE133/lab13/./Multiplexed_Display.v:31]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1243.480 ; gain = 90.191 ; free physical = 408 ; free virtual = 4038
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/home/victor/CPE133/lab13/main.v:8]
+INFO: [Synth 8-6157] synthesizing module 'SERIAL_PARITY_GEN' [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:7]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+	Parameter n bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit' (1#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+INFO: [Synth 8-6157] synthesizing module 'usr_nb' [/home/victor/CPE133/Modules/usr_nb.v:41]
+	Parameter n bound to: 16 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/Modules/usr_nb.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'usr_nb' (2#1) [/home/victor/CPE133/Modules/usr_nb.v:41]
+INFO: [Synth 8-6157] synthesizing module 'comp_nb' [/home/victor/CPE133/Modules/comp_nb.v:34]
+	Parameter n bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'comp_nb' (3#1) [/home/victor/CPE133/Modules/comp_nb.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'lt' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:21]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:21]
+WARNING: [Synth 8-689] width (32) of port connection 'gt' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:21]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:21]
+INFO: [Synth 8-6157] synthesizing module 'FSM_PAR' [/home/victor/CPE133/lab13/FSM_PAR.v:22]
+	Parameter st_0 bound to: 2'b00 
+	Parameter st_1 bound to: 2'b01 
+	Parameter st_2 bound to: 2'b10 
+	Parameter st_3 bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab13/FSM_PAR.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'FSM_PAR' (4#1) [/home/victor/CPE133/lab13/FSM_PAR.v:22]
+WARNING: [Synth 8-350] instance 'FSM' of module 'FSM_PAR' requires 5 connections, but only 4 given [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cntr_up_clr_nb' [/home/victor/CPE133/Modules/cntr_up_clr_nb.v:33]
+	Parameter n bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'cntr_up_clr_nb' (5#1) [/home/victor/CPE133/Modules/cntr_up_clr_nb.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'rco' does not match port width (1) of module 'cntr_up_clr_nb' [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:26]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:26]
+WARNING: [Synth 8-3848] Net LD in module/entity SERIAL_PARITY_GEN does not have driver. [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:12]
+WARNING: [Synth 8-3848] Net D_IN in module/entity SERIAL_PARITY_GEN does not have driver. [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'SERIAL_PARITY_GEN' (6#1) [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:7]
+INFO: [Synth 8-6157] synthesizing module 'Multiplexed_Display' [/home/victor/CPE133/lab13/Multiplexed_Display.v:31]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit__parameterized0' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+	Parameter n bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit__parameterized0' (6#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit__parameterized1' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+	Parameter n bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit__parameterized1' (6#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
+INFO: [Synth 8-6157] synthesizing module 'Two_Digit_Decoder' [/home/victor/CPE133/lab13/Two_Digit_Decoder.v:23]
+WARNING: [Synth 8-151] case item 4'b0001 is unreachable [/home/victor/CPE133/lab13/Two_Digit_Decoder.v:30]
+WARNING: [Synth 8-151] case item 4'b0010 is unreachable [/home/victor/CPE133/lab13/Two_Digit_Decoder.v:30]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab13/Two_Digit_Decoder.v:30]
+WARNING: [Synth 8-151] case item 4'b0010 is unreachable [/home/victor/CPE133/lab13/Two_Digit_Decoder.v:57]
+INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab13/Two_Digit_Decoder.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'Two_Digit_Decoder' (7#1) [/home/victor/CPE133/lab13/Two_Digit_Decoder.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'x' does not match port width (4) of module 'Two_Digit_Decoder' [/home/victor/CPE133/lab13/Multiplexed_Display.v:45]
+INFO: [Synth 8-6157] synthesizing module 'BCD_Decoder' [/home/victor/CPE133/Modules/BCD_Decoder.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'BCD_Decoder' (8#1) [/home/victor/CPE133/Modules/BCD_Decoder.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PAR_DCDR' [/home/victor/CPE133/lab13/PAR_DCDR.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
+	Parameter n bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (9#1) [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'PAR_DCDR' (10#1) [/home/victor/CPE133/lab13/PAR_DCDR.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux_4t1_nb' [/home/victor/CPE133/Modules/mux_4t1_nb.v:35]
+	Parameter n bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_4t1_nb' (11#1) [/home/victor/CPE133/Modules/mux_4t1_nb.v:35]
+INFO: [Synth 8-6157] synthesizing module 'AN_DCDR' [/home/victor/CPE133/lab13/AN_DCDR.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_4t1_nb__parameterized0' [/home/victor/CPE133/Modules/mux_4t1_nb.v:35]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux_4t1_nb__parameterized0' (11#1) [/home/victor/CPE133/Modules/mux_4t1_nb.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'AN_DCDR' (12#1) [/home/victor/CPE133/lab13/AN_DCDR.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Multiplexed_Display' (13#1) [/home/victor/CPE133/lab13/Multiplexed_Display.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'main' (14#1) [/home/victor/CPE133/lab13/main.v:8]
+WARNING: [Synth 8-3331] design Multiplexed_Display has unconnected port CNT[4]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[15]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[14]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[13]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[12]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[11]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[10]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[9]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[8]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[7]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[6]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[5]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[4]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[3]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[2]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[1]
+WARNING: [Synth 8-3331] design SERIAL_PARITY_GEN has unconnected port SW[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.730 ; gain = 117.441 ; free physical = 423 ; free virtual = 4055
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[15] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[14] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[13] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[12] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[11] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[10] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[9] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[8] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[7] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[6] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[5] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[4] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[3] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[2] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[1] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line18:data_in[0] to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:18]
+WARNING: [Synth 8-3295] tying undriven pin FSM:CLK to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:23]
+WARNING: [Synth 8-3295] tying undriven pin EVENT_CNTR:ld to constant 0 [/home/victor/CPE133/lab13/SERIAL_PARITY_GEN.v:26]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.730 ; gain = 117.441 ; free physical = 424 ; free virtual = 4056
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1270.730 ; gain = 117.441 ; free physical = 424 ; free virtual = 4056
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/victor/CPE133/lab13/hardwareConfig.xdc]
+Finished Parsing XDC File [/home/victor/CPE133/lab13/hardwareConfig.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/victor/CPE133/lab13/hardwareConfig.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1594.598 ; gain = 0.000 ; free physical = 142 ; free virtual = 3806
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 217 ; free virtual = 3882
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 217 ; free virtual = 3882
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 220 ; free virtual = 3884
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'FSM_PAR'
+INFO: [Synth 8-5544] ROM "SEL" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NS" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    st_0 |                               00 |                               00
+                    st_1 |                               01 |                               01
+                    st_2 |                               10 |                               10
+                    st_3 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'FSM_PAR'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 210 ; free virtual = 3875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module usr_nb 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module FSM_PAR 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+Module cntr_up_clr_nb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module clk_divider_nbit__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+Module Two_Digit_Decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      1 Bit        Muxes := 1     
+Module mux_2t1_nb 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+Module mux_4t1_nb 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      8 Bit        Muxes := 1     
+Module mux_4t1_nb__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "display/CNTR_LSB/PARITY/" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-3331] design main has unconnected port SW[15]
+WARNING: [Synth 8-3331] design main has unconnected port SW[14]
+WARNING: [Synth 8-3331] design main has unconnected port SW[13]
+WARNING: [Synth 8-3331] design main has unconnected port SW[12]
+WARNING: [Synth 8-3331] design main has unconnected port SW[11]
+WARNING: [Synth 8-3331] design main has unconnected port SW[10]
+WARNING: [Synth 8-3331] design main has unconnected port SW[9]
+WARNING: [Synth 8-3331] design main has unconnected port SW[8]
+WARNING: [Synth 8-3331] design main has unconnected port SW[7]
+WARNING: [Synth 8-3331] design main has unconnected port SW[6]
+WARNING: [Synth 8-3331] design main has unconnected port SW[5]
+WARNING: [Synth 8-3331] design main has unconnected port SW[4]
+WARNING: [Synth 8-3331] design main has unconnected port SW[3]
+WARNING: [Synth 8-3331] design main has unconnected port SW[2]
+WARNING: [Synth 8-3331] design main has unconnected port SW[1]
+WARNING: [Synth 8-3331] design main has unconnected port SW[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PAR_GEN/nolabel_line18/data_out_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\PAR_GEN/EVENT_CNTR/count_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\PAR_GEN/EVENT_CNTR/count_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\PAR_GEN/EVENT_CNTR/count_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\PAR_GEN/EVENT_CNTR/count_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[0]) is unused and will be removed from module main.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:27 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 196 ; free virtual = 3865
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 102 ; free virtual = 3740
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[1]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[14]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[13]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[12]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[11]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[10]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[9]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[8]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[7]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[6]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[5]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[4]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[3]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (PAR_GEN/nolabel_line18/data_out_reg[2]) is unused and will be removed from module main.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |     3|
+|4     |LUT2   |     5|
+|5     |LUT3   |     4|
+|6     |LUT4   |     1|
+|7     |LUT5   |     2|
+|8     |LUT6   |     2|
+|9     |FDRE   |    25|
+|10    |IBUF   |     2|
+|11    |OBUF   |    12|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------+---------------------------------+------+
+|      |Instance       |Module                           |Cells |
++------+---------------+---------------------------------+------+
+|1     |top            |                                 |    61|
+|2     |  PAR_GEN      |SERIAL_PARITY_GEN                |     4|
+|3     |    FSM        |FSM_PAR                          |     4|
+|4     |  display      |Multiplexed_Display              |    42|
+|5     |    clk_faster |clk_divider_nbit__parameterized1 |    21|
+|6     |    clk_s      |clk_divider_nbit__parameterized0 |    21|
++------+---------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1594.598 ; gain = 441.309 ; free physical = 134 ; free virtual = 3738
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1594.598 ; gain = 117.441 ; free physical = 188 ; free virtual = 3792
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1594.605 ; gain = 441.309 ; free physical = 199 ; free virtual = 3803
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 98 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:38 . Memory (MB): peak = 1594.605 ; gain = 441.500 ; free physical = 177 ; free virtual = 3792
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/victor/CPE133/lab13/lab13/lab13.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1618.609 ; gain = 0.000 ; free physical = 179 ; free virtual = 3793
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 24 19:40:34 2018...

@@ -9,10 +9,10 @@ module main(input CLK, input BTN, input [15:0] SW, output [7:0] seg, output [3:0
 
 wire [4:0] CNT;
 
-SERIAL_PARITY_GEN PAR_GEN(.CLK(CLK),.BTN(BTN), .SW(SW), .CNT_WITH_PARITY(CNT));
+SERIAL_PARITY_GEN PAR_GEN(.CLK(CLK),.BTN(BTN), .SW(SW), .CNT(CNT));
 
 
-Multiplexed_display display(.CLK(CLK),.CNT(CNT),.an(an),.seg(seg));
+Multiplexed_Display display(.CLK(CLK),.CNT(CNT),.an(an),.seg(seg));
 
 
 

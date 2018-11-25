@@ -13,7 +13,7 @@ wire EQ,CLR, LD;
 wire PAR; //0 = even , 1 = odd
 
 
-clk_divider_nbit (#.n(25)) SLOWER_CLK(.inputclock(CLK),.outputclock(CLK_SLOWER)); 
+clk_divider_nbit #(.n(25)) SLOWER_CLK(.clockin(CLK),.clockout(CLK_SLOWER)); 
 
 usr_nb #(.n(16))(.data_in(D_IN), .dbit(0), .sel(SEL), .clk(CLK_SLOWER), .clr(0), .data_out(D_OUT));
 
