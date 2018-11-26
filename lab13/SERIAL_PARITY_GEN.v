@@ -4,6 +4,28 @@
 `include "./FSM_PAR.v"
 `include "../Modules/cntr_up_hold_nb.v"
 
+//////////////////////////////////////////////////////////////////////////////////
+// Company:  VANE
+// Engineer: Victor Delaplaine, Esteban Rubio
+// 
+// Create Date: 11/17/2018 08:05:03 AM
+// Design Name: 
+// Module Name: SERIAL_PARITY_GEN
+// Project Name: 
+// Target Devices: Basy3 
+// Tool Versions: 
+// Description: Produces a CNT - the number of bits asserted (Positive logic)
+// 		in the input SW.
+// 		
+// Dependencies: clk_divider_nbit.v, comp_nb.v, usr_nb.v, FSM_PAR.v,
+// 		 cntr_up_hold_nb.v
+// 
+// Revision:
+// Revision 1.00 - File Created (11-17-2018) 
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 module SERIAL_PARITY_GEN(input CLK, input BTN, input [15:0] SW, output [4:0] CNT);
 
 wire CLK_SLOWER; //slower clk 

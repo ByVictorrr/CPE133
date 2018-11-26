@@ -9,19 +9,19 @@
 //// Company: VANE
 //// Engineer: Victor Delaplaine, Esteban Rubio
 //// 
-//// Create Date: 11/5/2018 12:31:47 PM
+//// Create Date: 11/13/2018 12:31:47 PM
 //// Design Name: 
 //// Module Name: Multiplexed_Display
-//// Project Name: Exp 9
+//// Project Name: Exp 13
 //// Target Devices: Basy3
 //// Tool Versions: 
 ///* Description: Extracts the ones and tens place of a four-bit binary number
 //and displays each value on the 7-segment display fast enough to give the
-//illusion of just displaying the two digit decimal number.
-//*/
-///* Dependencies: clk_divider_nbit.v, Two_Digit_Decoder.v, AN_DCDR.v,
-//BCD_Decoder.v, mux_2t1_nb.v
-//*/ 
+//illusion of just displaying the two digit decimal number. Also provides an
+//even or odd parity with the 16-bit word on the screen.
+//
+///  Dependencies: clk_divider_nbit.v, Two_Digit_Decoder.v, AN_DCDR.v,
+//                 mux_2t1_nb.v, mux_4t1_nb.v, BCD_Decoder.v
 //// Revision:
 //// Revision 0.01 - File Created
 //// Additional Comments:

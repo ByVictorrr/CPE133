@@ -3,14 +3,14 @@
 //// Company: VANE
 //// Engineer: Victor Delaplaine, Esteban Rubio
 //// 
-//// Create Date: 11/5/2018 12:31:47 PM
+//// Create Date: 11/18/2018 12:31:47 PM
 //// Design Name: 
 //// Module Name: Two_Digit_Decoder
-//// Project Name: Exp 9
+//// Project Name: Exp 13
 //// Target Devices: Basy3
 //// Tool Versions: 
-///* Description: Separates a 4-bit binary number into its if it were
-//converted to a decimal number. The 4-bit binary number is separated
+///* Description: Separates a 5-bit binary number into its if it were
+//converted to a decimal number. The 5-bit binary number is separated
 //variables F1 (1’s place)  and F2 (tens place). 
 //*/
 //// Dependencies: n/a  

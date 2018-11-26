@@ -3,15 +3,15 @@
 //// Company: VANE
 //// Engineer: Victor Delaplaine, Esteban Rubio
 //// 
-//// Create Date: 11/5/2018 12:31:47 PM
+//// Create Date: 11/15/2018 12:31:47 PM
 //// Design Name: 
 //// Module Name: AN_DCDR
-//// Project Name: Exp 9
+//// Project Name: Exp 13
 //// Target Devices: Basy3
 //// Tool Versions: 
 ///* Description: Uses the clocks ON/OFF attribute to switch between anodes
 //*/
-//// Dependencies: n/a  
+//// Dependencies: mux_4t1_nb.v 
 //// Revision:
 //// Revision 0.01 - File Created
 //// Additional Comments:

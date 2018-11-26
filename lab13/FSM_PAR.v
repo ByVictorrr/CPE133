@@ -1,21 +1,25 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:  Ratner Surf Designs
-// Engineer:  James Ratner
+// Company:  VANE
+// Engineer: Victor Delaplaine, Esteban Rubio
 // 
-// Create Date: 07/07/2018 08:05:03 AM
+// Create Date: 11/15/2018 08:05:03 AM
 // Design Name: 
-// Module Name: fsm_template
+// Module Name: FSM_PAR
 // Project Name: 
-// Target Devices: 
+// Target Devices: Basy3 
 // Tool Versions: 
-// Description: Generic FSM model with both Mealy & Moore outputs. 
-//    Note: data widths of state variables are not specified 
+// Description: A master controller for the overall circuit. This
+// master-controller notifies a the shift register when to start the the shift operation on the
+// 16 bit number using SEL to control the shift register. The shift state ends when that 16-bit number contains all
+// 0's. During the shift state the Up control input for the 5b CNTR
+// is crollered by CTRL to ensure in the wait state there is no up asserted.
 //
-// Dependencies: 
+//
+// Dependencies: n/a
 // 
 // Revision:
-// Revision 1.00 - File Created (07-07-2018) 
+// Revision 1.00 - File Created (11-17-2018) 
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
