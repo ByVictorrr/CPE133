@@ -25,7 +25,7 @@
 `include "../Modules/usr_nb.v"
 `include "../Modules/rca_nb.v"
 
-module SLAVE_CIRCUIT(input CLK, input CLR, input LD, input [1:0] SEL_A, input [1:0] SEL_B, output EQ, output [9:0] SUM);
+module SLAVE_CIRCUIT(input CLK, input CLR, input LD, input [1:0] SEL_A, input [1:0] SEL_B, input [9:0] SW, output EQ, output [9:0] SUM);
 
 wire [4:0] D_OUT_A, D_OUT_B,ZER, M_OUT;
 
