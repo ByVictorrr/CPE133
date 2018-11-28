@@ -39,7 +39,7 @@ module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0]
     //- model the next-state and output decoders
     always @ (*)
     begin
-       CLR = 0; SEL = 2'b00; CTRL = 0;//LD = 0; // assign all outputs
+       CLR = 0; SEL_A = 2'b00; SEL_B = 2'b00; //LD = 0; // assign all outputs
        case(PS)
           
           st_0: //loads data into shift reg
