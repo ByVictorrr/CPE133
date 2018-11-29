@@ -7,8 +7,9 @@ wire [9:0] tot;
 
 SR_Muliplier_5b MULT( .CLK(CLK), .BTN(BTN), .SW(SW),  .tot(tot));
 
-univ_sseg display(.cnt1(tot),
-    .cnt2(0),
+univ_sseg display(
+     .cnt1(tot),
+     .cnt2(0),
      .valid(1),
      .dp_en(0),
      .dp_sel(0),
