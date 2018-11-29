@@ -54,8 +54,6 @@ module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0]
      	    end
 	    else 
 	    begin
-            SEL_A = 2'b00;
-	    SEL_B = 2'b00;
 	    CLR = 0;
 	    NS = st_0;
             end
