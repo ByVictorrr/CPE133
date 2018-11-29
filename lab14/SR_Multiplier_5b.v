@@ -8,7 +8,7 @@ wire CLK_S, EQ, CLR, LD;
 wire [1:0] SEL_A, SEL_B;
 
 
-clk_divider_nbit #(.n(10)) slow(.clockin(CLK), .clockout(CLK_S));
+  clk_divider_nbit #(.n(25)) slow(.clockin(CLK), .clockout(CLK_S));
 
 SLAVE_CIRCUIT SLAVE(.CLK(CLK_S), .CLR(CLR),  .LD(LD), .SEL_A(SEL_A), .SEL_B(SEL_B),  .EQ(EQ), .SUM(tot));
 
