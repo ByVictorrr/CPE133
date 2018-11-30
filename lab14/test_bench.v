@@ -1,39 +1,30 @@
-module tb_comp_nb( );
- reg [7:0] D;
- reg clk, clr, up, ld;
+module test_bench( );
+ reg CLK, BTN, led;
+ reg [9:0] SW;
+ wire [9:0] SUM;
+
  wire [7:0] count;
- wire rco;
 
- cntr_udclr_nb MY_CNTR (
- .clk (clk),
- .clr (clr),
- .up (up),
- .ld (ld),
- .D (D),
- .count (count),
- .rco (rco) );
+ wire led;
 
- //- Generate periodic clock signal
+ SR_Muliplier_5b test(.CLK(CLK),.BTN(BTN), .SW(SW), .SUM(SUM), .led(led) );
+
  initial
  begin
- clk = 0; //- init signal
- forever #10 clk = ~clk;
+ CLK = 0; //- init signal
+ forever #10 CLK = ~CLK;
  end;
 
  initial
  begin
- clk = 0;
- up = 1;
- ld = 0;
- D = 'hFB;
- clr = 0;
-
+ CLK = 0;
+ BTN = 1;
+ SW = {{1,0,1,0,0},{1,1,1,1,1}};
+ 
  //- send out LD pulse
- #10 ld = 1;
- #30 ld = 0;
+ #10 SW = {{1,0,1,0,0},{1,1,1,1,1}};
 
- //- change count direction
- #200 up = 0;
+
 
  end
 
