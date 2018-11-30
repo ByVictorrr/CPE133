@@ -1,9 +1,7 @@
 module test_bench( );
- reg CLK, BTN, led;
+ reg CLK, BTN;
  reg [9:0] SW;
  wire [9:0] SUM;
-
- wire [7:0] count;
 
  wire led;
 
@@ -13,20 +11,16 @@ module test_bench( );
  begin
  CLK = 0; //- init signal
  forever #10 CLK = ~CLK;
- end;
+ end
 
  initial
  begin
  CLK = 0;
  BTN = 1;
- SW = {{1,0,1,0,0},{1,1,1,1,1}};
+ SW = 10'b1010011111;
  
- //- send out LD pulse
- #10 SW = {{1,0,1,0,0},{1,1,1,1,1}};
-
 
 
  end
 
 endmodule
-
