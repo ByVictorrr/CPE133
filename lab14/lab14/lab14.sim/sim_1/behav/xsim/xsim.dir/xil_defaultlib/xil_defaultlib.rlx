@@ -1,0 +1,16 @@
+0.6
+2018.1
+Apr  4 2018
+18:43:17
+/home/victor/CPE133/Modules/clk_divider_nbit.v,1543112124,verilog,,,,clk_divider_nbit,,,,,,,,
+/home/victor/CPE133/Modules/comp_nb.v,1543112124,verilog,,,,comp_nb,,,,,,,,
+/home/victor/CPE133/Modules/mux_2t1_nb.v,1543112124,verilog,,,,mux_2t1_nb,,,,,,,,
+/home/victor/CPE133/Modules/rca_nb.v,1543112124,verilog,,,,rca_nb,,,,,,,,
+/home/victor/CPE133/Modules/reg_nb.v,1543112124,verilog,,,,reg_nb,,,,,,,,
+/home/victor/CPE133/Modules/univ_sseg.v,1543112124,verilog,,,,clk_divder;cnt_convert_14b;cnt_convert_7b;univ_sseg,,,,,,,,
+/home/victor/CPE133/Modules/usr_nb.v,1543112124,verilog,,,,usr_nb,,,,,,,,
+/home/victor/CPE133/lab14/FSM_MULT.v,1543546639,verilog,,/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v,,FSM_MULT,,,,,,,,
+/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v,1543545535,verilog,,/home/victor/CPE133/lab14/SR_Multiplier_5b.v,/home/victor/CPE133/Modules/mux_2t1_nb.v;/home/victor/CPE133/Modules/reg_nb.v;/home/victor/CPE133/Modules/comp_nb.v;/home/victor/CPE133/Modules/usr_nb.v;/home/victor/CPE133/Modules/rca_nb.v,SLAVE_CIRCUIT,,,,,,,,
+/home/victor/CPE133/lab14/SR_Multiplier_5b.v,1543545532,verilog,,/home/victor/CPE133/lab14/main.v,/home/victor/CPE133/lab14/FSM_MULT.v;/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v;/home/victor/CPE133/Modules/clk_divider_nbit.v,SR_Muliplier_5b,,,,,,,,
+/home/victor/CPE133/lab14/lab14/lab14.sim/sim_1/behav/xsim/glbl.v,1522801934,verilog,,,,glbl,,,,,,,,
+/home/victor/CPE133/lab14/main.v,1543546014,verilog,,,/home/victor/CPE133/Modules/univ_sseg.v;/home/victor/CPE133/lab14/SR_Multiplier_5b.v,main,,,,,,,,

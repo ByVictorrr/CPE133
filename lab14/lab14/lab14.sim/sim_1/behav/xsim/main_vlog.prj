@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../FSM_MULT.v" \
+"../../../../../SLAVE_CIRCUIT.v" \
+"../../../../../SR_Multiplier_5b.v" \
+"../../../../../main.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

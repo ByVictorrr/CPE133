@@ -23,7 +23,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] SEL_A, output reg [1:0] SEL_B, output reg LD);
+module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] SEL_A, output reg [1:0] SEL_B, output reg LD, output reg led);
      
     //- next state & present state variables
     reg  NS, PS; 
@@ -39,23 +39,23 @@ module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0]
     //- model the next-state and output decoders
     always @ (*)
     begin
-       CLR = 0; SEL_A = 2'b00; SEL_B = 2'b00; //LD = 0; // assign all outputs
+       //CLR = 0; SEL_A = 2'b00; SEL_B = 2'b00; LD = 0; // assign all outputs
        case(PS)
-          
-          st_0: //loads data into shift reg
+          st_0: //wait state
           begin
-	  LD = 0; SEL_A = 2'b00; SEL_B = 2'b00;
+	    LD = 0; SEL_A = 2'b00; SEL_B = 2'b00; led = 0;
 	   if(BTN ==1)
 	   begin 
              SEL_A = 2'b01; //loads in parrallel data
-	     SEL_B = 2'b01;
+	         SEL_B = 2'b01;
      	     CLR = 1;
+     	     LD = 1;
              NS = st_1; 
      	    end
 	    else 
 	    begin
-	    CLR = 0;
-	    NS = st_0;
+	       CLR = 0;
+	       NS = st_0;
             end
      	  end 
           
@@ -63,13 +63,15 @@ module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0]
       begin
 	  CLR = 0;
 	  LD = 1;
+	  led = 1;
 		if(EQ == 1)
 		begin 
 		SEL_A = 2'b00;
 		SEL_B = 2'b00;
 		NS = st_0;
 		end
-		else
+
+		else //if not done shifting
 		begin
 		SEL_A = 2'b10;
 		SEL_B = 2'b11;
@@ -77,7 +79,6 @@ module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0]
 		end
            end   
     default: NS = st_0;      
-      
           endcase
       end              
 endmodule
