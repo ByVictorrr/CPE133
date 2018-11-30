@@ -10,15 +10,12 @@
 //// Project Name: Exp 12
 //// Target Devices: Basy3
 //// Tool Versions: 
-///Description: Takes one external input - BTN. When the BTN is pressed the
+///Description: Takes one external input - BTN. When the BTN is pressed the circuit takes 4 values as sorts them into accending order. It takes the input and runs all the other code.
 //// Dependencies:  Multiplexed_Display.v
-//// 
 //// Revision:
 //// Revision 0.01 - File Created
 //// Additional Comments:
-//// 
 ////////////////////////////////////////////////////////////////////////////////////
-//
 
 `include "Multiplexed_Display.v"
 `include "./SORT_4b.v"
