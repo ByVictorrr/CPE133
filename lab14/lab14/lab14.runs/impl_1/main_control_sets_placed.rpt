@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Fri Nov 30 08:11:03 2018
+| Date         : Sat Dec  1 08:30:34 2018
 | Host         : TheShell running 64-bit unknown
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     3 |
-| Unused register locations in slices containing registers |    18 |
+| Number of unique control sets                            |     5 |
+| Unused register locations in slices containing registers |    22 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,11 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      1 |            1 |
 |      2 |            1 |
-|    16+ |            1 |
+|      4 |            1 |
+|     10 |            1 |
+|     11 |            1 |
+|     15 |            1 |
 +--------+--------------+
 
 
@@ -46,24 +48,26 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              38 |           12 |
+| No           | No                    | No                     |              17 |            6 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              11 |            4 |
+| Yes          | No                    | Yes                    |              10 |            3 |
+| Yes          | Yes                   | No                     |               4 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+---------------+------------------+------------------+----------------+
-|     Clock Signal     | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+----------------------+---------------+------------------+------------------+----------------+
-|  MULT/slow/S[0]      |               |                  |                1 |              1 |
-|  display/CLK_DIV/CLK |               |                  |                1 |              2 |
-|  CLK_IBUF_BUFG       |               |                  |               10 |             35 |
-+----------------------+---------------+------------------+------------------+----------------+
++-------------------------+---------------+--------------------------+------------------+----------------+
+|       Clock Signal      | Enable Signal |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++-------------------------+---------------+--------------------------+------------------+----------------+
+|  display/CLK_DIV/out[0] |               |                          |                1 |              2 |
+|  CLK_IBUF_BUFG          | MULT/FSM/NS   | MULT/FSM/data_out_reg[8] |                1 |              4 |
+|  CLK_IBUF_BUFG          | MULT/FSM/E[0] | MULT/FSM/AR[0]           |                3 |             10 |
+|  CLK_IBUF_BUFG          | MULT/FSM/NS   |                          |                4 |             11 |
+|  CLK_IBUF_BUFG          |               |                          |                5 |             15 |
++-------------------------+---------------+--------------------------+------------------+----------------+
 
 

@@ -23,7 +23,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] SEL_A, output reg [1:0] SEL_B, output reg LD, output reg led);
+module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0] SEL_A, output reg [1:0] SEL_B, output reg LD);
      
     //- next state & present state variables
     reg  NS, PS; 
@@ -43,7 +43,7 @@ module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0]
        case(PS)
           st_0: //wait state
           begin
-	    LD = 0; SEL_A = 2'b00; SEL_B = 2'b00; led = 0;
+	    LD = 0; SEL_A = 2'b00; SEL_B = 2'b00;
 	   if(BTN ==1)
 	   begin 
              SEL_A = 2'b01; //loads in parrallel data
@@ -63,7 +63,6 @@ module FSM_MULT(input CLK, input BTN, input EQ, output reg CLR ,output reg [1:0]
       begin
 	  CLR = 0;
 	  LD = 1;
-	  led = 1;
 		if(EQ == 1)
 		begin 
 		SEL_A = 2'b00;

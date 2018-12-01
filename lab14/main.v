@@ -1,12 +1,12 @@
 `include "../Modules/univ_sseg.v"
 `include "SR_Multiplier_5b.v"
 
-module main(input CLK, input BTN, input [9:0] SW, output [7:0] seg, output [3:0] an, output led);
+module main(input CLK, input BTN, input [9:0] SW, output [7:0] seg, output [3:0] an);
 
 wire [9:0] SUM;
 
 
-SR_Muliplier_5b MULT( .CLK(CLK), .BTN(BTN), .SW(SW),  .SUM(SUM), .led(led));
+SR_Muliplier_5b MULT( .CLK(CLK), .BTN(BTN), .SW(SW),  .SUM(SUM));
 
 
 univ_sseg display(
