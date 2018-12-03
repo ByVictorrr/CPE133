@@ -29,24 +29,24 @@
 //// 
 ////////////////////////////////////////////////////////////////////////////////////
 
-module Multiplexed_Display(input CLK, input [4:0 ] CNT, output [3:0] an, output [7:0] seg);
+module Multiplexed_Display(input CLK, input [4:0] CNT, output [3:0] an, output [7:0] seg);
 
 wire CLK_S;
 wire [3:0] F1, F2; //F1 - ones place, F2 - tens place
 wire [7:0] F1_seg, F2_seg, PAR_seg;
 wire [1:0] SEL;
 
-clk_divider_nbit #(.n(10)) clk_faster(.clockin(CLK), .clockout(CLK_S));
+clk_divider_nbit #(.n(12)) clk_faster(.clockin(CLK), .clockout(CLK_S));
 
 
 cntr_up_clr_nb #(.n(2)) SEL_CNTR (
           .clk   (CLK_S), 
           .clr   (0), 
           .up    (1),
-           .ld    (0), 
-           .D   (0), 
+           .ld   (0), 
+           .D    (0), 
            .count (SEL), 
-           .rco   (0) );
+           .rco    (0) );
 
 Two_Digit_Decoder CNTR_SPLIT(.x(CNT),.F1(F1),.F2(F2));
 
