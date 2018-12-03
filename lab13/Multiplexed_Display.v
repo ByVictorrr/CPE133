@@ -4,6 +4,7 @@
 `include "../Modules/mux_2t1_nb.v"
 `include "../Modules/mux_4t1_nb.v"
 `include "./Two_Digit_Decoder.v"
+`include "../Modules/cntr_up_clr_nb.v"
 
 //////////////////////////////////////////////////////////////////////////////////
 //// Company: VANE
@@ -30,15 +31,22 @@
 
 module Multiplexed_Display(input CLK, input [4:0 ] CNT, output [3:0] an, output [7:0] seg);
 
-wire CLK_S, CLK_F; //used for the input of the mux selectors
+wire CLK_S;
 wire [3:0] F1, F2; //F1 - ones place, F2 - tens place
 wire [7:0] F1_seg, F2_seg, PAR_seg;
+wire [1:0] SEL;
 
-//T_S - slower clock used for SEL[1] for 4-t-1 mux
-clk_divider_nbit #(.n(7)) clk_s(.clockin(CLK), .clockout(CLK_S));
+clk_divider_nbit #(.n(10)) clk_faster(.clockin(CLK), .clockout(CLK_S));
 
-//T_F = (1/2)T_S - used for SEL[0] for 4-to-1 mux
-clk_divider_nbit #(.n(14)) clk_faster(.clockin(CLK), .clockout(CLK_F));
+
+cntr_up_clr_nb #(.n(2)) SEL_CNTR (
+          .clk   (CLK_S), 
+          .clr   (0), 
+          .up    (1),
+           .ld    (0), 
+           .D   (0), 
+           .count (SEL), 
+           .rco   (0) );
 
 Two_Digit_Decoder CNTR_SPLIT(.x(CNT),.F1(F1),.F2(F2));
 
@@ -48,8 +56,8 @@ BCD_Decoder F2_DCDR(.x(F2),.seg(F2_seg));
 
 PAR_DCDR CNTR_LSB(.PAR(CNT[0]),.seg(PAR_seg));
 
-mux_4t1_nb #(.n(8)) seg_selector(.SEL({CLK_S, CLK_F}), .D0(F1_seg), .D1(F2_seg), .D2(PAR_seg), .D3(PAR_seg), .D_OUT(seg));
+mux_4t1_nb #(.n(8)) seg_selector(.SEL(SEL), .D0(F1_seg), .D1(F2_seg), .D2(PAR_seg), .D3(PAR_seg), .D_OUT(seg));
 
-AN_DCDR anDCDR(.CLK_S(CLK_S),.CLK_F(CLK_F),.an(an));
+AN_DCDR anDCDR(.SEL(SEL),.an(an));
 
 endmodule
