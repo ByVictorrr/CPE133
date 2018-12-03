@@ -9,6 +9,7 @@ wire [1:0] SEL_A, SEL_B;
 
 clk_divider_nbit #(.n(20)) slow(.clockin(CLK), .clockout(CLK_S));
   
+// this is the actual multiplication of of the inputs  
 FSM_MULT FSM(
 .CLK(CLK), 
 .BTN(BTN), 
@@ -18,6 +19,7 @@ FSM_MULT FSM(
 .SEL_B(SEL_B),
 .LD(LD));
   
+//this acculmulates  
 SLAVE_CIRCUIT SLAVE(
 .CLK(CLK), 
 .CLR(CLR),  
