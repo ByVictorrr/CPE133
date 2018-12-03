@@ -9,7 +9,7 @@ wire [1:0] SEL_A, SEL_B;
 
 clk_divider_nbit #(.n(20)) slow(.clockin(CLK), .clockout(CLK_S));
   
-//This controls tge slave circuit   
+//This controls the slave circuit   
 FSM_MULT FSM(
 .CLK(CLK), 
 .BTN(BTN), 
