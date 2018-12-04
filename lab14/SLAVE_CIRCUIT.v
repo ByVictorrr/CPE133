@@ -18,7 +18,7 @@
 //              to shift accordingly, when in the shift state. This type of shifting is effectivley multiplying one number 
 //              by another number. The operation ends when the other number that is being multiplied by which is OP_B is 5'b00000
 
-// Dependencies: mux_2t1_nb.v, reg_nb.v, comp_nb.v, usr_nb.v,rca_nb.v
+// Dependencies: mux_2t1_nb.v, reg_nb.v, comp_nb.v, usr_nb.v, rca_nb.v
 // 
 // Revision:
 // Revision 1.00 - File Created (11-17-2018) 
