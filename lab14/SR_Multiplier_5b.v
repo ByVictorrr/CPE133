@@ -11,23 +11,23 @@ clk_divider_nbit #(.n(20)) slow(.clockin(CLK), .clockout(CLK_S));
   
 //This controls the slave circuit   
 FSM_MULT FSM(
-.CLK(CLK), 
-.BTN(BTN), 
-.EQ(EQ), 
-.CLR(CLR), 
-.SEL_A(SEL_A), 
-.SEL_B(SEL_B),
-.LD(LD));
+	.CLK(CLK), 
+	.BTN(BTN), 
+	.EQ(EQ), 
+	.CLR(CLR), 
+	.SEL_A(SEL_A), 
+	.SEL_B(SEL_B),
+	.LD(LD));
   
 //this concadanates,multiplies, and acculmulates  
 SLAVE_CIRCUIT SLAVE(
-.CLK(CLK), 
-.CLR(CLR),  
-.LD(LD), 
-.SEL_A(SEL_A), 
-.SEL_B(SEL_B), 
-.SW(SW) ,
-.EQ(EQ), 
-.SUM(SUM));
+	.CLK(CLK), 
+	.CLR(CLR),  
+	.LD(LD), 
+	.SEL_A(SEL_A), 
+	.SEL_B(SEL_B), 
+	.SW(SW) ,
+	.EQ(EQ), 
+	.SUM(SUM));
 
 endmodule

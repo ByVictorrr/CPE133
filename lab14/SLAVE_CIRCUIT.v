@@ -17,11 +17,21 @@ assign ZER = 10'b0000000000;
 
 //This concadanates then shifts a 0 into the most significant bit dividing by two 
 usr_nb #(.n(10)) USR_A(
-.data_in({5'b00000, SW[9],SW[8],SW[7],SW[6],SW[5]}), 
-.dbit(0), .sel(SEL_A), .clk(CLK), .clr(0), .data_out(D_OUT_A));
+	.data_in({5'b00000, SW[9],SW[8],SW[7],SW[6],SW[5]}), 
+	.dbit(0), 
+	.sel(SEL_A), 
+	.clk(CLK), 
+	.clr(0), 
+	.data_out(D_OUT_A));
 
  //This concadanates and then shifts a 0 into the Left/right-most
-usr_nb #(.n(5)) USR_B(.data_in({SW[4],SW[3],SW[2],SW[1],SW[0]}), .dbit(0), .sel(SEL_B), .clk(CLK), .clr(0), .data_out(D_OUT_B));
+usr_nb #(.n(5)) USR_B(
+	.data_in({SW[4],SW[3],SW[2],SW[1],SW[0]}), 
+	.dbit(0), 
+	.sel(SEL_B), 
+	.clk(CLK), 
+	.clr(0), 
+	.data_out(D_OUT_B));
 
 mux_2t1_nb #(.n(10)) MUX(.D0(ZER),.D1(D_OUT_A),.SEL(D_OUT_B[0]),.D_OUT(M_OUT));
 
@@ -30,12 +40,17 @@ mux_2t1_nb #(.n(10)) MUX(.D0(ZER),.D1(D_OUT_A),.SEL(D_OUT_B[0]),.D_OUT(M_OUT));
           .a (D_OUT_B), 
           .b (5'b00000), 
           .eq (EQ), 
-          .gt (), 
-          .lt ()
+          .gt (0), 
+          .lt (0)
  );  
 
 //RCA and REG together are accumulating
-rca_nb #(.n(10)) add(.a(SUM),.b(M_OUT),.cin(0),.sum(RCA_OUT),.co());
+rca_nb #(.n(10)) add(
+	.a(SUM),
+	.b(M_OUT),
+	.cin(0),
+	.sum(RCA_OUT),
+	.co(0));
 
 reg_nb #(.n(10)) MY_REG (
           .data_in  (RCA_OUT), 
