@@ -13,7 +13,8 @@
 // Target Devices: Basy3 
 // Tool Versions: 
 // Description: Takes in two 5-bit numbers and multiplies one by another number. 
-// These two 5-bit numbers are represented on the basy3 board by switches.
+// These two 5-bit numbers are represented on the basy3 board by switches. The mutiplication result
+// is displayed on the basy3 7-segment display using the univ_sseg.
 // Dependencies: SR_Multiplier_5b.v, univ_sseg.v
 // 
 // Revision:
