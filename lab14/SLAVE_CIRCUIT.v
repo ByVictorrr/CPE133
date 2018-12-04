@@ -4,7 +4,36 @@
 `include "../Modules/usr_nb.v"
 `include "../Modules/rca_nb.v"
 
-module SLAVE_CIRCUIT(input CLK, input CLR, input LD, input [1:0] SEL_A, input [1:0] SEL_B, input [9:0] SW, output EQ, output [9:0] SUM);
+//////////////////////////////////////////////////////////////////////////////////
+// Company:  VANE
+// Engineer: Victor Delaplaine, Esteban Rubio
+// 
+// Create Date: 11/15/2018 08:05:03 AM
+// Design Name: 
+// Module Name: SLAVE_CIRCUIT
+// Project Name: Exp 14
+// Target Devices: Basy3 
+// Tool Versions: 
+// Description: This takes in SEL_A, SEL_B from the FSM and controls the two shift registers 
+//              to shift accordingly, when in the shift state. This type of shifting is effectivley multiplying one number 
+//              by another number. The operation ends when the other number that is being multiplied by which is OP_B is 5'b00000
+
+// Dependencies: mux_2t1_nb.v, reg_nb.v, comp_nb.v, usr_nb.v,rca_nb.v
+// 
+// Revision:
+// Revision 1.00 - File Created (11-17-2018) 
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+module SLAVE_CIRCUIT(input CLK, 
+		     input CLR, 
+		     input LD, 
+		     input [1:0] SEL_A,
+		     input [1:0] SEL_B, 
+		     input [9:0] SW, 
+		     output EQ, 
+		     output [9:0] SUM);
 
 wire [4:0] D_OUT_B,ZER;
 wire [9:0] D_OUT_A, RCA_OUT, M_OUT;
