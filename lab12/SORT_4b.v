@@ -17,7 +17,7 @@
 ///Description: Takes one external input - BTN. When the BTN is pressed the the sort starts, 
 //                the operation that is performed is a 4 4-bit bubble sort. 
 //
-//// Dependencies:  Multiplexed_Display.v
+//// Dependencies:  FSM_4b_SORT.v, SLAVE_CIRCUIT.v, clk_divider_nbit.v
 //// 
 //// Revision:
 //// Revision 0.01 - File Created
