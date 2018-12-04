@@ -8,7 +8,7 @@
 //// Create Date: 11/5/2018 12:31:47 PM
 //// Design Name: 
 //// Module Name: AN_DCDR
-//// Project Name: Exp 9
+//// Project Name: Exp 12
 //// Target Devices: Basy3
 //// Tool Versions: 
 ///* Description: Uses the clocks ON/OFF attribute to switch between anodes
