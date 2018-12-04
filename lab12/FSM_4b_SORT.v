@@ -5,13 +5,13 @@
 // 
 // Create Date: 07/07/2018 08:05:03 AM
 // Design Name: 
-// Module Name: FSM_SEQ_DETECTOR
-// Project Name:  Exp 11
+// Module Name: FSM_4b_SORT
+// Project Name:  Exp 12
 // Target Devices: Basys3
 // Tool Versions: 
-// Description: A seqence detector built from a the fsm module that will
-// detect the sequence of bits {0,1,1,1,0,1} when the button is clicked and
-// {0,1,1,0,0,1} when the button isnt clicked. 
+// Description: Takes in a status signal 3-bit LT signal that notifies if one number arr_0 is less than arr_1 if 
+//		so it doesnt put load high. It does this for 9-clock signals until arr_0 is the least value and 
+//		arr_3 has the highest value.
 //   
 //
 // Dependencies: n/a
@@ -84,8 +84,9 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
 		//Therefore swapping them
 		LD  = 4'b0011; //LD [1:0] 
 		//LD[0] loads arr[1] to the ouput of REG[0] on the next state
-			///LD[1] loads arr[0] to the ouput of REG[1] on the next state
-			NS = st_2;
+		///LD[1] loads arr[0] to the ouput of REG[1] on the next state
+		NS = st_2;
+			
 		end
 		else NS = st_3;
 	  end
@@ -103,7 +104,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
                 LD  = 4'b0110; //LD [2:1]
                 //LD[1] loads arr[2] to the ouput of REG[1] on the next state
                 ///LD[2] loads arr[1] to the ouput of REG[2] on the next state
-			NS = st_3;
+		NS = st_3;
                 end
                 else NS = st_4;
 	  end
@@ -121,7 +122,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
                 LD  = 4'b1100; //LD [3:2]
                 //LD[2] loads arr[3] to the ouput of REG[2] on the next state
                 ///LD[3] loads arr[2] to the ouput of REG[3] on the next state
-			NS = st_4;
+		NS = st_4;
                 end
                 else NS = st_5; //going to 2nd transversal
 	  end
@@ -139,7 +140,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
 		LD  = 4'b0011; //LD [1:0] 
 		//LD[0] loads arr[1] to the ouput of REG[0] on the next state
 		///LD[1] loads arr[0] to the ouput of REG[1] on the next state
-			NS = st_5;
+		NS = st_5;
 		end
 		else NS = st_6;	
 	  end
@@ -193,7 +194,7 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
 		LD  = 4'b0011; //LD [1:0] 
 		//LD[0] loads arr[1] to the ouput of REG[0] on the next state
 		///LD[1] loads arr[0] to the ouput of REG[1] on the next state
-			NS = st_8;
+		NS = st_8;
 		end
 		else NS = st_9;
 	  end
