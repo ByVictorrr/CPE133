@@ -12,16 +12,14 @@
 //// Create Date: 11/5/2018 12:31:47 PM
 //// Design Name: 
 //// Module Name: Multiplexed_Display
-//// Project Name: Exp 9
+//// Project Name: Exp 12
 //// Target Devices: Basy3
 //// Tool Versions: 
-///* Description: Extracts the ones and tens place of a four-bit binary number
-//and displays each value on the 7-segment display fast enough to give the
-//illusion of just displaying the two digit decimal number.
-//*/
-///* Dependencies: clk_divider_nbit.v, Two_Digit_Decoder.v, AN_DCDR.v,
-//BCD_Decoder.v, mux_2t1_nb.v
-//*/ 
+/// Description: Displays the numbers in order while being sorted and finally displays the sorted order from highest to lowest.
+///
+/// Dependencies: clk_divider_nbit.v, Two_Digit_Decoder.v, AN_DCDR.v, cntr_up_clr_nb.v, mux_4t1_nb.v,
+///               mux_2t1_nb.v, BCH_Decoder.v
+/// 
 //// Revision:
 //// Revision 0.01 - File Created
 //// Additional Comments:
@@ -41,13 +39,19 @@ cntr_up_clr_nb #(.n(2)) SEL_CNTR (
           .clk   (CLK_S), 
           .clr   (0), 
           .up    (1),
-           .ld   (0), 
-           .D    (0), 
-           .count (SEL), 
-           .rco    (0) );
+          .ld   (0), 
+          .D    (0), 
+          .count (SEL), 
+          .rco    (0) );
 
 
-mux_4t1_nb #(.n(4)) sorted(.SEL(SEL), .D0(arr_0), .D1(arr_1), .D2(arr_2), .D3(arr_3), .D_OUT(F_SORTED));
+mux_4t1_nb #(.n(4)) sorted(
+          .SEL(SEL), 
+          .D0(arr_0), 
+          .D1(arr_1), 
+          .D2(arr_2), 
+          .D3(arr_3), 
+          .D_OUT(F_SORTED));
 
 //output the value of F_sorted on the 7-segment display
 BCH_Decoder BCH(.x(F_SORTED),.seg(seg));
