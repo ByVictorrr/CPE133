@@ -13,8 +13,7 @@
 //// Project Name: Exp 12
 //// Target Devices: Basy3
 //// Tool Versions: 
-///  Description: Takes one external input - BTN. 
-///  When the BTN is pressed the circuit takes 4 values as sorts them into accending order. 
+///  Description: When the BTN is pressed the circuit takes 4 values as sorts them into accending order. 
 ///  It takes the 4 4-bit numbers and sorts according to their value. 
 ///  On the basy 7-segment display the board displays the the number being sorted. And when done the led indicates.
 //// Dependencies:  Multiplexed_Display.v, SORT_4b.v
