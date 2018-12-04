@@ -1,3 +1,5 @@
+`include "../Modules/mux_4t1_nb.v"
+
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 //// Company: VANE
@@ -11,14 +13,13 @@
 //// Tool Versions: 
 ///* Description: Uses the clocks ON/OFF attribute to switch between anodes
 //*/
-//// Dependencies: n/a  
+//// Dependencies: mux_4t1_nb.v
 //// Revision:
 //// Revision 0.01 - File Created
 //// Additional Comments:
 //// 
 ////////////////////////////////////////////////////////////////////////////////////
 //
-`include "../Modules/mux_4t1_nb.v"
 
 module AN_DCDR(input [1:0] SEL ,output [3:0] an);
 
