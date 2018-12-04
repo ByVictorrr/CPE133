@@ -27,7 +27,9 @@ module FSM_4b_SORT(input CLK, input BTN, input [2:0] LT, output reg led, output 
     reg [3:0] NS, PS;
     //- bit-level state representations
 
-    parameter [3:0] st_0= 4'b0000, st_1 = 4'b0001, st_2 = 4'b0010,  st_3 = 4'b0011,  st_4 = 4'b0100, st_5 = 4'b0101, st_6 = 4'b0110, st_7 = 4'b0111, st_8 = 4'b1000, st_9 = 4'b1001, st_10 = 4'b1010;
+    parameter [3:0] st_0= 4'b0000, st_1 = 4'b0001, st_2 = 4'b0010,  st_3 = 4'b0011,  
+		    st_4 = 4'b0100, st_5 = 4'b0101, st_6 = 4'b0110, st_7 = 4'b0111,
+		    st_8 = 4'b1000, st_9 = 4'b1001, st_10 = 4'b1010;
   
     always @ ( posedge CLK)
     	begin
