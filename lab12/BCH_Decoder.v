@@ -6,7 +6,7 @@
 // Create Date: 10/07/2018 10:23:19 PM
 // Design Name: VANE
 // Module Name: BCH_Decoder
-// Project Name: 7 - Segment BCD decoder
+// Project Name: Exp 12
 // Target Devices: Basy3
 // Tool Versions: 
 // Description: A module convert binary inputs into hexadecimal 7-segment displays
