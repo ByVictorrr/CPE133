@@ -5,15 +5,15 @@
 // 
 // Create Date: 11/15/2018 08:05:03 AM
 // Design Name: 
-// Module Name: FSM_PAR
+// Module Name: FSM_MULT
 // Project Name: 
 // Target Devices: Basy3 
 // Tool Versions: 
 // Description: A master controller for the overall circuit. This
-// master-controller notifies a the shift register when to start the the shift operation on the
-// 16 bit number using SEL to control the shift register. The shift state ends when that 16-bit number contains all
-// 0's. During the shift state the Up control input for the 5b CNTR
-// is crollered by CTRL to ensure in the wait state there is no up asserted.
+// master-controller controls the two Shift registers, simple register.
+// As a status input the FSM takes in EQ, and BTN which lets thes FSM when to end and start respectively.
+// There are two states in this FSM, one the wait and two the accumulating state. In the accumulating state
+// the USR_B is shifted until its data out is zero or EQ = 1
 //
 //
 // Dependencies: n/a
