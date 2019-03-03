@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sat Dec  1 08:28:42 2018
-# Process ID: 18283
+# Start of session at: Wed Dec  5 08:25:34 2018
+# Process ID: 8512
 # Current directory: /home/victor/CPE133/lab14/lab14/lab14.runs/synth_1
 # Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: /home/victor/CPE133/lab14/lab14/lab14.runs/synth_1/main.vds
@@ -15,28 +15,28 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18292 
+INFO: Helper process launched with PID 8525 
 WARNING: [Synth 8-2490] overwriting previous definition of module FSM_MULT [/home/victor/CPE133/lab14/FSM_MULT.v:26]
 WARNING: [Synth 8-2490] overwriting previous definition of module mux_2t1_nb [/home/victor/CPE133/lab14/../Modules/mux_2t1_nb.v:32]
 WARNING: [Synth 8-2490] overwriting previous definition of module reg_nb [/home/victor/CPE133/lab14/../Modules/reg_nb.v:32]
 WARNING: [Synth 8-2490] overwriting previous definition of module comp_nb [/home/victor/CPE133/lab14/../Modules/comp_nb.v:34]
 WARNING: [Synth 8-2490] overwriting previous definition of module usr_nb [/home/victor/CPE133/lab14/../Modules/usr_nb.v:41]
 WARNING: [Synth 8-2490] overwriting previous definition of module rca_nb [/home/victor/CPE133/lab14/../Modules/rca_nb.v:35]
-WARNING: [Synth 8-2490] overwriting previous definition of module SLAVE_CIRCUIT [/home/victor/CPE133/lab14/./SLAVE_CIRCUIT.v:7]
+WARNING: [Synth 8-2490] overwriting previous definition of module SLAVE_CIRCUIT [/home/victor/CPE133/lab14/./SLAVE_CIRCUIT.v:29]
 WARNING: [Synth 8-2490] overwriting previous definition of module FSM_MULT [/home/victor/CPE133/lab14/FSM_MULT.v:26]
 WARNING: [Synth 8-2490] overwriting previous definition of module mux_2t1_nb [/home/victor/CPE133/lab14/../Modules/mux_2t1_nb.v:32]
 WARNING: [Synth 8-2490] overwriting previous definition of module reg_nb [/home/victor/CPE133/lab14/../Modules/reg_nb.v:32]
 WARNING: [Synth 8-2490] overwriting previous definition of module comp_nb [/home/victor/CPE133/lab14/../Modules/comp_nb.v:34]
 WARNING: [Synth 8-2490] overwriting previous definition of module usr_nb [/home/victor/CPE133/lab14/../Modules/usr_nb.v:41]
 WARNING: [Synth 8-2490] overwriting previous definition of module rca_nb [/home/victor/CPE133/lab14/../Modules/rca_nb.v:35]
-WARNING: [Synth 8-2490] overwriting previous definition of module SLAVE_CIRCUIT [/home/victor/CPE133/lab14/./SLAVE_CIRCUIT.v:7]
+WARNING: [Synth 8-2490] overwriting previous definition of module SLAVE_CIRCUIT [/home/victor/CPE133/lab14/./SLAVE_CIRCUIT.v:29]
 WARNING: [Synth 8-2490] overwriting previous definition of module clk_divider_nbit [/home/victor/CPE133/lab14/../Modules/clk_divider_nbit.v:29]
-WARNING: [Synth 8-2490] overwriting previous definition of module SR_Muliplier_5b [/home/victor/CPE133/lab14/SR_Multiplier_5b.v:5]
+WARNING: [Synth 8-2490] overwriting previous definition of module SR_Muliplier_5b [/home/victor/CPE133/lab14/SR_Multiplier_5b.v:27]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1242.738 ; gain = 90.160 ; free physical = 10040 ; free virtual = 18644
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1242.738 ; gain = 90.160 ; free physical = 5359 ; free virtual = 14331
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'main' [/home/victor/CPE133/lab14/main.v:4]
-INFO: [Synth 8-6157] synthesizing module 'SR_Muliplier_5b' [/home/victor/CPE133/lab14/SR_Multiplier_5b.v:5]
+INFO: [Synth 8-6157] synthesizing module 'main' [/home/victor/CPE133/lab14/main.v:26]
+INFO: [Synth 8-6157] synthesizing module 'SR_Muliplier_5b' [/home/victor/CPE133/lab14/SR_Multiplier_5b.v:27]
 INFO: [Synth 8-6157] synthesizing module 'clk_divider_nbit' [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
 	Parameter n bound to: 20 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'clk_divider_nbit' (1#1) [/home/victor/CPE133/Modules/clk_divider_nbit.v:29]
@@ -45,7 +45,7 @@ INFO: [Synth 8-6157] synthesizing module 'FSM_MULT' [/home/victor/CPE133/lab14/F
 	Parameter st_1 bound to: 1'b1 
 INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/lab14/FSM_MULT.v:43]
 INFO: [Synth 8-6155] done synthesizing module 'FSM_MULT' (2#1) [/home/victor/CPE133/lab14/FSM_MULT.v:26]
-INFO: [Synth 8-6157] synthesizing module 'SLAVE_CIRCUIT' [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:7]
+INFO: [Synth 8-6157] synthesizing module 'SLAVE_CIRCUIT' [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:29]
 INFO: [Synth 8-6157] synthesizing module 'usr_nb' [/home/victor/CPE133/Modules/usr_nb.v:41]
 	Parameter n bound to: 10 - type: integer 
 INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/Modules/usr_nb.v:54]
@@ -57,18 +57,24 @@ INFO: [Synth 8-6155] done synthesizing module 'usr_nb__parameterized0' (3#1) [/h
 INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
 	Parameter n bound to: 10 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (4#1) [/home/victor/CPE133/Modules/mux_2t1_nb.v:32]
-WARNING: [Synth 8-689] width (5) of port connection 'D0' does not match port width (10) of module 'mux_2t1_nb' [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:25]
+WARNING: [Synth 8-689] width (5) of port connection 'D0' does not match port width (10) of module 'mux_2t1_nb' [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:65]
 INFO: [Synth 8-6157] synthesizing module 'comp_nb' [/home/victor/CPE133/Modules/comp_nb.v:34]
 	Parameter n bound to: 5 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'comp_nb' (5#1) [/home/victor/CPE133/Modules/comp_nb.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'gt' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:72]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:72]
+WARNING: [Synth 8-689] width (32) of port connection 'lt' does not match port width (1) of module 'comp_nb' [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:73]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:73]
 INFO: [Synth 8-6157] synthesizing module 'rca_nb' [/home/victor/CPE133/Modules/rca_nb.v:35]
 	Parameter n bound to: 10 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'rca_nb' (6#1) [/home/victor/CPE133/Modules/rca_nb.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'co' does not match port width (1) of module 'rca_nb' [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:82]
+WARNING: [Synth 8-2900] ignoring illegal expression in output port connection [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:82]
 INFO: [Synth 8-6157] synthesizing module 'reg_nb' [/home/victor/CPE133/Modules/reg_nb.v:32]
 	Parameter n bound to: 10 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'reg_nb' (7#1) [/home/victor/CPE133/Modules/reg_nb.v:32]
-INFO: [Synth 8-6155] done synthesizing module 'SLAVE_CIRCUIT' (8#1) [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'SR_Muliplier_5b' (9#1) [/home/victor/CPE133/lab14/SR_Multiplier_5b.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SLAVE_CIRCUIT' (8#1) [/home/victor/CPE133/lab14/SLAVE_CIRCUIT.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'SR_Muliplier_5b' (9#1) [/home/victor/CPE133/lab14/SR_Multiplier_5b.v:27]
 INFO: [Synth 8-6157] synthesizing module 'univ_sseg' [/home/victor/CPE133/Modules/univ_sseg.v:76]
 INFO: [Synth 8-6157] synthesizing module 'cnt_convert_14b' [/home/victor/CPE133/Modules/univ_sseg.v:269]
 INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/Modules/univ_sseg.v:288]
@@ -86,10 +92,10 @@ INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/Modules/uni
 INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/Modules/univ_sseg.v:175]
 INFO: [Synth 8-226] default block is never used [/home/victor/CPE133/Modules/univ_sseg.v:187]
 INFO: [Synth 8-6155] done synthesizing module 'univ_sseg' (13#1) [/home/victor/CPE133/Modules/univ_sseg.v:76]
-WARNING: [Synth 8-689] width (10) of port connection 'cnt1' does not match port width (14) of module 'univ_sseg' [/home/victor/CPE133/lab14/main.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'main' (14#1) [/home/victor/CPE133/lab14/main.v:4]
+WARNING: [Synth 8-689] width (10) of port connection 'cnt1' does not match port width (14) of module 'univ_sseg' [/home/victor/CPE133/lab14/main.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'main' (14#1) [/home/victor/CPE133/lab14/main.v:26]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1271.988 ; gain = 119.410 ; free physical = 10058 ; free virtual = 18662
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.988 ; gain = 119.410 ; free physical = 5377 ; free virtual = 14348
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -102,10 +108,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.988 ; gain = 119.410 ; free physical = 10057 ; free virtual = 18661
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.988 ; gain = 119.410 ; free physical = 5376 ; free virtual = 14348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.988 ; gain = 119.410 ; free physical = 10057 ; free virtual = 18661
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1271.988 ; gain = 119.410 ; free physical = 5376 ; free virtual = 14348
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -121,25 +127,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1601.832 ; gain = 0.000 ; free physical = 9808 ; free virtual = 18412
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1601.832 ; gain = 0.000 ; free physical = 5148 ; free virtual = 14118
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 9885 ; free virtual = 18489
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 5227 ; free virtual = 14197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 9885 ; free virtual = 18489
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 5227 ; free virtual = 14197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 9887 ; free virtual = 18490
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 5229 ; free virtual = 14199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 9878 ; free virtual = 18482
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 5220 ; free virtual = 14190
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -250,7 +256,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 9851 ; free virtual = 18457
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 5199 ; free virtual = 14171
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,13 +268,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 9734 ; free virtual = 18340
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 1601.832 ; gain = 449.254 ; free physical = 5078 ; free virtual = 14050
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1602.832 ; gain = 450.254 ; free physical = 9724 ; free virtual = 18330
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1602.832 ; gain = 450.254 ; free physical = 5068 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -280,7 +286,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 9723 ; free virtual = 18329
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 5066 ; free virtual = 14038
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -304,7 +310,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 9723 ; free virtual = 18329
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 5068 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -317,7 +323,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 9723 ; free virtual = 18329
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 5068 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -329,25 +335,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 9723 ; free virtual = 18329
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 5068 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 9723 ; free virtual = 18329
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 5068 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 9723 ; free virtual = 18329
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 5068 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 9723 ; free virtual = 18329
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 5068 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -394,11 +400,11 @@ Report Instance Areas:
 |11    |    CLK_DIV  |clk_divder             |    19|
 +------+-------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 9723 ; free virtual = 18329
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.840 ; gain = 458.262 ; free physical = 5068 ; free virtual = 14039
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1610.840 ; gain = 128.418 ; free physical = 9779 ; free virtual = 18385
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.848 ; gain = 458.262 ; free physical = 9779 ; free virtual = 18385
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1610.840 ; gain = 128.418 ; free physical = 5123 ; free virtual = 14094
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1610.848 ; gain = 458.262 ; free physical = 5123 ; free virtual = 14094
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -408,10 +414,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+52 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:51 . Memory (MB): peak = 1610.848 ; gain = 458.469 ; free physical = 9782 ; free virtual = 18388
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:51 . Memory (MB): peak = 1610.848 ; gain = 458.469 ; free physical = 5123 ; free virtual = 14094
 INFO: [Common 17-1381] The checkpoint '/home/victor/CPE133/lab14/lab14/lab14.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1634.852 ; gain = 0.000 ; free physical = 9782 ; free virtual = 18388
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  1 08:29:42 2018...
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1634.852 ; gain = 0.000 ; free physical = 5123 ; free virtual = 14095
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  5 08:26:34 2018...

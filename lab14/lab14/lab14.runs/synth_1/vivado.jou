@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sat Dec  1 08:28:42 2018
-# Process ID: 18283
+# Start of session at: Wed Dec  5 08:25:34 2018
+# Process ID: 8512
 # Current directory: /home/victor/CPE133/lab14/lab14/lab14.runs/synth_1
 # Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: /home/victor/CPE133/lab14/lab14/lab14.runs/synth_1/main.vds
